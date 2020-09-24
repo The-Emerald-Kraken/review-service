@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
-const reviewsSchema = new mongoose.Schema({
 
+const reviewsSchema = new mongoose.Schema({
   product_id: Number,
   review_id: Number,
   nickname: String,
@@ -25,14 +25,13 @@ const reviewsSchema = new mongoose.Schema({
     yes: Number, default: 0,
     no: Number, default: 0
   },
-
 },
   {
-    timestamp: true
+    timestamps: true
   }
 );
 
 
-let Review = mongoose.model('Review', reviewsSchema);
+const Review = mongoose.model('reviews', reviewsSchema);
 
 module.exports = Review;

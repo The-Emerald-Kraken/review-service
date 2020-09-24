@@ -1,9 +1,9 @@
 {
-  "name": "mr_beer_clone_joe",
+  "name": "review-services",
   "version": "",
   "description": "",
   "main": "index.js",
-  "author": "",
+  "author": "Matthew Belesiu",
   "license": "",
   "engines": {
     "node": ">=6.13.0"

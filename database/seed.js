@@ -7,7 +7,7 @@ const sampleReviews = [{
   nickname: 'billy!!!',
   rating: 5,
   title: 'This is a review',
-  createAt: '2017-11-08T05:05:26.037Z',
+  createdAt: '2017-11-08T05:05:26.037Z',
   body: 'Infomation about shirt',
   images: [{
     id: 1,
@@ -35,7 +35,7 @@ const sampleReviews = [{
   nickname: 'jimmy!!!',
   rating: 5,
   title: 'This is another review',
-  createAt: '2018-11-08T05:05:26.037Z',
+  createdAt: '2018-11-08T05:05:26.037Z',
   body: 'Infomation about shirt',
   images: [{
     id: 1,
@@ -67,7 +67,7 @@ const sampleReviews = [{
   nickname: 'billyagain!!!',
   rating: 5,
   title: 'This is a review',
-  createAt: '2019-11-08T05:05:26.037Z',
+  createdAt: '2019-11-08T05:05:26.037Z',
   body: 'Infomation about shirt',
   images: [{
     id: 1,
