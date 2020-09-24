@@ -10,18 +10,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+app.use(express.static(__dirname + '../public'));
 
 app.get('/api/reviews', (req, res) => {
-  Reviews.find({}).sort('-createdAt')
-    .then((data) => {
-      console.log(data);
-      res.send(data);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.sendStatus(503);
-    });
+
+  Reviews.find({})
+    .then((data) => res.send(data))
+    .catch((err) => res.sendStatus(503));
 
 });
 

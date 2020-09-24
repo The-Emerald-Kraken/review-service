@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-
+const db = require('./index.js');
+//mongoose.Promise = global.Promise;
 
 const reviewsSchema = new mongoose.Schema({
   product_id: Number,
