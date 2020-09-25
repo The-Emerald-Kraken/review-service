@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const db = require('./index.js');
-//mongoose.Promise = global.Promise;
+// mongoose.Promise = global.Promise;
 
 const reviewsSchema = new mongoose.Schema({
   product_id: Number,
@@ -20,18 +20,17 @@ const reviewsSchema = new mongoose.Schema({
   tags: [String],
   height: String,
   weight: String,
+  age: String,
   location: String,
   email: String,
   helpful: {
-    yes: Number, default: 0,
-    no: Number, default: 0
+    yes: Number,
+    no: Number,
   },
 },
-  {
-    timestamps: true
-  }
-);
-
+{
+  timestamps: true,
+});
 
 const Review = mongoose.model('reviews', reviewsSchema);
 
