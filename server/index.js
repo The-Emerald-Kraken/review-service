@@ -21,6 +21,19 @@ app.get('/api/products/reviews/:id', (req, res) => {
     .catch(() => res.sendStatus(410));
 });
 
+// UNTESTED
+app.post('/api/products/reviews', (req, res) => {
+  Reviews.create(req.body)
+    .then(() => res.sendStatus(201))
+    .catch(() => res.sendStatus(503));
+});
+
+app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
+  // TODO - Later
+  // use req.params.id and req.params.helpful
+  res.sendStatus(501);
+});
+
 const PORT = 3005;
 
 app.listen(PORT, () => {
