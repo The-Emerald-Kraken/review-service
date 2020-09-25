@@ -1,6 +1,8 @@
 const faker = require('faker');
+const fs = require('fs').promises;
 const db = require('./index.js');
 const Review = require('./Review.js');
+const FILE_COUNT_MAX = 500; //I know this is bad, but im being lazy
 
 
 
@@ -18,10 +20,16 @@ const randomCard = faker.helpers.createCard(); // random contact card containing
 console.log(`${randomName}, ${randomEmail}, ${randomCard}`);
 
 const randScore = (max) => Math.round((Math.random() * max) * 100) / 100;
-const ranImage = (max) => {
-  Math.floor(Math.random() * max);
-
+const ranImage = async (max) => {
+  let result = [];
+  const n = Math.floor(Math.random() * max);
+  for (let i = 0; i < n; i += 1) {
+    result.push({
+      id: i,
+      url: fs.readFile(`/img/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`, { encoding: 'base64' });
+    })
   }
+};
 
 const generateFakeReview = (productID, reviewID) => {
   for (let i = 0; i < reviewID; i += 1) {
@@ -34,14 +42,7 @@ const generateFakeReview = (productID, reviewID) => {
         title: faker.commerce.productDescription(),
         created_at: faker.date.past(),
         body: faker.lorem.paragraphs(),
-        images: [{
-          id: 1,
-          url: 'https://www.rei.com/media/e5f7c311-cb6f-4c4f-a5a4-00bd0a5d349a?size=784x588',
-        }],
-        videos: [{
-          id: 1,
-          url: 'https://www.youtube.com/watch?v=P6N7OvL0mww&ab_channel=REI',
-        }],
+        images: ranImage(),
         tags: ['Shirt', 'Pratical', '#streetWear'],
         height: "5'1\"",
         weight: '100 - 125 lbs',
