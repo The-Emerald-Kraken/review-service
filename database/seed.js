@@ -1,17 +1,17 @@
 const faker = require('faker');
-const fs = require('fs').promises;
 const db = require('./index.js');
 const Review = require('./Review.js');
+
 const FILE_COUNT_MAX = 500; // I know this is bad, but im being lazy
 
 const randScore = (max) => Math.round((Math.random() * max) * 100) / 100;
-const ranImage = async (max) => {
+const ranImage = (max) => {
   const result = [];
   const n = Math.floor(Math.random() * max);
   for (let i = 0; i < n; i += 1) {
     result.push({
       id: i,
-      url: fs.readFile(`/img/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`, { encoding: 'base64' }),
+      url: `/imgs/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`,
     });
   }
   return result;
@@ -64,11 +64,11 @@ const generateFakeReview = (productID, reviewID) => {
   return fakeReviews;
 };
 
-const fakeData = [];
+let fakeData = [];
 
 const insertSampleReviews = (maxReview = 10) => {
   for (let i = 0; i < 100; i += 1) {
-    fakeData.push(generateFakeReview(i, Math.floor(Math.random() * maxReview)));
+    fakeData = fakeData.concat((generateFakeReview(i, Math.floor(Math.random() * maxReview))));
   }
   Review.create(fakeData)
     .then(() => db.close())
