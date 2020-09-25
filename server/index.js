@@ -16,7 +16,6 @@ app.get('/api/products/reviews', (req, res) => {
 });
 
 app.get('/api/products/reviews/:id', (req, res) => {
-  console.log(req.params);
   Reviews.find({ product_id: req.params.id })
     .then((data) => res.send(data))
     .catch(() => res.sendStatus(410));
