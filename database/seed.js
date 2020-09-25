@@ -4,14 +4,15 @@ const Review = require('./Review.js');
 
 const FILE_COUNT_MAX = 500; // I know this is bad, but im being lazy
 
+
 const randScore = (max) => Math.round((Math.random() * max) * 100) / 100;
-const ranImage = (max) => {
+const ranImage = (max = 10) => {
   const result = [];
   const n = Math.floor(Math.random() * max);
   for (let i = 0; i < n; i += 1) {
     result.push({
       id: i,
-      url: `/imgs/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`,
+      url: `https://fec-pictures.s3-us-west-2.amazonaws.com/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`,
     });
   }
   return result;
@@ -47,7 +48,7 @@ const generateFakeReview = (productID, reviewID) => {
         title: faker.commerce.productDescription(),
         created_at: faker.date.past(),
         body: faker.lorem.paragraphs(),
-        images: ranImage(5),
+        images: ranImage(10),
         tags: randTag(),
         age: randAge(),
         height: randHeight(),
