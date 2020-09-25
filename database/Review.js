@@ -20,6 +20,7 @@ const reviewsSchema = new mongoose.Schema({
   tags: [String],
   height: String,
   weight: String,
+  fit: String,
   age: String,
   location: String,
   email: String,

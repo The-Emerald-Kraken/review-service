@@ -17,7 +17,7 @@ const ranImage = (max = 10) => {
   return result;
 };
 const randTag = () => {
-  const tags = ['Shirt', 'Pratical', '#streetWear', 'JinWasHere', 'Snoop'];
+  const tags = ['Shirt', 'Pratical', '#streetWear', 'JinSwagg', 'Snoop'];
   return tags.slice(Math.floor(Math.random() * 1), Math.floor(Math.random() * 5));
 };
 const randHeight = () => {
@@ -34,6 +34,10 @@ const randAge = () => {
   const age = ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 to 74', '75 or over'];
   return age[Math.floor(Math.random() * age.length)];
 };
+const randFit = () => {
+  const fit = ['Runs Small', 'True Fit', 'Runs Large'];
+  return fit[Math.floor(Math.random() * fit.length)];
+};
 
 const generateFakeReview = (productID, reviewID) => {
   const fakeReviews = [];
@@ -48,6 +52,7 @@ const generateFakeReview = (productID, reviewID) => {
         created_at: faker.date.past(),
         body: faker.lorem.paragraphs(),
         images: ranImage(10),
+        fit: randFit(),
         tags: randTag(),
         age: randAge(),
         height: randHeight(),
