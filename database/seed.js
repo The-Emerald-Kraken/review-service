@@ -72,7 +72,7 @@ const generateFakeReview = (productID, reviewID) => {
 let fakeData = [];
 
 const insertSampleReviews = (maxReview = 10) => {
-  for (let i = 0; i < 100; i += 1) {
+  for (let i = 1; i <= 100; i += 1) {
     fakeData = fakeData.concat((generateFakeReview(i, Math.floor(Math.random() * maxReview))));
   }
   Review.create(fakeData)
