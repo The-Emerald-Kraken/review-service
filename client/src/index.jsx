@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './components/App';
+// eslint-disable-next-line import/extensions
+import App from './components/App.jsx';
+// import Example from './hookExample.jsx';
 
-ReactDOM.render(<h1>React is Working my Friends</h1>, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));

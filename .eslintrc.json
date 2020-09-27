@@ -17,6 +17,8 @@
     "plugins": [
         "react"
     ],
+    "ignorePatterns": ["__tests__/*", "setupTests.js", "hookExample.jsx"],
     "rules": {
     }
+
 }

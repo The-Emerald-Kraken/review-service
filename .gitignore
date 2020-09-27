@@ -41,6 +41,7 @@ build/Release
 node_modules/
 jspm_packages/
 
+
 # TypeScript v1 declaration files
 typings/
 
@@ -105,3 +106,6 @@ dist
 
 #config files
 config.js
+
+#example file I do not want imported
+hookExample.jsx
