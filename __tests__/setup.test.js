@@ -30,6 +30,9 @@ describe('A test suite example using enzyme', function() {
     expect(render(<ReviewService />).text()).toEqual('Reviews');
   });
 
+});
+
+describe('A test suite for Review Container', () => {
   it('should render Review without throwing an error', function() {
     expect(shallow(<Review review = {sampleReview} />).contains(sampleReview.body)).toBe(true);
   });

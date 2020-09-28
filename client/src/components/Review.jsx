@@ -13,7 +13,8 @@ const Review = ({ review }) => (
     <p>{review.nickname}</p>
     <p>{review.rating}</p>
     <p>{review.body}</p>
-    {/* <img alt="'alt'" src={review.images[0].url} /> */}
+    <p>{ review.images[0] ? <img src={review.images[0].url} alt="description" /> : null }</p>
+
   </Wrapper>
 );
 
