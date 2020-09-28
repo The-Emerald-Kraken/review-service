@@ -34,7 +34,7 @@ class ReviewService extends React.Component {
 
   componentDidMount() {
     const { display } = this.state;
-    this.fetchData(display, 1);
+    this.fetchData(display, 2);
   }
 
   fetchData(requests, id) {

@@ -14,6 +14,11 @@ const FlexBox = styled.div`
   padding: 20px;
 
 `;
+const JessesProblem = styled.img`
+  width: 100px;
+  height: 100px;
+  background-image: url(${(props) => props.inputSrc});
+`;
 
 const Review = ({ review }) => (
   <FlexContainer>
@@ -26,7 +31,8 @@ const Review = ({ review }) => (
       <p>{review.rating}</p>
       <p>{review.title}</p>
       <p>{review.body}</p>
-      <p>{review.images[0] ? <img src={review.images[0].url} alt="description" /> : null}</p>
+      {review.images[0] ? <JessesProblem inputSrc={review.images[0].url} /> : null}
+
     </FlexBox>
     <FlexBox>
       <Star rating={review.rating} />
@@ -40,3 +46,7 @@ Review.propTypes = {
 };
 
 export default Review;
+
+// { <p>
+// {review.images[0] ? <img src={review.images[0].url} alt="description" /> : null}
+// </p> }
