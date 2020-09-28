@@ -40,7 +40,8 @@ class ReviewService extends React.Component {
   fetchData(requests, id) {
     axios.get(`/api/products/reviews/${id}`)
       .then(({ data }) => this.setState(
-        { reviews: data }));
+        { reviews: data },
+      ));
   }
 
   render() {

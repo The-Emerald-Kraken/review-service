@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { shallow, mount, render } from 'enzyme';
 import ReviewService from '../client/src/components/ReviewService';
-
+import Review from '../client/src/components/Review';
+import sampleReview from '../sampleData.js'
 
 describe('A suite example using jest only',  () => {
   it('renders without crashing', () => {
@@ -13,7 +14,7 @@ describe('A suite example using jest only',  () => {
 
 // to my understanding, shallow make it so I do not have to 'mount' it to a real page
 describe('A test suite example using enzyme', function() {
-  it('should render without throwing an error', function() {
+  it('should render ReviewService without throwing an error', function() {
     expect(shallow(<ReviewService />).contains('Reviews')).toBe(true);
   });
   // allows for me to know if a class is avalible to be selected
@@ -27,5 +28,9 @@ describe('A test suite example using enzyme', function() {
 
   it('should render to static HTML', function() {
     expect(render(<ReviewService />).text()).toEqual('Reviews');
+  });
+
+  it('should render Review without throwing an error', function() {
+    expect(shallow(<Review review = {sampleReview} />).contains(sampleReview.body)).toBe(true);
   });
 });
