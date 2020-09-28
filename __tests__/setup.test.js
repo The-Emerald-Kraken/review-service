@@ -21,7 +21,7 @@ describe('A test suite example using enzyme', function() {
     expect(shallow(<ReviewService />).is('.foo')).toBe(true);
   });
 
-  it('should mount in a full DOM', function() {
+  xit('should mount in a full DOM', function() {
     expect(mount(<ReviewService />).find('.foo').length).toBe(1);
   });
 
