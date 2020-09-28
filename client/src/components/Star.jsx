@@ -10,12 +10,14 @@ width: 65px;
 position: relative;
 text-shadow: 0 1px 0 #a2a2a2;
 &:before {
+
   content: '★★★★★';
   opacity: .6;
 }
 &:after{
+
   content: "★★★★★";
-  color: gold;
+  color: #3278AE;
   text-shadow: 0 1px 0 #ab5414;
   position: absolute;
   z-index: 1;
@@ -38,6 +40,7 @@ function Star({ rating }) {
 
   return (
     <StarStyle inputWidth={score} />
+
   );
 }
 
