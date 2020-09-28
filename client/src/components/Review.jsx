@@ -15,6 +15,8 @@ const FlexBox = styled.div`
 
 `;
 const JessesProblem = styled.img`
+  width: 150px;
+  height: 150px;
   background-image: url(${(props) => props.inputSrc});
 `;
 
