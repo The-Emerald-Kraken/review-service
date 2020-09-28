@@ -1,6 +1,8 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Star from './Star.jsx';
 
 const FlexContainer = styled.section`
 display: flex;
@@ -27,7 +29,7 @@ const Review = ({ review }) => (
       <p>{review.images[0] ? <img src={review.images[0].url} alt="description" /> : null}</p>
     </FlexBox>
     <FlexBox>
-      <p>{review.fit}</p>
+      <Star rating={review.rating} />
     </FlexBox>
 
   </FlexContainer>
