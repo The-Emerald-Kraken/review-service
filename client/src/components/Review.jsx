@@ -17,7 +17,12 @@ const FlexBox = styled.div`
 const JessesProblem = styled.img`
   width: 150px;
   height: 150px;
+  background-size: auto;
+  background-repeat: no-repeat;
   background-image: url(${(props) => props.inputSrc});
+  position: relative;
+  margin-right: 1.5px;
+  margin -left: 1.5px;
 `;
 
 const Review = ({ review }) => (
@@ -28,14 +33,14 @@ const Review = ({ review }) => (
       <p>{review.location}</p>
     </FlexBox>
     <FlexBox>
-      <p>{review.rating}</p>
-      <p>{review.title}</p>
+      <Star rating={review.rating} />
+      <p><b>{review.title}</b></p>
       <p>{review.body}</p>
-      {review.images[0] ? <JessesProblem inputSrc={review.images[0].url} /> : null}
+      {review.images.map((image) => <JessesProblem key={image.id} inputSrc={image.url} />)}
 
     </FlexBox>
     <FlexBox>
-      <Star rating={review.rating} />
+      Placeholder for Fit
     </FlexBox>
 
   </FlexContainer>

@@ -6,7 +6,7 @@ const StarStyle = styled.div`
 color: #c5c5c5;
 height: 25px;
 width: 65px;
-margin: 0 auto;
+
 position: relative;
 text-shadow: 0 1px 0 #a2a2a2;
 &:before {
