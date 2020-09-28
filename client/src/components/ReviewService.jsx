@@ -7,6 +7,7 @@ import Review from './Review.jsx';
 
 // Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
+margin-left: 2em;
 font-size: 1.25em;
 color: Black;
 font-family: Arial, Helvetica, sans-serif;
