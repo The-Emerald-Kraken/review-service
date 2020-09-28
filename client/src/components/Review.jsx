@@ -2,35 +2,35 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Wrapper = styled.section`
+const FlexContainer = styled.section`
 display: flex;
 font-family: Arial, Helvetica, sans-serif;
 border-bottom: groove;
 `;
-const FlexContainer = styled.div`
+const FlexBox = styled.div`
   margin: 10px;
   padding: 20px;
 
 `;
 
 const Review = ({ review }) => (
-  <Wrapper>
+  <FlexContainer>
 
-    <FlexContainer>
+    <FlexBox>
       <p>{review.nickname}</p>
       <p>{review.location}</p>
-    </FlexContainer>
-    <FlexContainer>
+    </FlexBox>
+    <FlexBox>
       <p>{review.rating}</p>
       <p>{review.title}</p>
       <p>{review.body}</p>
       <p>{review.images[0] ? <img src={review.images[0].url} alt="description" /> : null}</p>
-    </FlexContainer>
-    <FlexContainer>
+    </FlexBox>
+    <FlexBox>
       <p>{review.fit}</p>
-    </FlexContainer>
+    </FlexBox>
 
-  </Wrapper>
+  </FlexContainer>
 );
 
 Review.propTypes = {
