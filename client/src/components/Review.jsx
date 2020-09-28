@@ -6,7 +6,7 @@ import Star from './Star.jsx';
 
 const FlexContainer = styled.section`
 display: flex;
-font-family: Arial, Helvetica, sans-serif;
+font-family: Stuart,Georgia,serif;;
 border-bottom: groove;
 `;
 const FlexBox = styled.div`

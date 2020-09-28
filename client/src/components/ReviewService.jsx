@@ -10,7 +10,7 @@ const Title = styled.h1`
 margin-left: 2em;
 font-size: 1.25em;
 color: Black;
-font-family: Arial, Helvetica, sans-serif;
+font-family: Stuart,Georgia,serif;;
 `;
 
 // Create a Wrapper component that'll render a <section> tag with some styles

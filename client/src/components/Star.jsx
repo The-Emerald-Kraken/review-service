@@ -37,9 +37,7 @@ function Star({ rating }) {
   // });
 
   return (
-    <StarStyle inputWidth={score}>
-      {score}
-    </StarStyle>
+    <StarStyle inputWidth={score} />
   );
 }
 
