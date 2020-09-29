@@ -14,6 +14,7 @@ class ReviewService extends React.Component {
       display: 1,
       reviews: [],
       currentItem: 1,
+      show: true,
     };
     this.fetchData = this.fetchData.bind(this);
     this.patchData = this.patchData.bind(this);
@@ -26,9 +27,11 @@ class ReviewService extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { display, currentItem } = this.state;
-    if (display !== prevState.display || currentItem !== prevState.currentItem) {
-      this.fetchData(display, currentItem);
+    const { display, currentItem, show } = this.state;
+    if (show) {
+      if (display !== prevState.display || currentItem !== prevState.currentItem) {
+        this.fetchData(display, currentItem);
+      }
     }
   }
 
@@ -54,7 +57,7 @@ class ReviewService extends React.Component {
   }
 
   render() {
-    const { reviews, display } = this.state;
+    const { reviews, display, show } = this.state;
     return (
       <Wrapper>
         <Title>Reviews</Title>
@@ -67,10 +70,12 @@ class ReviewService extends React.Component {
             />
           ))}
         </ul>
-        <LoadMore
-          changeDisplay={this.changeDisplay}
-          currentDisplay={display}
-        />
+        {show ? (
+          <LoadMore
+            changeDisplay={this.changeDisplay}
+            currentDisplay={display}
+          />
+        ) : null}
       </Wrapper>
     );
   }
@@ -80,7 +85,7 @@ const Title = styled.h1`
 margin-left: 2em;
 font-size: 1.25em;
 color: Black;
-font-family: Stuart,Georgia,serif;;
+font-family: Stuart,Georgia,serif;
 `;
 
 const Wrapper = styled.section`
