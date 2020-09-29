@@ -10,21 +10,21 @@ class ReviewService extends React.Component {
     super(props);
 
     this.state = {
-      display: 10,
+      display: 5,
       reviews: [],
-      currentPage: 2,
+      currentItem: 2,
     };
     this.fetchData = this.fetchData.bind(this);
     this.patchData = this.patchData.bind(this);
   }
 
   componentDidMount() {
-    const { display, currentPage } = this.state;
-    this.fetchData(display, currentPage);
+    const { display, currentItem } = this.state;
+    this.fetchData(display, currentItem);
   }
 
   fetchData(requests, id) {
-    axios.get(`/api/products/reviews/${id}`)
+    axios.get(`/api/products/reviews/${id}/${requests}`)
       .then(({ data }) => this.setState(
         { reviews: data },
       ))
