@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 /* eslint-disable import/extensions */
 import React from 'react';
 import styled from 'styled-components';
@@ -5,8 +6,9 @@ import moment from 'moment';
 import PropTypes from 'prop-types';
 import Star from './Star.jsx';
 import Fit from './Fit.jsx';
+import Helpful from './Helpful.jsx';
 
-const Review = ({ review }) => (
+const Review = ({ review, patchData }) => (
   <FlexContainer>
 
     <FlexBoxL>
@@ -40,7 +42,11 @@ const Review = ({ review }) => (
         </Wrapper>
       </p>
       {review.images.map((image) => <JessesProblem key={image.id} inputSrc={image.url} />)}
-
+      <Helpful
+        helpful={review.helpful}
+        idd={review._id}
+        patchData={patchData}
+      />
     </FlexBoxC>
     <FlexBoxR>
       <Fit rating={review.fit} />
@@ -51,6 +57,7 @@ const Review = ({ review }) => (
 
 Review.propTypes = {
   review: PropTypes.shape().isRequired,
+  patchData: PropTypes.func.isRequired,
 };
 
 const FlexContainer = styled.section`

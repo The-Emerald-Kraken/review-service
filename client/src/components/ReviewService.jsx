@@ -12,13 +12,15 @@ class ReviewService extends React.Component {
     this.state = {
       display: 10,
       reviews: [],
+      currentPage: 2,
     };
     this.fetchData = this.fetchData.bind(this);
+    this.patchData = this.patchData.bind(this);
   }
 
   componentDidMount() {
-    const { display } = this.state;
-    this.fetchData(display, 2);
+    const { display, currentPage } = this.state;
+    this.fetchData(display, currentPage);
   }
 
   fetchData(requests, id) {
@@ -27,6 +29,13 @@ class ReviewService extends React.Component {
         { reviews: data },
       ))
       .catch((err) => (err));
+  }
+
+  patchData(helpful, id) {
+    const { display, currentPage } = this.state;
+    axios.patch(`/api/products/reviews/${helpful}/${id}`)
+      .then(() => this.fetchData(display, currentPage))
+      .catch((err) => err);
   }
 
   render() {
@@ -39,6 +48,7 @@ class ReviewService extends React.Component {
             <Review
               key={review._id}
               review={review}
+              patchData={this.patchData}
             />
           ))}
         </ul>
