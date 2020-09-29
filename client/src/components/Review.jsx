@@ -4,15 +4,16 @@ import styled from 'styled-components';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import Star from './Star.jsx';
+import Fit from './Fit.jsx';
 
 const Review = ({ review }) => (
   <FlexContainer>
 
-    <FlexBox>
-      <p>{review.nickname}</p>
+    <FlexBoxL>
+      <p><b>{review.nickname}</b></p>
       <p>{review.location}</p>
-    </FlexBox>
-    <FlexBox>
+    </FlexBoxL>
+    <FlexBoxC>
 
       <Wrapper>
         <Star rating={review.rating} />
@@ -40,10 +41,10 @@ const Review = ({ review }) => (
       </p>
       {review.images.map((image) => <JessesProblem key={image.id} inputSrc={image.url} />)}
 
-    </FlexBox>
-    <FlexBox>
-      Placeholder for Fit
-    </FlexBox>
+    </FlexBoxC>
+    <FlexBoxR>
+      <Fit rating={review.fit} />
+    </FlexBoxR>
 
   </FlexContainer>
 );
@@ -58,10 +59,22 @@ font-family: Stuart,Georgia,serif;
 font-size: 16px;
 border-bottom: groove;
 `;
-const FlexBox = styled.div`
-  margin: 10px;
+const FlexBoxL = styled.div`
+  margin: 20px;
   padding: 20px;
 
+`;
+const FlexBoxC = styled.div`
+  margin: 20px;
+  margin-right: 70px;
+  margin-left: 70px;
+  padding: 20px;
+
+`;
+const FlexBoxR = styled.div`
+margin: 10px;
+padding: 20px;
+width: 1000px
 `;
 const JessesProblem = styled.img`
   width: 150px;

@@ -11,7 +11,7 @@ const sampleReview = {
     id: 1,
     url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg'
   }],
-  fit: 'True Fit',
+  fit: '0.5',
   tags: ['Shirt', 'Pratical', '#streetWear'],
   age: '18 to 24',
   height: 'Shorter than 5\'',
