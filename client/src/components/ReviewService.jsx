@@ -5,22 +5,6 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Review from './Review.jsx';
 
-// Create a Title component that'll render an <h1> tag with some styles
-const Title = styled.h1`
-margin-left: 2em;
-font-size: 1.25em;
-color: Black;
-font-family: Stuart,Georgia,serif;;
-`;
-
-// Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section`
-padding: 4em;
-background: whitesmoke;
-width: 50%;
-margin: auto
-`;
-
 class ReviewService extends React.Component {
   constructor(props) {
     super(props);
@@ -41,7 +25,8 @@ class ReviewService extends React.Component {
     axios.get(`/api/products/reviews/${id}`)
       .then(({ data }) => this.setState(
         { reviews: data },
-      ));
+      ))
+      .catch((err) => (err));
   }
 
   render() {
@@ -61,5 +46,19 @@ class ReviewService extends React.Component {
     );
   }
 }
+
+const Title = styled.h1`
+margin-left: 2em;
+font-size: 1.25em;
+color: Black;
+font-family: Stuart,Georgia,serif;;
+`;
+
+const Wrapper = styled.section`
+padding: 4em;
+background: whitesmoke;
+width: 50%;
+margin: auto
+`;
 
 export default ReviewService;
