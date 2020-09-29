@@ -4,23 +4,38 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Review from './Review.jsx';
+import LoadMore from './LoadMore.jsx';
 
 class ReviewService extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      display: 5,
+      display: 1,
       reviews: [],
-      currentItem: 2,
+      currentItem: 1,
     };
     this.fetchData = this.fetchData.bind(this);
     this.patchData = this.patchData.bind(this);
+    this.changeDisplay = this.changeDisplay.bind(this);
   }
 
   componentDidMount() {
     const { display, currentItem } = this.state;
     this.fetchData(display, currentItem);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const { display, currentItem } = this.state;
+    if (display !== prevState.display || currentItem !== prevState.currentItem) {
+      this.fetchData(display, currentItem);
+    }
+  }
+
+  changeDisplay(n) {
+    this.setState({
+      display: n,
+    });
   }
 
   fetchData(requests, id) {
@@ -39,7 +54,7 @@ class ReviewService extends React.Component {
   }
 
   render() {
-    const { reviews } = this.state;
+    const { reviews, display } = this.state;
     return (
       <Wrapper>
         <Title>Reviews</Title>
@@ -52,6 +67,10 @@ class ReviewService extends React.Component {
             />
           ))}
         </ul>
+        <LoadMore
+          changeDisplay={this.changeDisplay}
+          currentDisplay={display}
+        />
       </Wrapper>
     );
   }
