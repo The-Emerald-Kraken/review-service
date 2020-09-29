@@ -36,7 +36,7 @@ const randAge = () => {
   return age[Math.floor(Math.random() * age.length)];
 };
 const randFit = () => {
-  const fit = ['Runs Small', 'True Fit', 'Runs Large'];
+  const fit = [0, 0.5, 1];
   return fit[Math.floor(Math.random() * fit.length)];
 };
 

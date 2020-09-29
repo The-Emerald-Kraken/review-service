@@ -31,7 +31,26 @@ app.post('/api/products/reviews', (req, res) => {
 app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
   // TODO - Later
   // use req.params.id and req.params.helpful
-  res.sendStatus(501);
+  const filter = { _id: req.params.id };
+  const help = req.params.helpful;
+  Reviews.find(filter)
+    .then((data) => {
+      let x = [];
+
+      if (help === 'yes') {
+        x = [(1 + data[0].helpful[help]), data[0].helpful.no];
+      } else {
+        x = [data[0].helpful.yes, (1 + data[0].helpful[help])];
+      }
+      return x;
+    })
+    .then((newValue) => ({ helpful: { yes: newValue[0], no: newValue[1] } }))
+    .then((update) => (Reviews.findOneAndUpdate(filter, update)))
+    .then(() => Reviews.find(filter))
+    .then((data) => res.send(data))
+    .catch(() => res.sendStatus(503));
+
+  // res.sendStatus(501);
 });
 
 const PORT = 3005;
