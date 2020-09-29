@@ -10,7 +10,7 @@ function Fit({ rating }) {
 
       <Title>Overall Fit Rating</Title>
       <Slider>
-      <ValueBox />
+        <ValueBox inputWidth={score} />
         <Divider />
 
       </Slider>
@@ -20,6 +20,10 @@ function Fit({ rating }) {
     </Wrapper>
   );
 }
+
+Fit.propTypes = {
+  rating: PropTypes.string.isRequired,
+};
 
 const Slider = styled.div`
   position: relative;
@@ -34,9 +38,16 @@ const Slider = styled.div`
 const ValueBox = styled.div`
   position: absloute;
   background-color: #2b6692;
-  height: 10px;
-  width: 10px;
-
+  height: 12px;
+  width: 12px;
+  top: 0;
+  left: -6px;
+  display: block;
+  margin-top: -2px;
+  z-index: 2;
+  margin-left: ${(props) => props.inputWidth || '0'}%;
+  box-shadow: inset 1px 0 0 rgba(255,255,255,.5),inset -1px 0 0 rgba(0,0,0,.25);
+  background-image: -webkit-linear-gradient(top,rgba(255,255,255,.3) 0,rgba(255,255,255,0) 100%)
 `;
 const SmallTag = styled.span`
   font-size: 12px;
@@ -68,6 +79,8 @@ const Divider = styled.span`
   height: 12px;
   border-right: 1px solid #666;
   margin: -2px 0 0 -1px;
+  opacity: 0.7;
+  z-index: 0;
 `;
 
 export default Fit;
