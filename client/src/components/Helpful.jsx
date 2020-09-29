@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 
 function Helpful({ helpful, idd, patchData }) {
   const [yes, setYes] = useState(helpful.yes);
