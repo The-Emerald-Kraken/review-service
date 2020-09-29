@@ -6,7 +6,7 @@ const Review = require('./Review.js');
 const FILE_COUNT_MAX = 500; // I know this is bad, but im being lazy
 
 const randScore = (max) => Math.round((Math.random() * max));
-const ranImage = (max = 10) => {
+const ranImage = (max = 5) => {
   const result = [];
   const n = Math.floor(Math.random() * max);
   for (let i = 0; i < n; i += 1) {
@@ -52,7 +52,7 @@ const generateFakeReview = (productID, reviewID) => {
         title: faker.commerce.productDescription(),
         created_at: faker.date.past(),
         body: faker.lorem.paragraphs(),
-        images: ranImage(10),
+        images: ranImage(5),
         fit: randFit(),
         tags: randTag(),
         age: randAge(),
