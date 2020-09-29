@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const faker = require('faker');
 const db = require('./index.js');
 const Review = require('./Review.js');
