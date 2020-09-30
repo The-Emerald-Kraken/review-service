@@ -22,37 +22,47 @@ const ReviewStatsContainer = ({ avgReview }) => (
             </tr>
             <tr>
               <Td3>
-                5 ★ <StarBar onClick={() => console.log('Filter 5')}>
+                5 ★
+                <StarBar onClick={() => console.log('Filter 5')}>
                   <FillBar status={(avgReview[5] / avgReview.count) * 100} />
-                </StarBar> {avgReview[5]}
+                </StarBar>
+                {avgReview[5]}
               </Td3>
             </tr>
             <tr>
               <Td3>
-                4 ★ <StarBar onClick={() => console.log('Filter 4')}>
+                4 ★
+                <StarBar onClick={() => console.log('Filter 4')}>
                   <FillBar status={(avgReview[4] / avgReview.count) * 100} />
-                </StarBar> {avgReview[4]}
+                </StarBar>
+                {avgReview[4]}
               </Td3>
             </tr>
             <tr>
               <Td3>
-                3 ★ <StarBar onClick={() => console.log('Filter 3')}>
+                3 ★
+                <StarBar onClick={() => console.log('Filter 3')}>
                   <FillBar status={(avgReview[3] / avgReview.count) * 100} />
-                </StarBar> {avgReview[3]}
+                </StarBar>
+                {avgReview[3]}
               </Td3>
             </tr>
             <tr>
               <Td3>
-                2 ★ <StarBar onClick={() => console.log('Filter 2')}>
+                2 ★
+                <StarBar onClick={() => console.log('Filter 2')}>
                   <FillBar status={(avgReview[2] / avgReview.count) * 100} />
-                </StarBar> {avgReview[2]}
+                </StarBar>
+                {avgReview[2]}
               </Td3>
             </tr>
             <tr>
               <Td3>
-                1 ★ <StarBar onClick={() => console.log('Filter 1')}>
+                1 ★
+                <StarBar onClick={() => console.log('Filter 1')}>
                   <FillBar status={(avgReview[1] / avgReview.count) * 100} />
-                </StarBar> {avgReview[1]}
+                </StarBar>
+                {avgReview[1]}
               </Td3>
             </tr>
           </thead>
@@ -88,6 +98,8 @@ ReviewStatsContainer.propTypes = {
 const StarBar = styled.div`
 position: relative;
 display: inline-block;
+margin-left: 5px;
+margin-right: 30px;
 width: 62%;
 height: 8px;
 border: 1px solid #ccc;
