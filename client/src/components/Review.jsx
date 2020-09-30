@@ -10,18 +10,18 @@ import Helpful from './Helpful.jsx';
 
 const Review = ({ review, patchData }) => (
   <FlexContainer>
-
     <FlexBoxL>
       <p><b>{review.nickname}</b></p>
       <p>{review.location}</p>
     </FlexBoxL>
     <FlexBoxC>
-
       <Wrapper>
         <Star rating={review.rating} />
         {moment(review.createdAt).fromNow()}
       </Wrapper>
+
       <Title>{review.title}</Title>
+
       <p>{review.body}</p>
       <p>
         <b>Height </b>
@@ -68,6 +68,7 @@ border-bottom: groove;
 `;
 const FlexBoxL = styled.div`
   margin: 20px;
+  margin-top: 0;
   padding: 20px;
 
 `;
@@ -75,13 +76,15 @@ const FlexBoxC = styled.div`
   margin: 20px;
   margin-right: 70px;
   margin-left: 70px;
+  margin-top: 0;
   padding: 20px;
 
 `;
 const FlexBoxR = styled.div`
+padding-top: 300px;
 margin: 10px;
 padding: 20px;
-width: 1000px
+padding-top: 90px;
 `;
 const JessesProblem = styled.img`
   width: 150px;
