@@ -41,80 +41,75 @@ exports[`A suite example using Snapshot renders Reviews Services correctly 1`] =
               <td
                 className="sc-hHEjAm jJbWbE"
               >
-                5 ★ 
+                5 ★
                 <div
-                  className="sc-hBMVcZ fEgBi"
+                  className="sc-hBMVcZ gGMrHL"
                   onClick={[Function]}
                 >
                   <div
                     className="sc-fnVYJo deJmWL"
                   />
                 </div>
-                 
               </td>
             </tr>
             <tr>
               <td
                 className="sc-hHEjAm jJbWbE"
               >
-                4 ★ 
+                4 ★
                 <div
-                  className="sc-hBMVcZ fEgBi"
+                  className="sc-hBMVcZ gGMrHL"
                   onClick={[Function]}
                 >
                   <div
                     className="sc-fnVYJo deJmWL"
                   />
                 </div>
-                 
               </td>
             </tr>
             <tr>
               <td
                 className="sc-hHEjAm jJbWbE"
               >
-                3 ★ 
+                3 ★
                 <div
-                  className="sc-hBMVcZ fEgBi"
+                  className="sc-hBMVcZ gGMrHL"
                   onClick={[Function]}
                 >
                   <div
                     className="sc-fnVYJo deJmWL"
                   />
                 </div>
-                 
               </td>
             </tr>
             <tr>
               <td
                 className="sc-hHEjAm jJbWbE"
               >
-                2 ★ 
+                2 ★
                 <div
-                  className="sc-hBMVcZ fEgBi"
+                  className="sc-hBMVcZ gGMrHL"
                   onClick={[Function]}
                 >
                   <div
                     className="sc-fnVYJo deJmWL"
                   />
                 </div>
-                 
               </td>
             </tr>
             <tr>
               <td
                 className="sc-hHEjAm jJbWbE"
               >
-                1 ★ 
+                1 ★
                 <div
-                  className="sc-hBMVcZ fEgBi"
+                  className="sc-hBMVcZ gGMrHL"
                   onClick={[Function]}
                 >
                   <div
                     className="sc-fnVYJo deJmWL"
                   />
                 </div>
-                 
               </td>
             </tr>
           </thead>
