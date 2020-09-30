@@ -9,33 +9,31 @@ import LoadMore from './LoadMore.jsx';
 function ReviewService() {
   const [display, setDisplay] = useState(1);
   const [reviews, setReviews] = useState([]);
-  const [currentItem, setCurrentItem] = useState(1);
-  const [show, setShow] = useState(true);
+  const [currentItem] = useState(1);
+  const [show] = useState(true);
 
   // did comopoent mount replacement
 
-  const useFetchData = (requests, id) => {
+  const FetchData = (requests, id) => {
     axios.get(`/api/products/reviews/${id}/${requests}`)
-
       .then(({ data }) => setReviews(data))
-
       .catch((err) => (err));
   };
 
-  const usePatchData = (selected, id) => {
+  const PatchData = (selected, id) => {
     axios.patch(`/api/products/reviews/${selected}/${id}`)
-      .then(() => useFetchData(display, currentItem))
+      .then(() => FetchData(display, currentItem))
       .catch((err) => err);
   };
 
   useEffect(() => {
-    useFetchData(display, currentItem);
+    FetchData(display, currentItem);
   });
 
   // did compoenet update replacement
   useEffect(() => {
     if (show) {
-      useFetchData(display, currentItem);
+      FetchData(display, currentItem);
     }
   }, [display || currentItem]);
 
@@ -47,7 +45,7 @@ function ReviewService() {
           <Review
             key={review._id}
             review={review}
-            patchData={usePatchData}
+            patchData={PatchData}
           />
         ))}
       </ul>
