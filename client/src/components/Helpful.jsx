@@ -17,14 +17,14 @@ function Helpful({ helpful, idd, patchData }) {
         setYes(yes + 1);
       }}
       >
-        Yes {yes}
+        Yes · {yes}
       </HelpfulButton>
       <HelpfulButton onClick={() => {
         patchData('no', id);
         setNo(no + 1);
       }}
       >
-        No {no}
+        No · {no}
       </HelpfulButton>
       <HelpfulButton>Report as inappropriate</HelpfulButton>
     </span>
@@ -38,6 +38,17 @@ Helpful.propTypes = {
 };
 
 const HelpfulButton = styled.button`
+  color: #292929;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+  margin-right: -5px;
+  margin-left: 10px;
+  font-weight: 400;
+
+  text-decoration: none;
+
+  cursor: pointer;
   background-color: white;
   border: 1px solid grey;
   border-radius: 2px;
