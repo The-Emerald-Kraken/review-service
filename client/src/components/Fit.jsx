@@ -12,7 +12,6 @@ function Fit({ rating }) {
       <Slider>
         <ValueBox inputWidth={score} />
         <Divider />
-
       </Slider>
 
       <SmallTag>Runs Small</SmallTag>

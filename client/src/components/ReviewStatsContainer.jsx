@@ -42,7 +42,7 @@ ReviewStatsContainer.propTypes = {
 };
 
 const FlexContainer = styled.section`
-  box-sizing: content-box;
+  width: 1300px;
   display: flex;
   font-family: Stuart,Georgia,serif;
   font-size: 16px;
@@ -72,6 +72,7 @@ const FlexBoxR = styled.div`
 
 const Wrapper = styled.div`
 display: block;
+width: 1300px;;
 `;
 const Title = styled.h1`
 
