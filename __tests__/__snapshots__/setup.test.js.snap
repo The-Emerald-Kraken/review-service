@@ -212,38 +212,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
 </section>
 `;
 
-exports[`A suite example using Snapshot renders correctly Star 1`] = `
-<div
-  className="sc-bdnylx ddxNlS"
-/>
-`;
-
 exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
-<div
-  className="sc-bdnylx ddxNlS"
-/>
-`;
-
-exports[`A suite example using jest only renders Reviews Services correctly 1`] = `
-<section
-  className="sc-fnVYJo glkBMy"
->
-  <h1
-    className="sc-hBMVcZ jkJDfe"
-  >
-    Reviews
-  </h1>
-  <ul />
-  <button
-    className="sc-ksluoS djYkNW"
-    onClick={[Function]}
-  >
-    Load More
-  </button>
-</section>
-`;
-
-exports[`A test suite for Review Container renders correctly Star 1`] = `
 <div
   className="sc-bdnylx ddxNlS"
 />
