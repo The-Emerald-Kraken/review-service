@@ -5,28 +5,22 @@ import PropTypes from 'prop-types';
 function Helpful({ helpful, idd, patchData }) {
   const [yes, setYes] = useState(helpful.yes);
   const [no, setNo] = useState(helpful.no);
-  const [selected, setSelected] = useState(null);
+  // const [selected, setSelected] = useState(null);
   const [id] = useState(idd);
-
-  useEffect(() => {
-    if (selected !== null) {
-      patchData(selected, id);
-    }
-  }, [selected]);
 
   return (
     <span>
       Helpful?
       <HelpfulButton onClick={() => {
+        patchData('yes', id);
         setYes(yes + 1);
-        setSelected('yes');
       }}
       >
         Yes {yes}
       </HelpfulButton>
       <HelpfulButton onClick={() => {
+        patchData('no', id);
         setNo(no + 1);
-        setSelected('no');
       }}
       >
         No {no}
