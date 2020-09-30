@@ -2,13 +2,88 @@
 
 exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
 <section
-  className="sc-fnVYJo glkBMy"
+  className="sc-hHEjAm iQGrgz"
 >
-  <h1
-    className="sc-hBMVcZ jkJDfe"
+  <div
+    className="sc-bkbjAj hiJEEp"
   >
-    Reviews
-  </h1>
+    <h1
+      className="sc-iemXMA eilSNk"
+    >
+      Reviews
+    </h1>
+    <button
+      className="sc-dIvqjp bWSmkT"
+    >
+      Write a review
+    </button>
+    <section
+      className="sc-hBMVcZ jQxBC"
+    >
+      <div
+        className="sc-fFSRdu kUdRup"
+      >
+        <p>
+          avgReview.rating
+        </p>
+      </div>
+      <div
+        className="sc-fnVYJo hcCIGy"
+      >
+        <table>
+          <caption>
+            Average Customer Ratings
+          </caption>
+          <tr>
+            <td>
+              Overall
+            </td>
+            <td>
+              <div
+                className="sc-bdnylx eTIvCG"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Overall Fit Rating
+            </td>
+            <td>
+              <div
+                className="sc-jSFkmK lnDnEi"
+              >
+                <h2
+                  className="sc-gKAblj kRxsFL"
+                >
+                  Overall Fit Rating
+                </h2>
+                <div
+                  className="sc-gtssRu dWODPw"
+                >
+                  <div
+                    className="sc-dlnjPT eUUHfX"
+                  />
+                  <span
+                    className="sc-iCoHVE giZbGQ"
+                  />
+                </div>
+                <span
+                  className="sc-hKFyIo fNFVfG"
+                >
+                  Runs Small
+                </span>
+                <span
+                  className="sc-eCApGN dNfuhr"
+                >
+                  Runs Large
+                </span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+  </div>
   <ul />
   <button
     className="sc-ksluoS djYkNW"
@@ -90,7 +165,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
   className="sc-pNWxx bezsMZ"
 >
   <div
-    className="sc-jrsJCI cRFoNp"
+    className="sc-jrsJCI bhkHCy"
   >
     <p>
       <b>
@@ -102,7 +177,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     </p>
   </div>
   <div
-    className="sc-kEqYlL eKrUov"
+    className="sc-kEqYlL bDBWiU"
   >
     <span
       className="sc-bqGHjH gBkTZR"
@@ -177,7 +252,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     </span>
   </div>
   <div
-    className="sc-iqAbSa iGmZzl"
+    className="sc-iqAbSa gSMIyk"
   >
     <div
       className="sc-jSFkmK lnDnEi"
