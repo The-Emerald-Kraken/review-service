@@ -9,9 +9,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../public')));
 
-app.get('/api/products/reviews', (req, res) => {
-  Reviews.find({})
-    .then((data) => res.send(data))
+app.get('/api/products/reviews/avg/:item', (req, res) => {
+  Reviews.find({ product_id: req.params.item })
+    .then((data) => {
+      const avg = [0, 0];
+      data.forEach((doc) => {
+        avg[0] += doc.rating;
+        avg[1] += Number(doc.fit);
+      });
+      avg[0] /= data.length;
+      avg[1] /= data.length;
+      res.send(avg);
+    })
     .catch(() => res.sendStatus(503));
 });
 
