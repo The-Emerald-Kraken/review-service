@@ -49,6 +49,7 @@ const Review = ({ review, patchData }) => (
       />
     </FlexBoxC>
     <FlexBoxR>
+      <Title2>Overall Fit Rating</Title2>
       <Fit rating={review.fit} />
     </FlexBoxR>
 
@@ -104,6 +105,15 @@ const Title = styled.h2`
     font-style: normal;
     font-weight: 700;
     `;
+
+const Title2 = styled.h2`
+  display: block!important;
+  margin-bottom: .5em!important;
+  font-size: 15px;
+  line-height: 20px;
+  font-style: normal;
+  font-weight: 400;
+`;
 const Wrapper = styled.span`
   display:inline-block;
 `;

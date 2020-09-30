@@ -12,13 +12,13 @@ app.use(express.static(path.join(__dirname, '/../public')));
 app.get('/api/products/reviews/avg/:item', (req, res) => {
   Reviews.find({ product_id: req.params.item })
     .then((data) => {
-      const avg = [0, 0];
+      const avg = {rating: 0, fit: 0};
       data.forEach((doc) => {
-        avg[0] += doc.rating;
-        avg[1] += Number(doc.fit);
+        avg.rating += doc.rating;
+        avg.fit += Number(doc.fit);
       });
-      avg[0] /= data.length;
-      avg[1] /= data.length;
+      avg.rating /= data.length;
+      avg.fit /= data.length;
       res.send(avg);
     })
     .catch(() => res.sendStatus(503));

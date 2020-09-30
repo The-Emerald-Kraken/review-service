@@ -21,14 +21,17 @@ const ReviewStatsContainer = ({ avgReview }) => (
 
         <table>
           <caption>Average Customer Ratings</caption>
-          <tr>
-            <td>Overall</td>
-            <td><Star rating={avgReview.rating} /></td>
-          </tr>
-          <tr>
-            <td>Overall Fit Rating</td>
-            <td><Fit rating={avgReview.fit} /></td>
-          </tr>
+          <thead>
+            <tr>
+              <td>Overall</td>
+              <td><Star rating={avgReview.rating} /></td>
+              <td>{avgReview.rating}</td>
+            </tr>
+            <tr>
+              <td>Overall Fit Rating</td>
+              <td><Fit rating={String(avgReview.fit)} /></td>
+            </tr>
+          </thead>
         </table>
 
       </FlexBoxL>
