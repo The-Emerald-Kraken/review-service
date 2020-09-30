@@ -1,86 +1,64 @@
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable import/extensions */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
 
-class ReviewService extends React.Component {
-  constructor(props) {
-    super(props);
+function ReviewService() {
+  const [display, setDisplay] = useState(1);
+  const [reviews, setReviews] = useState([]);
+  const [currentItem, setCurrentItem] = useState(1);
+  const [show, setShow] = useState(true);
 
-    this.state = {
-      display: 1,
-      reviews: [],
-      currentItem: 1,
-      show: true,
-    };
-    this.fetchData = this.fetchData.bind(this);
-    this.patchData = this.patchData.bind(this);
-    this.changeDisplay = this.changeDisplay.bind(this);
-  }
+  // did comopoent mount replacement
 
-  componentDidMount() {
-    const { display, currentItem } = this.state;
-    this.fetchData(display, currentItem);
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const {
-      display, currentItem, show,
-    } = this.state;
-    if (show) {
-      if (display !== prevState.display || currentItem !== prevState.currentItem) {
-        this.fetchData(display, currentItem);
-      }
-    }
-  }
-
-  changeDisplay(n) {
-    this.setState({
-      display: n,
-    });
-  }
-
-  fetchData(requests, id) {
+  const useFetchData = (requests, id) => {
     axios.get(`/api/products/reviews/${id}/${requests}`)
-      .then(({ data }) => this.setState(
-        { reviews: data },
-      ))
+
+      .then(({ data }) => setReviews(data))
+
       .catch((err) => (err));
-  }
+  };
 
-  patchData(selected, id) {
-    const { display, currentItem } = this.state;
+  const usePatchData = (selected, id) => {
     axios.patch(`/api/products/reviews/${selected}/${id}`)
-      .then(() => this.fetchData(display, currentItem))
+      .then(() => useFetchData(display, currentItem))
       .catch((err) => err);
-  }
+  };
 
-  render() {
-    const { reviews, display, show } = this.state;
-    return (
-      <Wrapper>
-        <Title>Reviews</Title>
-        <ul>
-          {reviews.map((review) => (
-            <Review
-              key={review._id}
-              review={review}
-              patchData={this.patchData}
-            />
-          ))}
-        </ul>
-        {show ? (
-          <LoadMore
-            changeDisplay={this.changeDisplay}
-            currentDisplay={display}
+  useEffect(() => {
+    useFetchData(display, currentItem);
+  });
+
+  // did compoenet update replacement
+  useEffect(() => {
+    if (show) {
+      useFetchData(display, currentItem);
+    }
+  }, [display || currentItem]);
+
+  return (
+    <Wrapper>
+      <Title>Reviews</Title>
+      <ul>
+        {reviews.map((review) => (
+          <Review
+            key={review._id}
+            review={review}
+            patchData={usePatchData}
           />
-        ) : null}
-      </Wrapper>
-    );
-  }
+        ))}
+      </ul>
+      {show ? (
+        <LoadMore
+          changeDisplay={setDisplay}
+          currentDisplay={display}
+        />
+      ) : null}
+    </Wrapper>
+  );
 }
 
 const Title = styled.h1`
