@@ -1,5 +1,5 @@
 const sampleReview = {
-
+  _id: '1',
   product_id: 1,
   review_id: 1,
   nickname: 'theGreekest',
@@ -8,7 +8,7 @@ const sampleReview = {
   createdAt: '2017-11-14T05:57:26.037Z',
   body: 'GreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreek',
   images: [{
-    id: 1,
+    id: '1',
     url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg'
   }],
   fit: '0.5',
@@ -19,8 +19,8 @@ const sampleReview = {
   location: 'New York',
   email: 'fake@gmail.com',
   helpful: {
-    yes: 1,
-    no: 2,
+    yes: '1',
+    no: '2',
   },
 
 }
