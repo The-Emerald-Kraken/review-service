@@ -15,8 +15,8 @@ app.get('/api/products/reviews', (req, res) => {
     .catch(() => res.sendStatus(503));
 });
 
-app.get('/api/products/reviews/:id', (req, res) => {
-  Reviews.find({ product_id: req.params.id })
+app.get('/api/products/reviews/:id/:count', (req, res) => {
+  Reviews.find({ product_id: req.params.id }).limit(Number(req.params.count))
     .then((data) => res.send(data))
     .catch(() => res.sendStatus(410));
 });
@@ -31,6 +31,7 @@ app.post('/api/products/reviews', (req, res) => {
 app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
   const filter = { _id: req.params.id };
   const help = req.params.helpful;
+  console.log(help);
   Reviews.find(filter)
     .then((data) => {
       if (help === 'yes') {

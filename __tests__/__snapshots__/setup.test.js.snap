@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
+<section
+  className="sc-fnVYJo glkBMy"
+>
+  <h1
+    className="sc-hBMVcZ jkJDfe"
+  >
+    Reviews
+  </h1>
+  <ul />
+  <button
+    className="sc-ksluoS djYkNW"
+    onClick={[Function]}
+  >
+    Load More
+  </button>
+</section>
+`;
+
+exports[`A suite example using Snapshot renders correctly Fit Display Component 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <h2
+    className="sc-gKAblj kRxsFL"
+  >
+    Overall Fit Rating
+  </h2>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT dUUXmW"
+    />
+    <span
+      className="sc-iCoHVE giZbGQ"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
+`;
+
+exports[`A suite example using Snapshot renders correctly Helpful Button Component 1`] = `
+<span>
+  Helpful?
+  <button
+    className="sc-fujyUd ffmWaa"
+    onClick={[Function]}
+  >
+    Yes 
+    1
+  </button>
+  <button
+    className="sc-fujyUd ffmWaa"
+    onClick={[Function]}
+  >
+    No 
+    2
+  </button>
+  <button
+    className="sc-fujyUd ffmWaa"
+  >
+    Report as inappropriate
+  </button>
+</span>
+`;
+
+exports[`A suite example using Snapshot renders correctly Load More Button Component 1`] = `
+<button
+  className="sc-ksluoS djYkNW"
+  onClick={[Function]}
+>
+  Load More
+</button>
+`;
+
+exports[`A suite example using Snapshot renders correctly Review Display Component 1`] = `
+<section
+  className="sc-pNWxx bezsMZ"
+>
+  <div
+    className="sc-jrsJCI cRFoNp"
+  >
+    <p>
+      <b>
+        theGreekest
+      </b>
+    </p>
+    <p>
+      New York
+    </p>
+  </div>
+  <div
+    className="sc-kEqYlL eKrUov"
+  >
+    <span
+      className="sc-bqGHjH gBkTZR"
+    >
+      <div
+        className="sc-bdnylx ddxNlS"
+      />
+      3 years ago
+    </span>
+    <h2
+      className="sc-dIsAE hZCqsA"
+    >
+      The Greeks Strike Again
+    </h2>
+    <p>
+      GreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreek
+    </p>
+    <p>
+      <b>
+        Height 
+      </b>
+      Shorter than 5'
+    </p>
+    <p>
+      <b>
+        Weight 
+      </b>
+      375 - 400 lbs
+    </p>
+    <p>
+      <b>
+        Age 
+      </b>
+      18 to 24
+    </p>
+    <p>
+      <b>
+        Primary Usage 
+      </b>
+      <span
+        className="sc-bqGHjH gBkTZR"
+      >
+        Shirt 
+        Pratical 
+        #streetWear 
+      </span>
+    </p>
+    <img
+      className="sc-crzoUp eBkuLj"
+    />
+    <span>
+      Helpful?
+      <button
+        className="sc-fujyUd ffmWaa"
+        onClick={[Function]}
+      >
+        Yes 
+        1
+      </button>
+      <button
+        className="sc-fujyUd ffmWaa"
+        onClick={[Function]}
+      >
+        No 
+        2
+      </button>
+      <button
+        className="sc-fujyUd ffmWaa"
+      >
+        Report as inappropriate
+      </button>
+    </span>
+  </div>
+  <div
+    className="sc-iqAbSa iGmZzl"
+  >
+    <div
+      className="sc-jSFkmK lnDnEi"
+    >
+      <h2
+        className="sc-gKAblj kRxsFL"
+      >
+        Overall Fit Rating
+      </h2>
+      <div
+        className="sc-gtssRu dWODPw"
+      >
+        <div
+          className="sc-dlnjPT dUUXmW"
+        />
+        <span
+          className="sc-iCoHVE giZbGQ"
+        />
+      </div>
+      <span
+        className="sc-hKFyIo fNFVfG"
+      >
+        Runs Small
+      </span>
+      <span
+        className="sc-eCApGN dNfuhr"
+      >
+        Runs Large
+      </span>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`A suite example using Snapshot renders correctly Star 1`] = `
+<div
+  className="sc-bdnylx ddxNlS"
+/>
+`;
+
+exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
+<div
+  className="sc-bdnylx ddxNlS"
+/>
+`;
+
+exports[`A suite example using jest only renders Reviews Services correctly 1`] = `
+<section
+  className="sc-fnVYJo glkBMy"
+>
+  <h1
+    className="sc-hBMVcZ jkJDfe"
+  >
+    Reviews
+  </h1>
+  <ul />
+  <button
+    className="sc-ksluoS djYkNW"
+    onClick={[Function]}
+  >
+    Load More
+  </button>
+</section>
+`;
+
+exports[`A test suite for Review Container renders correctly Star 1`] = `
+<div
+  className="sc-bdnylx ddxNlS"
+/>
+`;

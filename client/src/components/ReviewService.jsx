@@ -4,42 +4,62 @@ import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import Review from './Review.jsx';
+import LoadMore from './LoadMore.jsx';
 
 class ReviewService extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      display: 10,
+      display: 1,
       reviews: [],
-      currentPage: 2,
+      currentItem: 1,
+      show: true,
     };
     this.fetchData = this.fetchData.bind(this);
     this.patchData = this.patchData.bind(this);
+    this.changeDisplay = this.changeDisplay.bind(this);
   }
 
   componentDidMount() {
-    const { display, currentPage } = this.state;
-    this.fetchData(display, currentPage);
+    const { display, currentItem } = this.state;
+    this.fetchData(display, currentItem);
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    const {
+      display, currentItem, show,
+    } = this.state;
+    if (show) {
+      if (display !== prevState.display || currentItem !== prevState.currentItem) {
+        this.fetchData(display, currentItem);
+      }
+    }
+  }
+
+  changeDisplay(n) {
+    this.setState({
+      display: n,
+    });
   }
 
   fetchData(requests, id) {
-    axios.get(`/api/products/reviews/${id}`)
+    axios.get(`/api/products/reviews/${id}/${requests}`)
       .then(({ data }) => this.setState(
         { reviews: data },
       ))
       .catch((err) => (err));
   }
 
-  patchData(helpful, id) {
-    const { display, currentPage } = this.state;
-    axios.patch(`/api/products/reviews/${helpful}/${id}`)
-      .then(() => this.fetchData(display, currentPage))
+  patchData(selected, id) {
+    const { display, currentItem } = this.state;
+    axios.patch(`/api/products/reviews/${selected}/${id}`)
+      .then(() => this.fetchData(display, currentItem))
       .catch((err) => err);
   }
 
   render() {
-    const { reviews } = this.state;
+    const { reviews, display, show } = this.state;
     return (
       <Wrapper>
         <Title>Reviews</Title>
@@ -52,6 +72,12 @@ class ReviewService extends React.Component {
             />
           ))}
         </ul>
+        {show ? (
+          <LoadMore
+            changeDisplay={this.changeDisplay}
+            currentDisplay={display}
+          />
+        ) : null}
       </Wrapper>
     );
   }
@@ -61,7 +87,7 @@ const Title = styled.h1`
 margin-left: 2em;
 font-size: 1.25em;
 color: Black;
-font-family: Stuart,Georgia,serif;;
+font-family: Stuart,Georgia,serif;
 `;
 
 const Wrapper = styled.section`
