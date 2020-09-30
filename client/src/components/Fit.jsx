@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 function Fit({ rating }) {
-  const [score] = useState((rating / 1) * 100);
+  const [score, setScore] = useState((rating / 1) * 100);
+
+  useEffect(() => {
+    setScore((rating / 1) * 100);
+  });
 
   return (
     <Wrapper>
-
-      <Title>Overall Fit Rating</Title>
       <Slider>
         <ValueBox inputWidth={score} />
         <Divider />
@@ -62,14 +64,7 @@ const LargeTag = styled.span`
 const Wrapper = styled.div`
   font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!
 `;
-const Title = styled.h2`
-  display: block!important;
-  margin-bottom: .5em!important;
-  font-size: 15px;
-  line-height: 20px;
-  font-style: normal;
-  font-weight: 400;
-`;
+
 const Divider = styled.span`
   display: block;
   position: absolute;

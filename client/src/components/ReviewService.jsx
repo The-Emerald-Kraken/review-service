@@ -3,14 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
 import ReviewStatsContainer from './ReviewStatsContainer.jsx';
 
-function ReviewService() {
-  const [display, setDisplay] = useState(1);
+function ReviewService({ start }) {
+  const [display, setDisplay] = useState(5);
   const [reviews, setReviews] = useState([]);
-  const [currentItem] = useState(1);
+  const [avg, setAvg] = useState({ rating: 0, fit: 0 });
+  const [currentItem] = useState(start);
   const [show] = useState(true);
 
   // did comopoent mount replacement
@@ -18,6 +20,11 @@ function ReviewService() {
   const FetchData = (requests, id) => {
     axios.get(`/api/products/reviews/${id}/${requests}`)
       .then(({ data }) => setReviews(data))
+      .catch((err) => (err));
+  };
+  const FetchAvgData = (request) => {
+    axios.get(`/api/products/reviews/avg/${request}`)
+      .then(({ data }) => setAvg(data))
       .catch((err) => (err));
   };
 
@@ -28,8 +35,12 @@ function ReviewService() {
   };
 
   useEffect(() => {
+    FetchAvgData(currentItem);
+  }, [currentItem]);
+
+  useEffect(() => {
     FetchData(display, currentItem);
-  });
+  }, [display]);
 
   // did compoenet update replacement
   useEffect(() => {
@@ -37,10 +48,9 @@ function ReviewService() {
       FetchData(display, currentItem);
     }
   }, [display || currentItem]);
-
   return (
     <Wrapper>
-      <ReviewStatsContainer avgReview={reviews} />
+      <ReviewStatsContainer avgReview={avg} />
       <ul>
         {reviews.map((review) => (
           <Review
@@ -59,6 +69,10 @@ function ReviewService() {
     </Wrapper>
   );
 }
+
+ReviewService.propTypes = {
+  start: PropTypes.number.isRequired,
+};
 
 const Wrapper = styled.section`
 padding: 4em;

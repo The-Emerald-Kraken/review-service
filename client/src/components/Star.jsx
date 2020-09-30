@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 function Star({ rating }) {
-  const [score] = useState((rating / 5) * 100);
+  const [score, setScore] = useState((rating / 5) * 100);
+  useEffect(() => {
+    setScore((rating / 5) * 100);
+  });
 
   return (
     <StarStyle inputWidth={score} />
