@@ -2,35 +2,125 @@
 
 exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
 <section
-  className="sc-hHEjAm iQGrgz"
+  className="sc-cxNIbT kBJFUG"
 >
   <div
-    className="sc-bkbjAj jvtoKR"
+    className="sc-fKgIGh jmiSIv"
   >
     <h1
-      className="sc-iemXMA eilSNk"
+      className="sc-bCwgka bZJqHK"
     >
       Reviews
     </h1>
     <button
-      className="sc-dIvqjp bWSmkT"
+      className="sc-iwaifL kByyyd"
     >
       Write a review
     </button>
     <section
-      className="sc-hBMVcZ hBqpZH"
+      className="sc-fFSRdu eEQBRj"
     >
       <div
-        className="sc-fFSRdu kUdRup"
+        className="sc-kfYqjs fgrQAH"
       >
-        <p>
-          avgReview.rating
-        </p>
+        <table
+          className="sc-bkbjAj favYKL"
+        >
+          <thead>
+            <tr>
+              <td>
+                Rating Snapshot
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Select a row below to filter reviews.
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="sc-hHEjAm jJbWbE"
+              >
+                5 ★
+                <div
+                  className="sc-hBMVcZ gGMrHL"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-fnVYJo deJmWL"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="sc-hHEjAm jJbWbE"
+              >
+                4 ★
+                <div
+                  className="sc-hBMVcZ gGMrHL"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-fnVYJo deJmWL"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="sc-hHEjAm jJbWbE"
+              >
+                3 ★
+                <div
+                  className="sc-hBMVcZ gGMrHL"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-fnVYJo deJmWL"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="sc-hHEjAm jJbWbE"
+              >
+                2 ★
+                <div
+                  className="sc-hBMVcZ gGMrHL"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-fnVYJo deJmWL"
+                  />
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="sc-hHEjAm jJbWbE"
+              >
+                1 ★
+                <div
+                  className="sc-hBMVcZ gGMrHL"
+                  onClick={[Function]}
+                >
+                  <div
+                    className="sc-fnVYJo deJmWL"
+                  />
+                </div>
+              </td>
+            </tr>
+          </thead>
+        </table>
       </div>
       <div
-        className="sc-fnVYJo hcCIGy"
+        className="sc-dlMBXb fkaCyn"
       >
-        <table>
+        <table
+          className="sc-bkbjAj favYKL"
+        >
           <caption>
             Average Customer Ratings
           </caption>
@@ -39,20 +129,28 @@ exports[`A suite example using Snapshot renders Reviews Services correctly 1`] =
               <td>
                 Overall
               </td>
-              <td>
+              <td
+                className="sc-iemXMA kltcnJ"
+              >
                 <div
                   className="sc-bdnylx eTIvCG"
                 />
               </td>
-              <td>
+              <td
+                className="sc-iemXMA kltcnJ"
+              >
                 0
               </td>
             </tr>
             <tr>
-              <td>
+              <td
+                className="sc-dIvqjp bAuUCd"
+              >
                 Overall Fit Rating
               </td>
-              <td>
+              <td
+                className="sc-iemXMA kltcnJ"
+              >
                 <div
                   className="sc-jSFkmK lnDnEi"
                 >
@@ -125,21 +223,21 @@ exports[`A suite example using Snapshot renders correctly Helpful Button Compone
 <span>
   Helpful?
   <button
-    className="sc-iCoHVE laKprR"
+    className="sc-iCoHVE hDOOVg"
     onClick={[Function]}
   >
-    Yes 
+    Yes · 
     1
   </button>
   <button
-    className="sc-iCoHVE laKprR"
+    className="sc-iCoHVE hDOOVg"
     onClick={[Function]}
   >
-    No 
+    No · 
     2
   </button>
   <button
-    className="sc-iCoHVE laKprR"
+    className="sc-iCoHVE hDOOVg"
   >
     Report as inappropriate
   </button>
@@ -226,21 +324,21 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     <span>
       Helpful?
       <button
-        className="sc-iCoHVE laKprR"
+        className="sc-iCoHVE hDOOVg"
         onClick={[Function]}
       >
-        Yes 
+        Yes · 
         1
       </button>
       <button
-        className="sc-iCoHVE laKprR"
+        className="sc-iCoHVE hDOOVg"
         onClick={[Function]}
       >
-        No 
+        No · 
         2
       </button>
       <button
-        className="sc-iCoHVE laKprR"
+        className="sc-iCoHVE hDOOVg"
       >
         Report as inappropriate
       </button>

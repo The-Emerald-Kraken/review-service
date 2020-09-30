@@ -5,7 +5,7 @@ const Review = require('./Review.js');
 
 const FILE_COUNT_MAX = 500; // I know this is bad, but im being lazy
 
-const randScore = (max) => Math.round((Math.random() * max));
+const randScore = (max) => Math.ceil((Math.random() * max));
 const ranImage = (max = 5) => {
   const result = [];
   const n = Math.floor(Math.random() * max);

@@ -73,4 +73,3 @@ describe('A test suite example using enzyme', function() {
   });
 
 });
-
