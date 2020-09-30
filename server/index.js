@@ -31,6 +31,7 @@ app.post('/api/products/reviews', (req, res) => {
 app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
   const filter = { _id: req.params.id };
   const help = req.params.helpful;
+  console.log(help);
   Reviews.find(filter)
     .then((data) => {
       if (help === 'yes') {

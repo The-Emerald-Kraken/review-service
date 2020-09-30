@@ -27,7 +27,9 @@ class ReviewService extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    const { display, currentItem, show } = this.state;
+    const {
+      display, currentItem, show,
+    } = this.state;
     if (show) {
       if (display !== prevState.display || currentItem !== prevState.currentItem) {
         this.fetchData(display, currentItem);
@@ -49,10 +51,10 @@ class ReviewService extends React.Component {
       .catch((err) => (err));
   }
 
-  patchData(helpful, id) {
-    const { display, currentPage } = this.state;
-    axios.patch(`/api/products/reviews/${helpful}/${id}`)
-      .then(() => this.fetchData(display, currentPage))
+  patchData(selected, id) {
+    const { display, currentItem } = this.state;
+    axios.patch(`/api/products/reviews/${selected}/${id}`)
+      .then(() => this.fetchData(display, currentItem))
       .catch((err) => err);
   }
 
