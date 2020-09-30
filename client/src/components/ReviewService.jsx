@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
+import ReviewStatsContainer from './ReviewStatsContainer.jsx';
 
 function ReviewService() {
   const [display, setDisplay] = useState(1);
@@ -39,7 +40,7 @@ function ReviewService() {
 
   return (
     <Wrapper>
-      <Title>Reviews</Title>
+      <ReviewStatsContainer avgReview={reviews} />
       <ul>
         {reviews.map((review) => (
           <Review
@@ -58,13 +59,6 @@ function ReviewService() {
     </Wrapper>
   );
 }
-
-const Title = styled.h1`
-margin-left: 2em;
-font-size: 1.25em;
-color: Black;
-font-family: Stuart,Georgia,serif;
-`;
 
 const Wrapper = styled.section`
 padding: 4em;
