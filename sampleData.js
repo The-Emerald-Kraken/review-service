@@ -24,6 +24,6 @@ const sampleReview = {
     no: '2',
   },
 
-}
+};
 
 module.exports = sampleReview;
