@@ -73,7 +73,7 @@ function ReviewService({ start }) {
           currentDisplay={display}
         />
       ) : null}
-      {showImgModal ? <PageMask /> : null}
+      {showImgModal ? <PageMask onClick={() => setShowImgModal(false)} /> : null}
     </Wrapper>
   );
 }
