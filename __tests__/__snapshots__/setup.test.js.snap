@@ -2,7 +2,7 @@
 
 exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
 <section
-  className="sc-cxNIbT kBJFUG"
+  className="sc-bYwzba bzbiuh"
 >
   <div
     className="sc-fKgIGh jmiSIv"
@@ -320,6 +320,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     </p>
     <img
       className="sc-iqAbSa jTOThj"
+      onClick={[Function]}
     />
     <span>
       Helpful?

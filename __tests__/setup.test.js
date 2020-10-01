@@ -51,6 +51,8 @@ describe('A suite example using Snapshot',  () => {
       .create(<Review
         review={sampleReview}
         patchData={()=>(null)}
+        showImgModal={()=>(null)}
+        setModalImg={()=>(null)}
         />)
       .toJSON();
     expect(tree).toMatchSnapshot();
