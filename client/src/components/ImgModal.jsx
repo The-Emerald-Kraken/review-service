@@ -8,13 +8,16 @@ function ImgModal({ image, showImgModal, onClose }) {
   }
   return (
     <Modal>
+      {window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      })}
+      <Button onClick={() => onClose(false)}>X</Button>
       <Content>
         <Image inputSrc={image.url} />
         <Description>{image.description}</Description>
       </Content>
-
-        <Button onClick={() => onClose(false)}>X</Button>
-
     </Modal>
   );
 }
@@ -26,10 +29,12 @@ ImgModal.propTypes = {
 };
 const Modal = styled.div`
   margin: 0, auto;
+  margin-top: 100px;
   position: absolute;
   top: 25%;
   left: 40%;
   z-index: 10;
+  padding-bottom: 150px;
   height: auto;
   width: auto;
   background-color: #000;
@@ -43,7 +48,7 @@ const Modal = styled.div`
 
 const Content = styled.div`
   color: white;
-  left: 40%;
+  left: 50%;
   padding: 1rem;
 `;
 const Image = styled.img`
@@ -51,15 +56,19 @@ background-attachment: scroll;
 width: 500px;
 height: 500px;
 margin: auto;
+margin-top: 100px;
 position: relative;
 top: 50%;
-left: 20%;
+left: 25%;
 background-size: cover;
 background-repeat: no-repeat;
 background-image: url(${(props) => props.inputSrc});
 `;
-const Description = styled.p`
+const Description = styled.h3`
+  left:25%
+  width: 60%;
   text-align: center;
+
 `;
 const Button = styled.button`
   position: absolute;
@@ -69,6 +78,7 @@ const Button = styled.button`
   border: none;
   font-size: 16px;
   text-align: center;
+  z-index:100;
   color: black;
   background-color: #767676;
   border-radius: 100%;
