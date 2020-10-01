@@ -9,7 +9,8 @@ const sampleReview = {
   body: 'GreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreek',
   images: [{
     id: '1',
-    url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg'
+    url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg',
+    description: 'The Greekest',
   }],
   fit: '0.5',
   tags: ['Shirt', 'Pratical', '#streetWear'],

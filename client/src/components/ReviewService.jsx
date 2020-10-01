@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
 import ReviewStatsContainer from './ReviewStatsContainer.jsx';
+import ImgModal from './ImgModal.jsx';
 
 function ReviewService({ start }) {
   const [display, setDisplay] = useState(5);
@@ -14,6 +15,8 @@ function ReviewService({ start }) {
   const [avg, setAvg] = useState({ rating: 0, fit: 0 });
   const [currentItem] = useState(start);
   const [show] = useState(true);
+  const [showImgModal, setShowImgModal] = useState(false);
+  const [modalImg, setModalImg] = useState({});
 
   // did comopoent mount replacement
 
@@ -50,6 +53,7 @@ function ReviewService({ start }) {
   }, [display || currentItem]);
   return (
     <Wrapper>
+      <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
       <ReviewStatsContainer avgReview={avg} />
       <ul>
         {reviews.map((review) => (
@@ -57,6 +61,8 @@ function ReviewService({ start }) {
             key={review._id}
             review={review}
             patchData={PatchData}
+            showImgModal={setShowImgModal}
+            setModalImg={setModalImg}
           />
         ))}
       </ul>

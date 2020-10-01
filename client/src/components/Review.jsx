@@ -8,7 +8,7 @@ import Star from './Star.jsx';
 import Fit from './Fit.jsx';
 import Helpful from './Helpful.jsx';
 
-const Review = ({ review, patchData }) => (
+const Review = ({ review, patchData, showImgModal, setModalImg }) => (
   <FlexContainer>
     <FlexBoxL>
       <p><b>{review.nickname}</b></p>
@@ -41,7 +41,16 @@ const Review = ({ review, patchData }) => (
           {review.tags.map((tag) => (`${tag} `))}
         </Wrapper>
       </p>
-      {review.images.map((image) => <JessesProblem key={image.id} inputSrc={image.url} />)}
+      {review.images.map((image) => (
+        <Image
+          onClick={() => {
+            setModalImg(image);
+            showImgModal(true);
+          }}
+          key={image.id}
+          inputSrc={image.url}
+        />
+      ))}
       <Helpful
         helpful={review.helpful}
         idd={review._id}
@@ -59,6 +68,8 @@ const Review = ({ review, patchData }) => (
 Review.propTypes = {
   review: PropTypes.shape().isRequired,
   patchData: PropTypes.func.isRequired,
+  showImgModal: PropTypes.func.isRequired,
+  setModalImg: PropTypes.func.isRequired,
 };
 
 const FlexContainer = styled.section`
@@ -87,7 +98,7 @@ margin: 10px;
 padding: 20px;
 padding-top: 90px;
 `;
-const JessesProblem = styled.img`
+const Image = styled.img`
   width: 150px;
   height: 150px;
   background-size: auto;
