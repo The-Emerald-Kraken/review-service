@@ -80,7 +80,11 @@ const Wrapper = styled.section`
 padding: 4em;
 background: whitesmoke;
 width: 50%;
-margin: auto
+margin: auto;
+font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -.016rem;
 `;
 const PageMask = styled.div`
   background: rgba(0, 0, 0, 0.5);

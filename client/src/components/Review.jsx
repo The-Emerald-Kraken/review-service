@@ -74,7 +74,7 @@ Review.propTypes = {
 
 const FlexContainer = styled.section`
 display: flex;
-font-family: Stuart,Georgia,serif;
+//font-family: Stuart,Georgia,serif;
 font-size: 16px;
 border-bottom: groove;
 `;
@@ -108,13 +108,14 @@ const Image = styled.img`
   margin-right: 1.5px;
   margin -left: 1.5px;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
     color: #292929;
     font-size: 19px;
     line-height: 20px;
-    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 0;
+    //font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+
     `;
 
 const Title2 = styled.h2`

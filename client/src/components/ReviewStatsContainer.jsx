@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Star from './Star.jsx';
 import Fit from './Fit.jsx';
+import SortBy from './SortBy.jsx';
 
 function ReviewStatsContainer({ avgReview }) {
   return (
@@ -86,9 +87,8 @@ function ReviewStatsContainer({ avgReview }) {
               </tr>
             </thead>
           </Table>
-
         </FlexBoxL>
-
+        <FootR><SortBy sort={'Most Recent'} /></FootR>
       </FlexContainer>
     </Wrapper>
   );
@@ -97,6 +97,13 @@ function ReviewStatsContainer({ avgReview }) {
 ReviewStatsContainer.propTypes = {
   avgReview: PropTypes.shape().isRequired,
 };
+
+const FootR = styled.div`
+  float: right;
+  margin-right: 5px;
+  margin-top: 350px;
+  margin-bottom: 5px;
+`;
 const StarBar = styled.div`
 position: relative;
 display: inline-block;
@@ -140,6 +147,10 @@ const FlexContainer = styled.section`
   margin-bottom: 0;
   margin-left: 0;
   margin-bottom: 20px;
+  font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -.016rem;
 `;
 const Table = styled.table`
 tablelayout: auto;
