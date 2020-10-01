@@ -52,6 +52,7 @@ function ReviewService({ start }) {
     }
   }, [display || currentItem]);
   return (
+
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
       <ReviewStatsContainer avgReview={avg} />
@@ -72,6 +73,7 @@ function ReviewService({ start }) {
           currentDisplay={display}
         />
       ) : null}
+      {showImgModal ? <PageMask /> : null}
     </Wrapper>
   );
 }
@@ -85,6 +87,14 @@ padding: 4em;
 background: whitesmoke;
 width: 50%;
 margin: auto
+`;
+const PageMask = styled.div`
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 `;
 
 export default ReviewService;

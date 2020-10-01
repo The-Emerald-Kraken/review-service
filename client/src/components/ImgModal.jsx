@@ -8,16 +8,13 @@ function ImgModal({ image, showImgModal, onClose }) {
   }
   return (
     <Modal>
-      <Title>Modal Window</Title>
       <Content>
         <Image inputSrc={image.url} />
-        {image.description}
+        <Description>{image.description}</Description>
       </Content>
-      <Action>
-        <Button onClick={() => onClose(false)}>
-          close
-        </Button>
-      </Action>
+
+        <Button onClick={() => onClose(false)}>X</Button>
+
     </Modal>
   );
 }
@@ -28,64 +25,59 @@ ImgModal.propTypes = {
   showImgModal: PropTypes.bool.isRequired,
 };
 const Modal = styled.div`
-  width: 500px;
-  background: white;
-  border: 1px solid #ccc;
-  transition: 1.1s ease-out;
-  box-shadow: -2rem 2rem 2rem rgba(black, 0.2);
-  filter: blur(0);
-  transform: scale(1);
-  opacity: 1;
-  visibility: visible;
-  &.off {
-    opacity: 0;
-    visibility: hidden;
-    filter: blur(8px);
-    transform: scale(0.33);
-    box-shadow: 1rem 0 0 rgba(black, 0.2);
-  }
+  margin: 0, auto;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 10;
+  height: auto;
+  width: auto;
+  background-color: #000;
+  box-shadow: 0 10px 25px rgba(0,0,0,.5);
   @supports (offset-rotate: 0deg) {
     offset-rotate: 0deg;
     offset-path: path("M 250,100 S -300,500 -700,-200");
-    &.off {
-      offset-distance: 100%;
     }
   }
-  @media (prefers-reduced-motion) {
-    offset-path: none;
-  }`;
-
-const Title = styled.h2`
-  border-bottom: 1px solid #ccc;
-  padding: 1rem;
-  margin: 0;`;
+  `;
 
 const Content = styled.div`
+  color: white;
+  left: 40%;
   padding: 1rem;
 `;
 const Image = styled.img`
-width: 150px;
-height: 150px;
-background-size: auto;
+background-attachment: scroll;
+width: 500px;
+height: 500px;
+margin: auto;
+position: relative;
+top: 50%;
+left: 20%;
+background-size: cover;
 background-repeat: no-repeat;
 background-image: url(${(props) => props.inputSrc});
-position: relative;
-margin-right: 1.5px;
-margin -left: 1.5px;
-`
-const Action = styled.div`
-  border-top: 1px solid #ccc;
-  background: #eee;
-  padding: 0.5rem 1rem;
 `;
-
+const Description = styled.p`
+  text-align: center;
+`;
 const Button = styled.button`
-  border: 0;
-  background: #78f89f;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  font-size: 0.8rem;
-  line-height: 1;
+  position: absolute;
+  font-family: "Arial Black", Gadget, sans-serif;
+  top: 3px;
+  right: 3px;
+  border: none;
+  font-size: 16px;
+  text-align: center;
+  color: black;
+  background-color: #767676;
+  border-radius: 100%;
+  height: 30px;
+  width: 30px;
+  &:hover{
+    background-color: transparent;
+    background-color: #fff;
+  }
 `;
 
 export default ImgModal;
