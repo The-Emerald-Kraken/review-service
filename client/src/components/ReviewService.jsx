@@ -14,11 +14,8 @@ function ReviewService({ start }) {
   const [reviews, setReviews] = useState([]);
   const [avg, setAvg] = useState({ rating: 0, fit: 0 });
   const [currentItem] = useState(start);
-  const [showLoadMore, setShowLoadMore] = useState(true);
   const [showImgModal, setShowImgModal] = useState(false);
   const [modalImg, setModalImg] = useState({});
-
-  // did comopoent mount replacement
 
   const FetchData = (requests, id) => {
     axios.get(`/api/products/reviews/${id}/${requests}`)
@@ -42,12 +39,9 @@ function ReviewService({ start }) {
   }, [currentItem]);
 
   useEffect(() => {
-    const prevDisplay = reviews.length;
     FetchData(display, currentItem);
-    setShowLoadMore(prevDisplay === reviews.length);
   }, [display]);
 
-  // did compoenet update replacement
   useEffect(() => {
     FetchData(display, currentItem);
   }, [currentItem]);
@@ -67,7 +61,7 @@ function ReviewService({ start }) {
           />
         ))}
       </ul>
-      {showLoadMore ? (
+      {(avg.count > reviews.length) ? (
         <LoadMore
           changeDisplay={setDisplay}
           currentDisplay={display}
