@@ -13,7 +13,6 @@ const ranImage = (max = 5) => {
     result.push({
       id: i,
       url: `https://fec-pictures.s3-us-west-2.amazonaws.com/image${Math.floor(Math.random() * FILE_COUNT_MAX)}.jpg`,
-      description: faker.commerce.productDescription(),
     });
   }
   return result;

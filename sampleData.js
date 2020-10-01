@@ -9,8 +9,7 @@ const sampleReview = {
   body: 'GreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreek',
   images: [{
     id: '1',
-    url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg',
-    description: 'The Greekest',
+    url: 'https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg'
   }],
   fit: '0.5',
   tags: ['Shirt', 'Pratical', '#streetWear'],
@@ -24,6 +23,6 @@ const sampleReview = {
     no: '2',
   },
 
-};
+}
 
 module.exports = sampleReview;
