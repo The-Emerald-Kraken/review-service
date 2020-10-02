@@ -82,10 +82,10 @@ exports[`A suite of tests for Fit Component renders correctly Fit Display Compon
 `;
 
 exports[`A suite of tests for Helpful Component renders correctly Helpful Button Component 1`] = `
-<span>
+<div>
   Helpful?
   <button
-    className="sc-iCoHVE iXcjmY"
+    className="sc-iCoHVE bvCgNS"
     data-testid="yesButton"
     onClick={[Function]}
     value={1}
@@ -95,7 +95,7 @@ exports[`A suite of tests for Helpful Component renders correctly Helpful Button
     1
   </button>
   <button
-    className="sc-iCoHVE iXcjmY"
+    className="sc-iCoHVE bvCgNS"
     data-testid="noButton"
     onClick={[Function]}
     value={2}
@@ -105,33 +105,33 @@ exports[`A suite of tests for Helpful Component renders correctly Helpful Button
     2
   </button>
   <button
-    className="sc-iCoHVE iXcjmY"
+    className="sc-iCoHVE bvCgNS"
   >
     Report as inappropriate
   </button>
-</span>
+</div>
 `;
 
 exports[`A suite of tests for ImgModal Component does not renders ImgModal Component 1`] = `null`;
 
 exports[`A suite of tests for ImgModal Component renders correctly ImgModal Component 1`] = `
 <div
-  className="sc-ezzayL dZoPQG"
+  className="sc-kLokih ibCanN"
 >
   <button
-    className="sc-jJMGHv kxoLxF"
+    className="sc-gXfWUo hkMISl"
     onClick={[Function]}
   >
     X
   </button>
   <div
-    className="sc-bYwzba iSrUoy"
+    className="sc-iklIKw fulWdc"
   >
     <img
-      className="sc-kLokih fziBwH"
+      className="sc-jJMGHv fFYxBt"
     />
     <h3
-      className="sc-iklIKw honAYw"
+      className="sc-hiKfjK gEvJoG"
     >
       The Greekest
     </h3>
@@ -165,7 +165,7 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
     </p>
   </div>
   <div
-    className="sc-jrsJCI eQGrVN"
+    className="sc-jrsJCI iOXdGf"
   >
     <span
       className="sc-bqGHjH gBkTZR"
@@ -214,13 +214,13 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
       </span>
     </p>
     <img
-      className="sc-iqAbSa kwHshB"
+      className="sc-iqAbSa jqYKGB"
       onClick={[Function]}
     />
-    <span>
+    <div>
       Helpful?
       <button
-        className="sc-iCoHVE iXcjmY"
+        className="sc-iCoHVE bvCgNS"
         data-testid="yesButton"
         onClick={[Function]}
         value={1}
@@ -230,7 +230,7 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
         1
       </button>
       <button
-        className="sc-iCoHVE iXcjmY"
+        className="sc-iCoHVE bvCgNS"
         data-testid="noButton"
         onClick={[Function]}
         value={2}
@@ -240,11 +240,11 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
         2
       </button>
       <button
-        className="sc-iCoHVE iXcjmY"
+        className="sc-iCoHVE bvCgNS"
       >
         Report as inappropriate
       </button>
-    </span>
+    </div>
   </div>
   <div
     className="sc-kEqYlL hWtfSf"
@@ -284,26 +284,26 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
 
 exports[`A suite of tests for Review Stats Container Component renders correctly Review Display Component 1`] = `
 <div
-  className="sc-lmgQde gwpiXt"
+  className="sc-giAqnE igbTra"
 >
   <h1
-    className="sc-iJCRLp dBSqHz"
+    className="sc-ezzayL gJDqIQ"
   >
     Reviews
   </h1>
   <button
-    className="sc-giAqnE geQklo"
+    className="sc-bYwzba cCGNpU"
   >
     Write a review
   </button>
   <section
-    className="sc-hHEjAm gqCyXA"
+    className="sc-bCwgka booarE"
   >
     <div
-      className="sc-cxNIbT kGdyBd"
+      className="sc-dlMBXb gabvLs"
     >
       <table
-        className="sc-dlMBXb hHKDTo"
+        className="sc-iwaifL kywOwR"
       >
         <thead>
           <tr>
@@ -318,15 +318,15 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
           </tr>
           <tr>
             <td
-              className="sc-bCwgka bTIoJo"
+              className="sc-iJCRLp cBIuiF"
             >
               5 ★
               <div
-                className="sc-iemXMA ehlYxi"
+                className="sc-kfYqjs igEuCT"
                 onClick={[Function]}
               >
                 <div
-                  className="sc-dIvqjp dQTGsn"
+                  className="sc-fKgIGh eeeCjv"
                 />
               </div>
               4
@@ -334,15 +334,15 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
           </tr>
           <tr>
             <td
-              className="sc-bCwgka bTIoJo"
+              className="sc-iJCRLp cBIuiF"
             >
               4 ★
               <div
-                className="sc-iemXMA ehlYxi"
+                className="sc-kfYqjs igEuCT"
                 onClick={[Function]}
               >
                 <div
-                  className="sc-dIvqjp fUHMAb"
+                  className="sc-fKgIGh fQxxPX"
                 />
               </div>
               5
@@ -350,15 +350,15 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
           </tr>
           <tr>
             <td
-              className="sc-bCwgka bTIoJo"
+              className="sc-iJCRLp cBIuiF"
             >
               3 ★
               <div
-                className="sc-iemXMA ehlYxi"
+                className="sc-kfYqjs igEuCT"
                 onClick={[Function]}
               >
                 <div
-                  className="sc-dIvqjp jqrSht"
+                  className="sc-fKgIGh kELwhx"
                 />
               </div>
               2
@@ -366,15 +366,15 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
           </tr>
           <tr>
             <td
-              className="sc-bCwgka bTIoJo"
+              className="sc-iJCRLp cBIuiF"
             >
               2 ★
               <div
-                className="sc-iemXMA ehlYxi"
+                className="sc-kfYqjs igEuCT"
                 onClick={[Function]}
               >
                 <div
-                  className="sc-dIvqjp kYmzWv"
+                  className="sc-fKgIGh exikfv"
                 />
               </div>
               3
@@ -382,15 +382,15 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
           </tr>
           <tr>
             <td
-              className="sc-bCwgka bTIoJo"
+              className="sc-iJCRLp cBIuiF"
             >
               1 ★
               <div
-                className="sc-iemXMA ehlYxi"
+                className="sc-kfYqjs igEuCT"
                 onClick={[Function]}
               >
                 <div
-                  className="sc-dIvqjp eNMUaO"
+                  className="sc-fKgIGh jsbgTq"
                 />
               </div>
               1
@@ -400,10 +400,10 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
       </table>
     </div>
     <div
-      className="sc-iwaifL gNlxCS"
+      className="sc-hHEjAm bXHEUy"
     >
       <table
-        className="sc-dlMBXb hHKDTo"
+        className="sc-iwaifL kywOwR"
       >
         <caption>
           Average Customer Ratings
@@ -414,26 +414,26 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
               Overall
             </td>
             <td
-              className="sc-kfYqjs gmpuzA"
+              className="sc-cxNIbT lbEgEG"
             >
               <div
                 className="sc-bdnylx dHfqiF"
               />
             </td>
             <td
-              className="sc-kfYqjs gmpuzA"
+              className="sc-cxNIbT lbEgEG"
             >
               4.8
             </td>
           </tr>
           <tr>
             <td
-              className="sc-fKgIGh QDDsx"
+              className="sc-lmgQde cPrNCv"
             >
               Overall Fit Rating
             </td>
             <td
-              className="sc-kfYqjs gmpuzA"
+              className="sc-cxNIbT lbEgEG"
             >
               <div
                 className="sc-jSFkmK lnDnEi"
@@ -465,10 +465,26 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
       </table>
     </div>
     <div
-      className="sc-bkbjAj dxzrvs"
+      className="sc-dIvqjp fEBpLv"
+    >
+      <p
+        className="sc-bkbjAj kHLutn"
+      >
+        1–
+        5
+         
+        of
+         
+        15
+         
+        Reviews
+      </p>
+    </div>
+    <div
+      className="sc-iemXMA iPyMCC"
     >
       <div
-        className="sc-fnVYJo iajhhJ"
+        className="sc-fnVYJo iUPTYC"
         data-testid="dropDown"
       >
         Sort By:
@@ -530,7 +546,7 @@ exports[`A suite of tests for Reviews Services Container renders Reviews Service
 
 exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 1`] = `
 <div
-  className="sc-fnVYJo iajhhJ"
+  className="sc-fnVYJo iUPTYC"
   data-testid="dropDown"
 >
   Sort By:
@@ -583,7 +599,7 @@ exports[`A suite of tests for SortBy Component renders correctly SortBy Review C
 
 exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 2`] = `
 <div
-  className="sc-fnVYJo iajhhJ"
+  className="sc-fnVYJo iUPTYC"
   data-testid="dropDown"
 >
   Sort By:
@@ -636,7 +652,7 @@ exports[`A suite of tests for SortBy Component renders correctly SortBy Review C
 
 exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Helpful" 1`] = `
 <div
-  className="sc-fnVYJo iajhhJ"
+  className="sc-fnVYJo iUPTYC"
   data-testid="dropDown"
 >
   Sort By:
@@ -689,7 +705,7 @@ exports[`A suite of tests for SortBy Component renders correctly SortBy Review C
 
 exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Recent" 1`] = `
 <div
-  className="sc-fnVYJo iajhhJ"
+  className="sc-fnVYJo iUPTYC"
   data-testid="dropDown"
 >
   Sort By:

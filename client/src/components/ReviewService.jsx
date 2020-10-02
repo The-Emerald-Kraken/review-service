@@ -57,7 +57,7 @@ function ReviewService({ start }) {
 
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
-      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} />
+      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} display={display} />
       <ul>
         {reviews.map((review) => (
           <Review

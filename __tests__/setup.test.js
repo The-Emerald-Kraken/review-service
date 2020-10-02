@@ -56,6 +56,7 @@ describe('A suite of tests for Review Stats Container Component', () => {
         avgReview={avg}
         setSort={() => (null)}
         sort={'Most Recent'}
+        display = {5}
       />)
       .toJSON();
     expect(tree).toMatchSnapshot();

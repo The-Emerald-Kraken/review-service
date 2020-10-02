@@ -20,7 +20,7 @@ function Helpful({
   };
 
   return (
-    <span>
+    <div>
       Helpful?
       <HelpfulButton data-testid="yesButton" value={yes} onClick={increaseYes}>
         Yes ·
@@ -33,7 +33,7 @@ function Helpful({
         {no}
       </HelpfulButton>
       <HelpfulButton>Report as inappropriate</HelpfulButton>
-    </span>
+    </div>
   );
 }
 
@@ -45,6 +45,7 @@ Helpful.propTypes = {
 };
 
 const HelpfulButton = styled.button`
+
   color: #292929;
   font-size: 14px;
   line-height: 24px;
