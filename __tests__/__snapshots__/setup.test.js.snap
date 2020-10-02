@@ -1,12 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
-<p>
-  Be the first to review this product
-</p>
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "Runs Large 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT iEAyWe"
+    />
+    <span
+      className="sc-gKAblj dJFrAv"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
 `;
 
-exports[`A suite example using Snapshot renders correctly Fit Display Component 1`] = `
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "Runs Small 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT eUUHfX"
+    />
+    <span
+      className="sc-gKAblj dJFrAv"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
+`;
+
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "True Fit 1`] = `
 <div
   className="sc-jSFkmK lnDnEi"
 >
@@ -33,32 +81,65 @@ exports[`A suite example using Snapshot renders correctly Fit Display Component 
 </div>
 `;
 
-exports[`A suite example using Snapshot renders correctly Helpful Button Component 1`] = `
+exports[`A suite of tests for Helpful Component renders correctly Helpful Button Component 1`] = `
 <span>
   Helpful?
   <button
-    className="sc-iCoHVE hDOOVg"
+    className="sc-iCoHVE iXcjmY"
+    data-testid="yesButton"
     onClick={[Function]}
+    value={1}
   >
-    Yes · 
+    Yes ·
+     
     1
   </button>
   <button
-    className="sc-iCoHVE hDOOVg"
+    className="sc-iCoHVE iXcjmY"
+    data-testid="noButton"
     onClick={[Function]}
+    value={2}
   >
-    No · 
+    No ·
+     
     2
   </button>
   <button
-    className="sc-iCoHVE hDOOVg"
+    className="sc-iCoHVE iXcjmY"
   >
     Report as inappropriate
   </button>
 </span>
 `;
 
-exports[`A suite example using Snapshot renders correctly Load More Button Component 1`] = `
+exports[`A suite of tests for ImgModal Component does not renders ImgModal Component 1`] = `null`;
+
+exports[`A suite of tests for ImgModal Component renders correctly ImgModal Component 1`] = `
+<div
+  className="sc-ezzayL dZoPQG"
+>
+  <button
+    className="sc-jJMGHv kxoLxF"
+    onClick={[Function]}
+  >
+    X
+  </button>
+  <div
+    className="sc-bYwzba iSrUoy"
+  >
+    <img
+      className="sc-kLokih fziBwH"
+    />
+    <h3
+      className="sc-iklIKw honAYw"
+    >
+      The Greekest
+    </h3>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for Load More Component renders correctly Load More Button Component 1`] = `
 <button
   className="sc-ksluoS djYkNW"
   onClick={[Function]}
@@ -67,7 +148,7 @@ exports[`A suite example using Snapshot renders correctly Load More Button Compo
 </button>
 `;
 
-exports[`A suite example using Snapshot renders correctly Review Display Component 1`] = `
+exports[`A suite of tests for Review Display Component renders correctly Review Display Component 1`] = `
 <section
   className="sc-fujyUd bPgFlh"
 >
@@ -139,21 +220,27 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     <span>
       Helpful?
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
+        data-testid="yesButton"
         onClick={[Function]}
+        value={1}
       >
-        Yes · 
+        Yes ·
+         
         1
       </button>
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
+        data-testid="noButton"
         onClick={[Function]}
+        value={2}
       >
-        No · 
+        No ·
+         
         2
       </button>
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
       >
         Report as inappropriate
       </button>
@@ -195,9 +282,256 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
 </section>
 `;
 
-exports[`A suite example using Snapshot renders correctly SortBy Review Component 1`] = `
+exports[`A suite of tests for Review Stats Container Component renders correctly Review Display Component 1`] = `
+<div
+  className="sc-lmgQde gwpiXt"
+>
+  <h1
+    className="sc-iJCRLp dBSqHz"
+  >
+    Reviews
+  </h1>
+  <button
+    className="sc-giAqnE geQklo"
+  >
+    Write a review
+  </button>
+  <section
+    className="sc-hHEjAm gqCyXA"
+  >
+    <div
+      className="sc-cxNIbT kGdyBd"
+    >
+      <table
+        className="sc-dlMBXb hHKDTo"
+      >
+        <thead>
+          <tr>
+            <td>
+              Rating Snapshot
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Select a row below to filter reviews.
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-bCwgka bTIoJo"
+            >
+              5 ★
+              <div
+                className="sc-iemXMA ehlYxi"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dIvqjp dQTGsn"
+                />
+              </div>
+              4
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-bCwgka bTIoJo"
+            >
+              4 ★
+              <div
+                className="sc-iemXMA ehlYxi"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dIvqjp fUHMAb"
+                />
+              </div>
+              5
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-bCwgka bTIoJo"
+            >
+              3 ★
+              <div
+                className="sc-iemXMA ehlYxi"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dIvqjp jqrSht"
+                />
+              </div>
+              2
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-bCwgka bTIoJo"
+            >
+              2 ★
+              <div
+                className="sc-iemXMA ehlYxi"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dIvqjp kYmzWv"
+                />
+              </div>
+              3
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-bCwgka bTIoJo"
+            >
+              1 ★
+              <div
+                className="sc-iemXMA ehlYxi"
+                onClick={[Function]}
+              >
+                <div
+                  className="sc-dIvqjp eNMUaO"
+                />
+              </div>
+              1
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div
+      className="sc-iwaifL gNlxCS"
+    >
+      <table
+        className="sc-dlMBXb hHKDTo"
+      >
+        <caption>
+          Average Customer Ratings
+        </caption>
+        <thead>
+          <tr>
+            <td>
+              Overall
+            </td>
+            <td
+              className="sc-kfYqjs gmpuzA"
+            >
+              <div
+                className="sc-bdnylx dHfqiF"
+              />
+            </td>
+            <td
+              className="sc-kfYqjs gmpuzA"
+            >
+              4.8
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="sc-fKgIGh QDDsx"
+            >
+              Overall Fit Rating
+            </td>
+            <td
+              className="sc-kfYqjs gmpuzA"
+            >
+              <div
+                className="sc-jSFkmK lnDnEi"
+              >
+                <div
+                  className="sc-gtssRu dWODPw"
+                >
+                  <div
+                    className="sc-dlnjPT dfYhMK"
+                  />
+                  <span
+                    className="sc-gKAblj dJFrAv"
+                  />
+                </div>
+                <span
+                  className="sc-hKFyIo fNFVfG"
+                >
+                  Runs Small
+                </span>
+                <span
+                  className="sc-eCApGN dNfuhr"
+                >
+                  Runs Large
+                </span>
+              </div>
+            </td>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div
+      className="sc-bkbjAj dxzrvs"
+    >
+      <div
+        className="sc-fnVYJo iajhhJ"
+        data-testid="dropDown"
+      >
+        Sort By:
+         
+        Most Recent
+         
+        ▼
+        <div
+          className="sc-hBMVcZ cGajHf"
+          data-testid="content"
+        >
+          <div
+            className="sc-fFSRdu fmPRGV"
+            data-testid="relevant"
+            onClick={[Function]}
+          >
+            Most Relevant
+          </div>
+          <div
+            className="sc-fFSRdu fmPRGV"
+            data-testid="helpful"
+            onClick={[Function]}
+          >
+            Most Helpful
+          </div>
+          <div
+            className="sc-fFSRdu fmPRGV"
+            data-testid="high"
+            onClick={[Function]}
+          >
+            Highest to Lowest Rating
+          </div>
+          <div
+            className="sc-fFSRdu fmPRGV"
+            data-testid="low"
+            onClick={[Function]}
+          >
+            Lowest to Highest Rating
+          </div>
+          <div
+            className="sc-fFSRdu fmPRGV"
+            data-testid="recent"
+            onClick={[Function]}
+          >
+            Most Recent
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`A suite of tests for Reviews Services Container renders Reviews Services correctly 1`] = `
+<p>
+  Be the first to review this product
+</p>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 1`] = `
 <div
   className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
 >
   Sort By:
    
@@ -206,33 +540,39 @@ exports[`A suite example using Snapshot renders correctly SortBy Review Componen
   ▼
   <div
     className="sc-hBMVcZ cGajHf"
+    data-testid="content"
   >
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
       onClick={[Function]}
     >
       Most Relevant
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
       onClick={[Function]}
     >
       Most Helpful
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="high"
       onClick={[Function]}
     >
       Highest to Lowest Rating
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="low"
       onClick={[Function]}
     >
       Lowest to Highest Rating
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
       onClick={[Function]}
     >
       Most Recent
@@ -241,8 +581,191 @@ exports[`A suite example using Snapshot renders correctly SortBy Review Componen
 </div>
 `;
 
-exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 2`] = `
 <div
-  className="sc-bdnylx ddxNlS"
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Lowesest to Highest Rating
+   
+  ▼
+  <div
+    className="sc-hBMVcZ cGajHf"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Helpful" 1`] = `
+<div
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Most Helpful
+   
+  ▼
+  <div
+    className="sc-hBMVcZ cGajHf"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Recent" 1`] = `
+<div
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Most Recent
+   
+  ▼
+  <div
+    className="sc-hBMVcZ cGajHf"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for Star Review Component renders correctly Star Review Component with 1 ★'s 1`] = `
+<div
+  className="sc-bdnylx blTEpM"
+/>
+`;
+
+exports[`A suite of tests for Star Review Component renders correctly Star Review Component with 3 ★'s 1`] = `
+<div
+  className="sc-bdnylx cSglpA"
+/>
+`;
+
+exports[`A suite of tests for Star Review Component renders correctly Star Review Component with 4.5 ★'s 1`] = `
+<div
+  className="sc-bdnylx dDgCkX"
+/>
+`;
+
+exports[`A suite of tests for Star Review Component renders correctly Star Review Component with 5 ★'s 1`] = `
+<div
+  className="sc-bdnylx gulRub"
+/>
+`;
+
+exports[`A suite of tests for Star Review Component renders correctly Star Review Component with no ★'s 1`] = `
+<div
+  className="sc-bdnylx eTIvCG"
 />
 `;

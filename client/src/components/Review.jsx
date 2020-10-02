@@ -8,7 +8,9 @@ import Star from './Star.jsx';
 import Fit from './Fit.jsx';
 import Helpful from './Helpful.jsx';
 
-const Review = ({ review, patchData, showImgModal, setModalImg }) => (
+const Review = ({
+  review, patchData, showImgModal, setModalImg,
+}) => (
   <FlexContainer>
     <FlexBoxL>
       <p><b>{review.nickname}</b></p>
@@ -52,8 +54,8 @@ const Review = ({ review, patchData, showImgModal, setModalImg }) => (
         />
       ))}
       <Helpful
-        helpful_yes={review.helpful_yes}
-        helpful_no={review.helpful_no}
+        helpfulyes={review.helpful_yes}
+        helpfulno={review.helpful_no}
         idd={review._id}
         patchData={patchData}
       />
