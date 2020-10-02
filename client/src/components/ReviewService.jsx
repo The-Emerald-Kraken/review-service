@@ -86,7 +86,6 @@ ReviewService.propTypes = {
 
 const Wrapper = styled.section`
 padding: 4em;
-background: whitesmoke;
 width: 50%;
 margin: auto;
 font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
