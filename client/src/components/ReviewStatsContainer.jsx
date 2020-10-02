@@ -90,7 +90,6 @@ function ReviewStatsContainer({ avgReview, setSort, sort }) {
         </FlexBoxL>
         <FootR><SortBy sort={sort} setSort={setSort} /></FootR>
       </FlexContainer>
-      <FootR><SortBy sort={sort} setSort={setSort} /></FootR>
     </Wrapper>
   );
 }
