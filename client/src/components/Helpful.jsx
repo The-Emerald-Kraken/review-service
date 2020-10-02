@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-function Helpful({ helpful, idd, patchData }) {
-  const [yes, setYes] = useState(helpful.yes);
-  const [no, setNo] = useState(helpful.no);
+function Helpful({ helpful_yes, helpful_no, idd, patchData }) {
+  const [yes, setYes] = useState(helpful_yes);
+  const [no, setNo] = useState(helpful_no);
   // const [selected, setSelected] = useState(null);
   const [id] = useState(idd);
 
@@ -32,7 +32,8 @@ function Helpful({ helpful, idd, patchData }) {
 }
 
 Helpful.propTypes = {
-  helpful: PropTypes.shape().isRequired,
+  helpful_yes: PropTypes.number.isRequired,
+  helpful_no: PropTypes.number.isRequired,
   idd: PropTypes.string.isRequired,
   patchData: PropTypes.func.isRequired,
 };

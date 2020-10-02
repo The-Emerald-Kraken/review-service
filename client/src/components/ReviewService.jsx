@@ -16,9 +16,10 @@ function ReviewService({ start }) {
   const [currentItem] = useState(start);
   const [showImgModal, setShowImgModal] = useState(false);
   const [modalImg, setModalImg] = useState({});
+  const [sort, setSort] = useState('Most Recent');
 
   const FetchData = (requests, id) => {
-    axios.get(`/api/products/reviews/${id}/${requests}`)
+    axios.get(`/api/products/reviews/${id}/${requests}/${sort}`)
       .then(({ data }) => setReviews(data))
       .catch((err) => (err));
   };
@@ -30,7 +31,6 @@ function ReviewService({ start }) {
 
   const PatchData = (selected, id) => {
     axios.patch(`/api/products/reviews/${selected}/${id}`)
-      .then(() => FetchData(display, currentItem))
       .catch((err) => err);
   };
 
@@ -45,11 +45,19 @@ function ReviewService({ start }) {
   useEffect(() => {
     FetchData(display, currentItem);
   }, [currentItem]);
+
+  useEffect(() => {
+    FetchData(display, currentItem);
+  }, [sort]);
+
+  if (reviews.length === 0) {
+    return <p>Be the first to review this product</p>;
+  }
   return (
 
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
-      <ReviewStatsContainer avgReview={avg} />
+      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} />
       <ul>
         {reviews.map((review) => (
           <Review
@@ -80,7 +88,11 @@ const Wrapper = styled.section`
 padding: 4em;
 background: whitesmoke;
 width: 50%;
-margin: auto
+margin: auto;
+font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-style: normal;
+font-weight: 400;
+letter-spacing: -.016rem;
 `;
 const PageMask = styled.div`
   background: rgba(0, 0, 0, 0.5);

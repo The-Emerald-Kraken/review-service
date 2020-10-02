@@ -61,10 +61,9 @@ const generateFakeReview = (productID, reviewID) => {
         weight: randWeight(),
         location: faker.address.city(),
         email: faker.internet.email(),
-        helpful: {
-          yes: 1,
-          no: 2,
-        },
+        helpful_yes: 1,
+        helpful_no: 2,
+
       },
     );
   }

@@ -52,7 +52,8 @@ const Review = ({ review, patchData, showImgModal, setModalImg }) => (
         />
       ))}
       <Helpful
-        helpful={review.helpful}
+        helpful_yes={review.helpful_yes}
+        helpful_no={review.helpful_no}
         idd={review._id}
         patchData={patchData}
       />
@@ -74,7 +75,7 @@ Review.propTypes = {
 
 const FlexContainer = styled.section`
 display: flex;
-font-family: Stuart,Georgia,serif;
+//font-family: Stuart,Georgia,serif;
 font-size: 16px;
 border-bottom: groove;
 `;
@@ -101,20 +102,21 @@ padding-top: 90px;
 const Image = styled.img`
   width: 150px;
   height: 150px;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${(props) => props.inputSrc});
   position: relative;
   margin-right: 1.5px;
   margin -left: 1.5px;
 `;
-const Title = styled.h2`
+const Title = styled.h3`
     color: #292929;
     font-size: 19px;
     line-height: 20px;
-    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 0;
+    //font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+
     `;
 
 const Title2 = styled.h2`

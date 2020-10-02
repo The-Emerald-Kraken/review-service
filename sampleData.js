@@ -19,11 +19,8 @@ const sampleReview = {
   weight: '375 - 400 lbs',
   location: 'New York',
   email: 'fake@gmail.com',
-  helpful: {
-    yes: '1',
-    no: '2',
-  },
-
+  helpful_yes: 1,
+  helpful_no: 2,
 };
 
 module.exports = sampleReview;
