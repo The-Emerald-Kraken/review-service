@@ -34,8 +34,14 @@ app.get('/api/products/reviews/avg/:item', (req, res) => {
     .catch(() => res.sendStatus(503));
 });
 
-app.get('/api/products/reviews/:id/:count', (req, res) => {
-  Reviews.find({ product_id: req.params.id }).limit(Number(req.params.count))
+app.get('/api/products/reviews/:id/:count/:sort', (req, res) => {
+  {createdAt, 'asc'}
+  {helpful {yes, 'asc'}}
+  {rating, 'asc'}
+  {rating, 'desc'}
+
+
+  Reviews.find({ product_id: req.params.id }).sort(sortBy).limit(Number(req.params.count))
     .then((data) => res.send(data))
     .catch(() => res.sendStatus(410));
 });

@@ -7,7 +7,7 @@ import Star from './Star.jsx';
 import Fit from './Fit.jsx';
 import SortBy from './SortBy.jsx';
 
-function ReviewStatsContainer({ avgReview }) {
+function ReviewStatsContainer({ avgReview, setSort, sort }) {
   return (
     <Wrapper>
       <Title>Reviews</Title>
@@ -88,14 +88,17 @@ function ReviewStatsContainer({ avgReview }) {
             </thead>
           </Table>
         </FlexBoxL>
-        <FootR><SortBy sort={'Most Recent'} /></FootR>
+        <FootR><SortBy sort={sort} setSort={setSort} /></FootR>
       </FlexContainer>
+      <FootR><SortBy sort={sort} setSort={setSort} /></FootR>
     </Wrapper>
   );
 }
 
 ReviewStatsContainer.propTypes = {
   avgReview: PropTypes.shape().isRequired,
+  setSort: PropTypes.func.isRequired,
+  sort: PropTypes.string.isRequired,
 };
 
 const FootR = styled.div`

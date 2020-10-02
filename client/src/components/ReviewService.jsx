@@ -16,9 +16,10 @@ function ReviewService({ start }) {
   const [currentItem] = useState(start);
   const [showImgModal, setShowImgModal] = useState(false);
   const [modalImg, setModalImg] = useState({});
+  const [sort, setSort] = useState('Most Recent');
 
   const FetchData = (requests, id) => {
-    axios.get(`/api/products/reviews/${id}/${requests}`)
+    axios.get(`/api/products/reviews/${id}/${requests}/${sort}`)
       .then(({ data }) => setReviews(data))
       .catch((err) => (err));
   };
@@ -45,11 +46,15 @@ function ReviewService({ start }) {
   useEffect(() => {
     FetchData(display, currentItem);
   }, [currentItem]);
+
+  useEffect(() => {
+    FetchData(display, currentItem);
+  }, [sort]);
   return (
 
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
-      <ReviewStatsContainer avgReview={avg} />
+      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} />
       <ul>
         {reviews.map((review) => (
           <Review

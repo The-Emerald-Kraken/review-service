@@ -2,16 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-function SortBy({ sort }) {
+function SortBy({ sort, setSort }) {
   return (
     <Dropdown>
-      <p>Sort By {sort} ▼</p>
+      Sort By:
+      {' '}
+      {sort}
+      {' '}
+      ▼
       <Content>
-        <Ref>Most Relevant</Ref>
-        <Ref>Most Helpful</Ref>
-        <Ref>Highest to Lowest Rating</Ref>
-        <Ref>Lowest to Highest Rating</Ref>
-        <Ref>Most Recent</Ref>
+        <Ref onClick={() => setSort('Most Relevant')}>Most Relevant</Ref>
+        <Ref onClick={() => setSort('Most Helpful')}>Most Helpful</Ref>
+        <Ref onClick={() => setSort('Highest to Lowest Rating')}>Highest to Lowest Rating</Ref>
+        <Ref onClick={() => setSort('Lowest to Highest Rating')}>Lowest to Highest Rating</Ref>
+        <Ref onClick={() => setSort('Most Recent')}>Most Recent</Ref>
       </Content>
     </Dropdown>
   );
@@ -19,12 +23,13 @@ function SortBy({ sort }) {
 
 SortBy.propTypes = {
   sort: PropTypes.string.isRequired,
+  setSort: PropTypes.func.isRequired,
 };
 const Content = styled.div`
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  width: 225px;
+  width: max-content;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 `;
@@ -32,9 +37,10 @@ const Content = styled.div`
 const Dropdown = styled.div`
   position: relative;
   display: inline-block;
-  width: 200px;
+  width: max-content;
+  z-index: 1;
   &:hover ${Content} {
-    display: inline-block;
+    display: block;
   }
 `;
 
