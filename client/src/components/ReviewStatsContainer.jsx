@@ -8,12 +8,12 @@ import Fit from './Fit.jsx';
 import SortBy from './SortBy.jsx';
 
 function ReviewStatsContainer({
-  avgReview, setSort, sort, display,
+  avgReview, setSort, sort, display, openReview,
 }) {
   return (
     <Wrapper>
       <Title>Reviews</Title>
-      <ReviewButton>Write a review</ReviewButton>
+      <ReviewButton onClick={() => openReview(true)}>Write a review</ReviewButton>
       <FlexContainer>
         <FlexBoxR>
           <Table>
@@ -113,6 +113,7 @@ ReviewStatsContainer.propTypes = {
   setSort: PropTypes.func.isRequired,
   sort: PropTypes.string.isRequired,
   display: PropTypes.number.isRequired,
+  openReview: PropTypes.func.isRequired,
 };
 
 const ItemsDis = styled.p`
