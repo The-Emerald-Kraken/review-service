@@ -10,8 +10,8 @@
   "scripts": {
     "react-dev": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "db-seeding": "node database/seed.js",
-    "test": "jest --coverage"
+    "db-seed": "node database/seed.js",
+    "test": "jest --coverage --env=jsdom"
   },
   "jest": {
     "transform": {

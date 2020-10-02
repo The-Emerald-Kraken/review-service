@@ -37,7 +37,7 @@ display:inline-block;margin-right:10px;
   display: block;
   left: 0;
   top:0;
-  width: ${(props) => props.inputWidth || '0'}%;
+  width: ${(props) => props.inputWidth}%;
   overflow: hidden;
 }
 

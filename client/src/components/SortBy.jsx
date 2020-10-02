@@ -32,7 +32,7 @@ SortBy.propTypes = {
   setSort: PropTypes.func.isRequired,
 };
 const Content = styled.div`
-  display: block;
+  display: none;
   position: absolute;
   background-color: #f9f9f9;
   width: max-content;
