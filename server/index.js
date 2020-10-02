@@ -57,7 +57,8 @@ app.post('/api/products/reviews', (req, res) => {
     .then(() => res.sendStatus(201))
     .catch(() => res.sendStatus(503));
 });
-
+// TODO - Needs to be cleaned up. This model was based on an old structure that is no longer uesed
+// It works, it just not purtty
 app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
   const filter = { _id: req.params.id };
   const help = req.params.helpful;
