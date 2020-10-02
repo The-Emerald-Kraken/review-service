@@ -31,7 +31,6 @@ function ReviewService({ start }) {
 
   const PatchData = (selected, id) => {
     axios.patch(`/api/products/reviews/${selected}/${id}`)
-      .then(() => FetchData(display, currentItem))
       .catch((err) => err);
   };
 

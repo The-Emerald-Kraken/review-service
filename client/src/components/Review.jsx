@@ -52,7 +52,8 @@ const Review = ({ review, patchData, showImgModal, setModalImg }) => (
         />
       ))}
       <Helpful
-        helpful={review.helpful}
+        helpful_yes={review.helpful_yes}
+        helpful_no={review.helpful_no}
         idd={review._id}
         patchData={patchData}
       />

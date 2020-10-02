@@ -26,10 +26,9 @@ const reviewsSchema = new mongoose.Schema({
   age: String,
   location: String,
   email: String,
-  helpful: {
-    yes: Number,
-    no: Number,
-  },
+  helpful_yes: Number,
+  helpful_no: Number,
+
 },
 {
   timestamps: true,

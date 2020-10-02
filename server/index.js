@@ -35,11 +35,16 @@ app.get('/api/products/reviews/avg/:item', (req, res) => {
 });
 
 app.get('/api/products/reviews/:id/:count/:sort', (req, res) => {
-  {createdAt, 'asc'}
-  {helpful {yes, 'asc'}}
-  {rating, 'asc'}
-  {rating, 'desc'}
-
+  let sortBy;
+  if (req.params.sort === 'Most Helpful') {
+    sortBy = '-helpful_yes';
+  } else if (req.params.sort === 'Highest to Lowest Rating') {
+    sortBy = 'rating';
+  } else if (req.params.sort === 'Lowest to Highest Rating') {
+    sortBy = '-rating';
+  } else {
+    sortBy = '-createdAt';
+  }
 
   Reviews.find({ product_id: req.params.id }).sort(sortBy).limit(Number(req.params.count))
     .then((data) => res.send(data))
@@ -59,11 +64,11 @@ app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
   Reviews.find(filter)
     .then((data) => {
       if (help === 'yes') {
-        return [(1 + data[0].helpful[help]), data[0].helpful.no];
+        return [(1 + data[0].helpful_yes), data[0].helpful_no];
       }
-      return [data[0].helpful.yes, (1 + data[0].helpful[help])];
+      return [data[0].helpful_yes, (1 + data[0].helpful_no)];
     })
-    .then((newValue) => ({ helpful: { yes: newValue[0], no: newValue[1] } }))
+    .then((newValue) => ({ helpful_yes: newValue[0], helpful_no: newValue[1] } ))
     .then((update) => (Reviews.findOneAndUpdate(filter, update)))
     .then(() => Reviews.find(filter))
     .then((data) => res.send(data))
