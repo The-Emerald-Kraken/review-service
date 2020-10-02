@@ -12,6 +12,7 @@ import Fit from '../client/src/components/Fit';
 import LoadMore from '../client/src/components/LoadMore';
 import Star from '../client/src/components/Star';
 import SortBy from '../client/src/components/SortBy';
+import ReviewModal from '../client/src/components/ReviewModal';
 import sampleReview from '../sampleData.js'
 const noop = () => { };
 Object.defineProperty(window, 'scrollTo', { value: noop, writable: true });
@@ -20,6 +21,20 @@ describe('A suite of tests for Reviews Services Container', () => {
   it('renders Reviews Services correctly', () => {
     const tree = renderer
       .create(<ReviewService start={1} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+describe('A suite of tests for ReviewModal Component', () => {
+  it('renders Reviews Services correctly', () => {
+    const tree = renderer
+      .create(<ReviewModal img={sampleReview.images[0]} showReviewModal={true} onClose={() => (null)} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+  it('it does nopt renders Reviews Services', () => {
+    const tree = renderer
+      .create(<ReviewModal img={sampleReview.images[0]} showReviewModal={false} onClose={() => (null)} />)
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
@@ -56,7 +71,8 @@ describe('A suite of tests for Review Stats Container Component', () => {
         avgReview={avg}
         setSort={() => (null)}
         sort={'Most Recent'}
-        display = {5}
+        display={5}
+        openReview={() => (null)}
       />)
       .toJSON();
     expect(tree).toMatchSnapshot();

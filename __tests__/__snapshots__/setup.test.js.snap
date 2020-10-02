@@ -293,6 +293,7 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
   </h1>
   <button
     className="sc-bYwzba cCGNpU"
+    onClick={[Function]}
   >
     Write a review
   </button>
@@ -535,6 +536,98 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
       </div>
     </div>
   </section>
+</div>
+`;
+
+exports[`A suite of tests for ReviewModal Component it does nopt renders Reviews Services 1`] = `null`;
+
+exports[`A suite of tests for ReviewModal Component renders Reviews Services correctly 1`] = `
+<div
+  className="sc-cBoprd dYZyTo"
+>
+  <button
+    className="sc-iTVIwl aTpSw"
+    onClick={[Function]}
+  >
+    X
+  </button>
+  <div
+    className="sc-jcwofb gtUsti"
+  >
+    <img
+      className="sc-carGAA iNEvDa"
+    />
+    The Greekest
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Product rating*
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Review title*
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Review*
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Would you recommend this product to a friend?
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Overall Fit
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Best for:
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Height
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Weight Range
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Age
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Nickname* Location
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    Email*
+  </div>
+  <div
+    className="sc-ciSmjq RpyRj"
+  >
+    <button
+      className="sc-iBzFoy ebpcog"
+    >
+      Post Review
+    </button>
+  </div>
 </div>
 `;
 
