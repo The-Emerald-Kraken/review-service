@@ -57,7 +57,7 @@ function ReviewService({ start }) {
 
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
-      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} />
+      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} display={display} />
       <ul>
         {reviews.map((review) => (
           <Review
@@ -86,7 +86,6 @@ ReviewService.propTypes = {
 
 const Wrapper = styled.section`
 padding: 4em;
-background: whitesmoke;
 width: 50%;
 margin: auto;
 font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;

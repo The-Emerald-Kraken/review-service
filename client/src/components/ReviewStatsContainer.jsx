@@ -7,7 +7,9 @@ import Star from './Star.jsx';
 import Fit from './Fit.jsx';
 import SortBy from './SortBy.jsx';
 
-function ReviewStatsContainer({ avgReview, setSort, sort }) {
+function ReviewStatsContainer({
+  avgReview, setSort, sort, display,
+}) {
   return (
     <Wrapper>
       <Title>Reviews</Title>
@@ -88,6 +90,18 @@ function ReviewStatsContainer({ avgReview, setSort, sort }) {
             </thead>
           </Table>
         </FlexBoxL>
+        <FootL>
+          <ItemsDis>
+            1–
+            {display}
+            {' '}
+            of
+            {' '}
+            {avgReview.count}
+            {' '}
+            Reviews
+          </ItemsDis>
+        </FootL>
         <FootR><SortBy sort={sort} setSort={setSort} /></FootR>
       </FlexContainer>
     </Wrapper>
@@ -98,13 +112,30 @@ ReviewStatsContainer.propTypes = {
   avgReview: PropTypes.shape().isRequired,
   setSort: PropTypes.func.isRequired,
   sort: PropTypes.string.isRequired,
+  display: PropTypes.number.isRequired,
 };
 
+const ItemsDis = styled.p`
+  position: absolute;
+  bottom:0;
+  left: 0;
+  margin-bottom: 0;
+`;
 const FootR = styled.div`
-  float: right;
-  margin-right: 5px;
-  margin-top: 350px;
-  margin-bottom: 5px;
+  position: relative;
+  padding: 0;
+`;
+const FootL = styled.div`
+  position: relative;
+  padding: 0;
+`;
+
+const FlexBoxL = styled.div`
+  position: relative;
+`;
+const FlexBoxR = styled.div`
+  position: relative;
+  width: 55%;
 `;
 const StarBar = styled.div`
 position: relative;
@@ -135,24 +166,16 @@ box-shadow: inset 1px 0 0 rgba(255,255,255,.5),inset -1px 0 0 rgba(0,0,0,.25);
 
 const FlexContainer = styled.section`
   width: 1300px;
-  display: flex;
+  display: grid;
   font-family: Stuart,Georgia,serif;
   font-size: 16px;
   border-bottom: groove;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-bottom: 20px;
   font-family: Graphik,Roboto,"Helvetica Neue",Helvetica,Arial,sans-serif;
   font-style: normal;
   font-weight: 400;
   letter-spacing: -.016rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, auto);
 `;
 const Table = styled.table`
 tablelayout: auto;
@@ -176,20 +199,6 @@ width: 500px;
 
 
 `;
-const FlexBoxL = styled.div`
-  margin: 20px;
-  padding: 20px;
-
-`;
-const FlexBoxR = styled.div`
-  margin-top: 1000px;
-  height: 300px;
-  margin: 10px;
-  padding: 20px;
-  width: 600px;
-
-`;
-
 const Wrapper = styled.div`
 display: block;
 width: 1300px;;

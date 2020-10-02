@@ -38,7 +38,7 @@ const Review = ({
         {review.age}
       </p>
       <p>
-        <b>Primary Usage </b>
+        {review.tags.length > 0 ? <b>Primary Usage </b> : null}
         <Wrapper>
           {review.tags.map((tag) => (`${tag} `))}
         </Wrapper>
@@ -88,12 +88,13 @@ const FlexBoxL = styled.div`
 
 `;
 const FlexBoxC = styled.div`
+position: relative;
   margin: 20px;
   margin-right: 70px;
   margin-left: 70px;
   margin-top: 0;
   padding: 20px;
-
+  padding-bottom:1px
 `;
 const FlexBoxR = styled.div`
 padding-top: 300px;
@@ -110,6 +111,7 @@ const Image = styled.img`
   position: relative;
   margin-right: 1.5px;
   margin -left: 1.5px;
+  margin-bottom: 30px;
 `;
 const Title = styled.h3`
     color: #292929;
