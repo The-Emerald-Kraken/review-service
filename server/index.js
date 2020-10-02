@@ -69,7 +69,7 @@ app.patch('/api/products/reviews/:helpful/:id', (req, res) => {
       }
       return [data[0].helpful_yes, (1 + data[0].helpful_no)];
     })
-    .then((newValue) => ({ helpful_yes: newValue[0], helpful_no: newValue[1] } ))
+    .then((newValue) => ({ helpful_yes: newValue[0], helpful_no: newValue[1] }))
     .then((update) => (Reviews.findOneAndUpdate(filter, update)))
     .then(() => Reviews.find(filter))
     .then((data) => res.send(data))

@@ -6,58 +6,6 @@ exports[`A suite example using Snapshot renders Reviews Services correctly 1`] =
 </p>
 `;
 
-exports[`A suite example using Snapshot renders correctly Fit Display Component 1`] = `
-<div
-  className="sc-jSFkmK lnDnEi"
->
-  <div
-    className="sc-gtssRu dWODPw"
-  >
-    <div
-      className="sc-dlnjPT dUUXmW"
-    />
-    <span
-      className="sc-gKAblj dJFrAv"
-    />
-  </div>
-  <span
-    className="sc-hKFyIo fNFVfG"
-  >
-    Runs Small
-  </span>
-  <span
-    className="sc-eCApGN dNfuhr"
-  >
-    Runs Large
-  </span>
-</div>
-`;
-
-exports[`A suite example using Snapshot renders correctly Helpful Button Component 1`] = `
-<span>
-  Helpful?
-  <button
-    className="sc-iCoHVE hDOOVg"
-    onClick={[Function]}
-  >
-    Yes · 
-    1
-  </button>
-  <button
-    className="sc-iCoHVE hDOOVg"
-    onClick={[Function]}
-  >
-    No · 
-    2
-  </button>
-  <button
-    className="sc-iCoHVE hDOOVg"
-  >
-    Report as inappropriate
-  </button>
-</span>
-`;
-
 exports[`A suite example using Snapshot renders correctly Load More Button Component 1`] = `
 <button
   className="sc-ksluoS djYkNW"
@@ -139,21 +87,27 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     <span>
       Helpful?
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
+        data-testid="yesButton"
         onClick={[Function]}
+        value={1}
       >
-        Yes · 
+        Yes ·
+         
         1
       </button>
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
+        data-testid="noButton"
         onClick={[Function]}
+        value={2}
       >
-        No · 
+        No ·
+         
         2
       </button>
       <button
-        className="sc-iCoHVE hDOOVg"
+        className="sc-iCoHVE iXcjmY"
       >
         Report as inappropriate
       </button>
@@ -195,9 +149,128 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
 </section>
 `;
 
-exports[`A suite example using Snapshot renders correctly SortBy Review Component 1`] = `
+exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
+<div
+  className="sc-bdnylx ddxNlS"
+/>
+`;
+
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "Runs Large 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT iEAyWe"
+    />
+    <span
+      className="sc-gKAblj dJFrAv"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
+`;
+
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "Runs Small 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT eUUHfX"
+    />
+    <span
+      className="sc-gKAblj dJFrAv"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
+`;
+
+exports[`A suite of tests for Fit Component renders correctly Fit Display Component as "True Fit 1`] = `
+<div
+  className="sc-jSFkmK lnDnEi"
+>
+  <div
+    className="sc-gtssRu dWODPw"
+  >
+    <div
+      className="sc-dlnjPT dUUXmW"
+    />
+    <span
+      className="sc-gKAblj dJFrAv"
+    />
+  </div>
+  <span
+    className="sc-hKFyIo fNFVfG"
+  >
+    Runs Small
+  </span>
+  <span
+    className="sc-eCApGN dNfuhr"
+  >
+    Runs Large
+  </span>
+</div>
+`;
+
+exports[`A suite of tests for Helpful Component renders correctly Helpful Button Component 1`] = `
+<span>
+  Helpful?
+  <button
+    className="sc-iCoHVE iXcjmY"
+    data-testid="yesButton"
+    onClick={[Function]}
+    value={1}
+  >
+    Yes ·
+     
+    1
+  </button>
+  <button
+    className="sc-iCoHVE iXcjmY"
+    data-testid="noButton"
+    onClick={[Function]}
+    value={2}
+  >
+    No ·
+     
+    2
+  </button>
+  <button
+    className="sc-iCoHVE iXcjmY"
+  >
+    Report as inappropriate
+  </button>
+</span>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 1`] = `
 <div
   className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
 >
   Sort By:
    
@@ -205,34 +278,40 @@ exports[`A suite example using Snapshot renders correctly SortBy Review Componen
    
   ▼
   <div
-    className="sc-hBMVcZ cGajHf"
+    className="sc-hBMVcZ dVVFnw"
+    data-testid="content"
   >
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
       onClick={[Function]}
     >
       Most Relevant
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
       onClick={[Function]}
     >
       Most Helpful
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="high"
       onClick={[Function]}
     >
       Highest to Lowest Rating
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="low"
       onClick={[Function]}
     >
       Lowest to Highest Rating
     </div>
     <div
       className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
       onClick={[Function]}
     >
       Most Recent
@@ -241,8 +320,161 @@ exports[`A suite example using Snapshot renders correctly SortBy Review Componen
 </div>
 `;
 
-exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Highest to Lowest Rating" 2`] = `
 <div
-  className="sc-bdnylx ddxNlS"
-/>
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Lowesest to Highest Rating
+   
+  ▼
+  <div
+    className="sc-hBMVcZ dVVFnw"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Helpful" 1`] = `
+<div
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Most Helpful
+   
+  ▼
+  <div
+    className="sc-hBMVcZ dVVFnw"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
+`;
+
+exports[`A suite of tests for SortBy Component renders correctly SortBy Review Component by "Most Recent" 1`] = `
+<div
+  className="sc-fnVYJo iajhhJ"
+  data-testid="dropDown"
+>
+  Sort By:
+   
+  Most Recent
+   
+  ▼
+  <div
+    className="sc-hBMVcZ dVVFnw"
+    data-testid="content"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="relevant"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="helpful"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="high"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="low"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      data-testid="recent"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
 `;

@@ -3,19 +3,25 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 function SortBy({ sort, setSort }) {
+  const sortRelevant = () => setSort('Most Relevant');
+  const sortHelpful = () => setSort('Most Helpful');
+  const sortHighRate = () => setSort('Highest to Lowest Rating');
+  const sortLowRate = () => setSort('Lowest to Highest Rating');
+  const sortRecent = () => setSort('Most Recent');
+
   return (
-    <Dropdown>
+    <Dropdown data-testid="dropDown">
       Sort By:
       {' '}
       {sort}
       {' '}
       ▼
-      <Content>
-        <Ref onClick={() => setSort('Most Relevant')}>Most Relevant</Ref>
-        <Ref onClick={() => setSort('Most Helpful')}>Most Helpful</Ref>
-        <Ref onClick={() => setSort('Highest to Lowest Rating')}>Highest to Lowest Rating</Ref>
-        <Ref onClick={() => setSort('Lowest to Highest Rating')}>Lowest to Highest Rating</Ref>
-        <Ref onClick={() => setSort('Most Recent')}>Most Recent</Ref>
+      <Content data-testid="content">
+        <Ref data-testid="relevant" onClick={sortRelevant}>Most Relevant</Ref>
+        <Ref data-testid="helpful" onClick={sortHelpful}>Most Helpful</Ref>
+        <Ref data-testid="high" onClick={sortHighRate}>Highest to Lowest Rating</Ref>
+        <Ref data-testid="low" onClick={sortLowRate}>Lowest to Highest Rating</Ref>
+        <Ref data-testid="recent" onClick={sortRecent}>Most Recent</Ref>
       </Content>
     </Dropdown>
   );
@@ -26,7 +32,7 @@ SortBy.propTypes = {
   setSort: PropTypes.func.isRequired,
 };
 const Content = styled.div`
-  display: none;
+  display: block;
   position: absolute;
   background-color: #f9f9f9;
   width: max-content;
