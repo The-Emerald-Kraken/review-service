@@ -102,7 +102,7 @@ padding-top: 90px;
 const Image = styled.img`
   width: 150px;
   height: 150px;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${(props) => props.inputSrc});
   position: relative;

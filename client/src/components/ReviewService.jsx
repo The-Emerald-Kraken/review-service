@@ -49,6 +49,10 @@ function ReviewService({ start }) {
   useEffect(() => {
     FetchData(display, currentItem);
   }, [sort]);
+
+  if (reviews.length === 0) {
+    return <p>Be the first to review this product</p>;
+  }
   return (
 
     <Wrapper>
