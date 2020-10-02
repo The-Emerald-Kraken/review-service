@@ -8,6 +8,7 @@ import Helpful from '../client/src/components/Helpful';
 import Fit from '../client/src/components/Fit';
 import LoadMore from '../client/src/components/LoadMore';
 import Star from '../client/src/components/Star';
+import SortBy from '../client/src/components/SortBy';
 import sampleReview from '../sampleData.js'
 
 describe('A suite example using Snapshot',  () => {
@@ -28,7 +29,8 @@ describe('A suite example using Snapshot',  () => {
   it('renders correctly Helpful Button Component', () => {
     const tree = renderer
       .create(<Helpful
-        helpful={sampleReview.helpful}
+        helpful_yes={sampleReview.helpful_yes}
+        helpful_no={sampleReview.helpful_no}
         idd={sampleReview._id}
         patchData={()=>(null)}
         />)
@@ -65,7 +67,12 @@ describe('A suite example using Snapshot',  () => {
     expect(tree).toMatchSnapshot();
   });
 
-
+  it('renders correctly SortBy Review Component', () => {
+    const tree = renderer
+      .create(<SortBy sort={'Highest to Lowest Rating'} setSort={()=>(null)} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
 });
 
 // to my understanding, shallow make it so I do not have to 'mount' it to a real page

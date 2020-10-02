@@ -1,195 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`A suite example using Snapshot renders Reviews Services correctly 1`] = `
-<section
-  className="sc-bYwzba bzbiuh"
->
-  <div
-    className="sc-fKgIGh jmiSIv"
-  >
-    <h1
-      className="sc-bCwgka bZJqHK"
-    >
-      Reviews
-    </h1>
-    <button
-      className="sc-iwaifL kByyyd"
-    >
-      Write a review
-    </button>
-    <section
-      className="sc-fFSRdu eEQBRj"
-    >
-      <div
-        className="sc-kfYqjs fgrQAH"
-      >
-        <table
-          className="sc-bkbjAj favYKL"
-        >
-          <thead>
-            <tr>
-              <td>
-                Rating Snapshot
-              </td>
-            </tr>
-            <tr>
-              <td>
-                Select a row below to filter reviews.
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-hHEjAm jJbWbE"
-              >
-                5 ★
-                <div
-                  className="sc-hBMVcZ gGMrHL"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="sc-fnVYJo deJmWL"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-hHEjAm jJbWbE"
-              >
-                4 ★
-                <div
-                  className="sc-hBMVcZ gGMrHL"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="sc-fnVYJo deJmWL"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-hHEjAm jJbWbE"
-              >
-                3 ★
-                <div
-                  className="sc-hBMVcZ gGMrHL"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="sc-fnVYJo deJmWL"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-hHEjAm jJbWbE"
-              >
-                2 ★
-                <div
-                  className="sc-hBMVcZ gGMrHL"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="sc-fnVYJo deJmWL"
-                  />
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-hHEjAm jJbWbE"
-              >
-                1 ★
-                <div
-                  className="sc-hBMVcZ gGMrHL"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="sc-fnVYJo deJmWL"
-                  />
-                </div>
-              </td>
-            </tr>
-          </thead>
-        </table>
-      </div>
-      <div
-        className="sc-dlMBXb fkaCyn"
-      >
-        <table
-          className="sc-bkbjAj favYKL"
-        >
-          <caption>
-            Average Customer Ratings
-          </caption>
-          <thead>
-            <tr>
-              <td>
-                Overall
-              </td>
-              <td
-                className="sc-iemXMA kltcnJ"
-              >
-                <div
-                  className="sc-bdnylx eTIvCG"
-                />
-              </td>
-              <td
-                className="sc-iemXMA kltcnJ"
-              >
-                0
-              </td>
-            </tr>
-            <tr>
-              <td
-                className="sc-dIvqjp bAuUCd"
-              >
-                Overall Fit Rating
-              </td>
-              <td
-                className="sc-iemXMA kltcnJ"
-              >
-                <div
-                  className="sc-jSFkmK lnDnEi"
-                >
-                  <div
-                    className="sc-gtssRu dWODPw"
-                  >
-                    <div
-                      className="sc-dlnjPT eUUHfX"
-                    />
-                    <span
-                      className="sc-gKAblj dJFrAv"
-                    />
-                  </div>
-                  <span
-                    className="sc-hKFyIo fNFVfG"
-                  >
-                    Runs Small
-                  </span>
-                  <span
-                    className="sc-eCApGN dNfuhr"
-                  >
-                    Runs Large
-                  </span>
-                </div>
-              </td>
-            </tr>
-          </thead>
-        </table>
-      </div>
-    </section>
-  </div>
-  <ul />
-  <button
-    className="sc-ksluoS djYkNW"
-    onClick={[Function]}
-  >
-    Load More
-  </button>
-</section>
+<p>
+  Be the first to review this product
+</p>
 `;
 
 exports[`A suite example using Snapshot renders correctly Fit Display Component 1`] = `
@@ -255,7 +69,7 @@ exports[`A suite example using Snapshot renders correctly Load More Button Compo
 
 exports[`A suite example using Snapshot renders correctly Review Display Component 1`] = `
 <section
-  className="sc-fujyUd cfrUuJ"
+  className="sc-fujyUd bPgFlh"
 >
   <div
     className="sc-pNWxx glRlCA"
@@ -280,11 +94,11 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
       />
       3 years ago
     </span>
-    <h2
-      className="sc-crzoUp ixgpyj"
+    <h3
+      className="sc-crzoUp ljATUS"
     >
       The Greeks Strike Again
-    </h2>
+    </h3>
     <p>
       GreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreekGreek
     </p>
@@ -319,7 +133,7 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
       </span>
     </p>
     <img
-      className="sc-iqAbSa jTOThj"
+      className="sc-iqAbSa kwHshB"
       onClick={[Function]}
     />
     <span>
@@ -379,6 +193,52 @@ exports[`A suite example using Snapshot renders correctly Review Display Compone
     </div>
   </div>
 </section>
+`;
+
+exports[`A suite example using Snapshot renders correctly SortBy Review Component 1`] = `
+<div
+  className="sc-fnVYJo iajhhJ"
+>
+  Sort By:
+   
+  Highest to Lowest Rating
+   
+  ▼
+  <div
+    className="sc-hBMVcZ cGajHf"
+  >
+    <div
+      className="sc-fFSRdu fmPRGV"
+      onClick={[Function]}
+    >
+      Most Relevant
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      onClick={[Function]}
+    >
+      Most Helpful
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      onClick={[Function]}
+    >
+      Highest to Lowest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      onClick={[Function]}
+    >
+      Lowest to Highest Rating
+    </div>
+    <div
+      className="sc-fFSRdu fmPRGV"
+      onClick={[Function]}
+    >
+      Most Recent
+    </div>
+  </div>
+</div>
 `;
 
 exports[`A suite example using Snapshot renders correctly Star Review Component 1`] = `
