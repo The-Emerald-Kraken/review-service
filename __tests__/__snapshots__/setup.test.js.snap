@@ -519,60 +519,6 @@ exports[`A suite of tests for Review Stats Container Component renders correctly
       </div>
     </div>
   </section>
-  <div
-    className="sc-bkbjAj dxzrvs"
-  >
-    <div
-      className="sc-fnVYJo iajhhJ"
-      data-testid="dropDown"
-    >
-      Sort By:
-       
-      Most Recent
-       
-      ▼
-      <div
-        className="sc-hBMVcZ cGajHf"
-        data-testid="content"
-      >
-        <div
-          className="sc-fFSRdu fmPRGV"
-          data-testid="relevant"
-          onClick={[Function]}
-        >
-          Most Relevant
-        </div>
-        <div
-          className="sc-fFSRdu fmPRGV"
-          data-testid="helpful"
-          onClick={[Function]}
-        >
-          Most Helpful
-        </div>
-        <div
-          className="sc-fFSRdu fmPRGV"
-          data-testid="high"
-          onClick={[Function]}
-        >
-          Highest to Lowest Rating
-        </div>
-        <div
-          className="sc-fFSRdu fmPRGV"
-          data-testid="low"
-          onClick={[Function]}
-        >
-          Lowest to Highest Rating
-        </div>
-        <div
-          className="sc-fFSRdu fmPRGV"
-          data-testid="recent"
-          onClick={[Function]}
-        >
-          Most Recent
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 `;
 
