@@ -8,6 +8,9 @@ import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
 import ReviewStatsContainer from './ReviewStatsContainer.jsx';
 import ImgModal from './ImgModal.jsx';
+import Star from './Star.jsx';
+import ReviewModal from './ReviewModal.jsx';
+import sampleImages from './sample/sampleImg.js';
 
 function ReviewService({ start }) {
   const [display, setDisplay] = useState(5);
@@ -17,6 +20,7 @@ function ReviewService({ start }) {
   const [showImgModal, setShowImgModal] = useState(false);
   const [modalImg, setModalImg] = useState({});
   const [sort, setSort] = useState('Most Recent');
+  const [showReviewModal, setShowReviewModal] = useState(false);
 
   const FetchData = (requests, id) => {
     axios.get(`/api/products/reviews/${id}/${requests}/${sort}`)
@@ -51,13 +55,46 @@ function ReviewService({ start }) {
   }, [sort]);
 
   if (reviews.length === 0) {
-    return <p>Be the first to review this product</p>;
+    return (
+      <Wrapper>
+        <ReviewModal
+          img={sampleImages}
+          showReviewModal={showReviewModal}
+          onClose={setShowReviewModal}
+        />
+        <hr />
+        <Star rating={0} />
+        <FirstButton
+          onClick={() => (setShowReviewModal(true))}
+        >
+          Be the first to review this product
+        </FirstButton>
+        {showImgModal || showReviewModal ? (
+          <PageMask onClick={() => {
+            setShowImgModal(false);
+            setShowReviewModal(false);
+          }}
+          />
+        ) : null}
+      </Wrapper>
+    );
   }
   return (
 
     <Wrapper>
       <ImgModal image={modalImg} showImgModal={showImgModal} onClose={setShowImgModal} />
-      <ReviewStatsContainer avgReview={avg} setSort={setSort} sort={sort} display={display} />
+      <ReviewModal
+        img={sampleImages}
+        showReviewModal={showReviewModal}
+        onClose={setShowReviewModal}
+      />
+      <ReviewStatsContainer
+        avgReview={avg}
+        setSort={setSort}
+        sort={sort}
+        display={display}
+        openReview={setShowReviewModal}
+      />
       <ul>
         {reviews.map((review) => (
           <Review
@@ -75,7 +112,13 @@ function ReviewService({ start }) {
           currentDisplay={display}
         />
       ) : null}
-      {showImgModal ? <PageMask onClick={() => setShowImgModal(false)} /> : null}
+      {showImgModal || showReviewModal ? (
+        <PageMask onClick={() => {
+          setShowImgModal(false);
+          setShowReviewModal(false);
+        }}
+        />
+      ) : null}
     </Wrapper>
   );
 }
@@ -100,6 +143,17 @@ const PageMask = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
+`;
+
+const FirstButton = styled.button`
+background: none;
+color: inherit;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+display: block;
 `;
 
 export default ReviewService;
