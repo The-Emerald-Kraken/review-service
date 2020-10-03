@@ -41,6 +41,7 @@ ReviewModal.propTypes = {
   img: PropTypes.shape().isRequired,
 };
 const Modal = styled.div`
+font-family: inherit;
 display: grid;
 width: 90%;
 max-width: 900px;
