@@ -543,7 +543,7 @@ exports[`A suite of tests for ReviewModal Component it does nopt renders Reviews
 
 exports[`A suite of tests for ReviewModal Component renders Reviews Services correctly 1`] = `
 <div
-  className="sc-cBoprd dYZyTo"
+  className="sc-cBoprd dExOty"
 >
   <button
     className="sc-iTVIwl aTpSw"
