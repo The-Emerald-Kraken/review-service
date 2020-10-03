@@ -57,6 +57,11 @@ function ReviewService({ start }) {
   if (reviews.length === 0) {
     return (
       <Wrapper>
+        <ReviewModal
+          img={sampleImages}
+          showReviewModal={showReviewModal}
+          onClose={setShowReviewModal}
+        />
         <hr />
         <Star rating={0} />
         <FirstButton
@@ -72,7 +77,7 @@ function ReviewService({ start }) {
           />
         ) : null}
       </Wrapper>
-    )
+    );
   }
   return (
 
@@ -149,6 +154,6 @@ font: inherit;
 cursor: pointer;
 outline: inherit;
 display: block;
-`
+`;
 
 export default ReviewService;
