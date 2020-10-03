@@ -3,6 +3,11 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 function ReviewModal({ img, showReviewModal, onClose }) {
+  const h = ['Shorter than 5\'', '5\'1"', '5\'2"', '5\'3"', '5\'4"', '5\'5"', '5\'6"', '5\'7"', '5\'8"', '5\'9"', '5\'10"', '5\'11"', '6\'1"', '6\'2"', '6\'3"', '6\'4"', '6\'5"', 'Taller than 6\'5"'];
+  const w = ['Less than 100 lbs', '100 - 125 lbs', '125 - 150 lbs', '175 - 200 lbs', '200 - 225 lbs', '225 - 250 lbs', '250 - 275 lbs', '275 - 300 lbs', '300 - 325 lbs', '325 - 350 lbs', '350 - 375 lbs', '375 - 400 lbs', 'More than 400 lbs'];
+  const tags = ['Shirt', 'Pratical', '#streetWear', 'JinSwagg', 'Snoop'];
+  const age = ['Under 18', '18 to 24', '25 to 34', '35 to 44', '45 to 54', '55 to 64', '65 to 74', '75 or over'];
+  const fit = [0, 0.5, 1];
   if (!showReviewModal) {
     return null;
   }
@@ -18,19 +23,87 @@ function ReviewModal({ img, showReviewModal, onClose }) {
         <Image inputSrc={img.url} />
         {img.description}
       </ImageContainer>
-      <Content>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</Content>
-      <Content>Product rating*</Content>
-      <Content>Review title*</Content>
-      <Content>Review*</Content>
-      <Content>Would you recommend this product to a friend?</Content>
-      <Content>Overall Fit</Content>
-      <Content>Best for:</Content>
-      <Content>Height</Content>
-      <Content>Weight Range</Content>
-      <Content>Age</Content>
-      <Content>Nickname* Location</Content>
-      <Content>Email*</Content>
-      <Content><PostButton>Post Review</PostButton></Content>
+
+      <Content>
+        <form onSubmit={() => (console.log('HelloWorld'))}>
+          <Content>
+            <TitleField>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleField>
+          </Content>
+          <Content>
+            <label htmlFor="Product Rating">
+              <TitleField>Product rating*</TitleField>
+              <input type="radio" name="rating" value={1} />
+              <input type="radio" name="rating" value={2} />
+              <input type="radio" name="rating" value={3} />
+              <input type="radio" name="rating" value={4} />
+              <input type="radio" name="rating" value={5} />
+            </label>
+          </Content>
+          <Content>
+
+            <TitleFieldBlock>Review title*</TitleFieldBlock>
+            <input type="text" name="title" placeholder="Example: Great on trails!" />
+
+          </Content>
+          <Content>
+
+            <TitleFieldBlock>Review*</TitleFieldBlock>
+            <Textarea type="text" name="body" placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!" />
+
+          </Content>
+          <Content>
+            <TitleField>Would you recommend this product to a friend?</TitleField>
+            <input type="radio" name="recc" value="yes" />
+            <input type="radio" name="recc" value="no" />
+          </Content>
+          <Content>
+            <TitleField>Overall Fit</TitleField>
+            {fit.map((f) => <input key={f} type="radio" name="fit" value={f} />)}
+          </Content>
+          <Content>
+            <TitleField>Best for:</TitleField>
+            {tags.map((t) => <input key={t} type="radio" name="tag" value={t} />)}
+
+          </Content>
+          <Content>
+            <TitleField>Height</TitleField>
+            <select name="height">
+              <option disabled hidden selected>Select</option>
+              {h.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
+            </select>
+          </Content>
+          <Content>
+            <TitleField>Weight Range</TitleField>
+            <select name="weight">
+              <option disabled hidden selected>Select</option>
+              {w.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
+            </select>
+          </Content>
+          <Content>
+            <TitleField>Age</TitleField>
+            <select name="weight">
+              <option disabled hidden selected>Select</option>
+              {age.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
+            </select>
+          </Content>
+          <Content>
+            <ContentInline>
+              <TitleFieldBlock>Nickname*</TitleFieldBlock>
+              <input type="text" name="nickname" placeholder="Example: jackie27" />
+            </ContentInline>
+            <ContentInline>
+              <TitleFieldBlock>Location</TitleFieldBlock>
+              <input type="text" name="Location" placeholder="Example: Seattle, WA" />
+            </ContentInline>
+          </Content>
+          <Content>
+            <TitleFieldBlock>Email*</TitleFieldBlock>
+            <input type="email" name="email" placeholder="Example: youremail@example.com" />
+          </Content>
+          <Content><PostButton>Post Review</PostButton></Content>
+
+        </form>
+      </Content>
     </Modal>
   );
 }
@@ -40,6 +113,18 @@ ReviewModal.propTypes = {
   showReviewModal: PropTypes.bool.isRequired,
   img: PropTypes.shape().isRequired,
 };
+const TitleField = styled.h3`
+    line-height: 1.5em!important;
+    resize: vertical!important;
+    display: inline-block!important;
+    line-height: 20px!important;
+`;
+const TitleFieldBlock = styled.h3`
+    line-height: 1.5em!important;
+    resize: vertical!important;
+    display: block!important;
+    line-height: 20px!important;
+`;
 const Modal = styled.div`
 font-family: inherit;
 display: grid;
@@ -48,25 +133,39 @@ max-width: 900px;
 margin: 0, auto;
 position: absolute;
 top: 25%;
-left: 40%;
+left: 32%;
 z-index: 10;
 padding: 100px
 height: auto;
 background-color: #e5e5e5;
 grid-template-columns: repeat(3, 1fr);
 box-shadow: 0 10px 25px rgba(0,0,0,.5);
-  @supports (offset-rotate: 0deg) {
-    offset-rotate: 0deg;
-    offset-path: path("M 250,100 S -300,500 -700,-200");
-    }
-  }
   `;
-
+const Textarea = styled.textarea`
+overflow-wrap: break-word;
+overflow: hidden !important;
+height: 89.9884px !important;
+border-radius: .25em .25em 0 0!important;
+    background-color: transparent!important;
+    border-bottom: 1px solid #ccc!important;
+    margin: 0!important;
+    border-color: transparent!important;
+    line-height: 1.5em!important;
+    resize: vertical!important;
+    display: inline-block!important;
+    width: 100%;
+`;
 const Content = styled.div`
   grid-column-start: 2;
   grid-column-end: 4;
-  border:1px solid black;
   background-color: white;
+  display: block;
+`;
+const ContentInline = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: white;
+  display: inline-block;
 `;
 const ImageContainer = styled.div`
   position: relative;
@@ -103,7 +202,7 @@ const Button = styled.button`
   height: 30px;
   width: 30px;
   &:hover{
-    background-color: transparent;
+            background - color: transparent;
     background-color: #fff;
   }
 `;
@@ -152,7 +251,7 @@ float: right;
   border-left-style: none;
   border-left-color: transparent;
   &:hover {
-    background-color: #2b455c;
+            background - color: #2b455c;
     border-color: #2b455c;
   }
 `;

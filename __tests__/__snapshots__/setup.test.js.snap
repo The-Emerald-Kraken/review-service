@@ -543,104 +543,506 @@ exports[`A suite of tests for ReviewModal Component it does nopt renders Reviews
 
 exports[`A suite of tests for ReviewModal Component renders Reviews Services correctly 1`] = `
 <div
-  className="sc-cBoprd dExOty"
+  className="sc-jcwofb bkDIIz"
 >
   <button
-    className="sc-iTVIwl aTpSw"
+    className="sc-jNnnWF bCgksY"
     onClick={[Function]}
   >
     X
   </button>
   <div
-    className="sc-jcwofb gtUsti"
+    className="sc-efHXLn eHfBxe"
   >
     <img
-      className="sc-carGAA iNEvDa"
+      className="sc-cTJmaU lhLlrd"
     />
     The Greekest
   </div>
   <div
-    className="sc-ciSmjq RpyRj"
+    className="sc-iTVIwl ifvcZZ"
   >
-    My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Product rating*
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Review title*
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Review*
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Would you recommend this product to a friend?
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Overall Fit
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Best for:
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Height
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Weight Range
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Age
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Nickname* Location
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    Email*
-  </div>
-  <div
-    className="sc-ciSmjq RpyRj"
-  >
-    <button
-      className="sc-iBzFoy ebpcog"
+    <form
+      onSubmit={[Function]}
     >
-      Post Review
-    </button>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
+        </h3>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <label
+          htmlFor="Product Rating"
+        >
+          <h3
+            className="sc-cBoprd iQQTCc"
+          >
+            Product rating*
+          </h3>
+          <input
+            name="rating"
+            type="radio"
+            value={1}
+          />
+          <input
+            name="rating"
+            type="radio"
+            value={2}
+          />
+          <input
+            name="rating"
+            type="radio"
+            value={3}
+          />
+          <input
+            name="rating"
+            type="radio"
+            value={4}
+          />
+          <input
+            name="rating"
+            type="radio"
+            value={5}
+          />
+        </label>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-ciSmjq jtjPIj"
+        >
+          Review title*
+        </h3>
+        <input
+          name="title"
+          placeholder="Example: Great on trails!"
+          type="text"
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-ciSmjq jtjPIj"
+        >
+          Review*
+        </h3>
+        <textarea
+          className="sc-carGAA FTkaC"
+          name="body"
+          placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!"
+          type="text"
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Would you recommend this product to a friend?
+        </h3>
+        <input
+          name="recc"
+          type="radio"
+          value="yes"
+        />
+        <input
+          name="recc"
+          type="radio"
+          value="no"
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Overall Fit
+        </h3>
+        <input
+          name="fit"
+          type="radio"
+          value={0}
+        />
+        <input
+          name="fit"
+          type="radio"
+          value={0.5}
+        />
+        <input
+          name="fit"
+          type="radio"
+          value={1}
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Best for:
+        </h3>
+        <input
+          name="tag"
+          type="radio"
+          value="Shirt"
+        />
+        <input
+          name="tag"
+          type="radio"
+          value="Pratical"
+        />
+        <input
+          name="tag"
+          type="radio"
+          value="#streetWear"
+        />
+        <input
+          name="tag"
+          type="radio"
+          value="JinSwagg"
+        />
+        <input
+          name="tag"
+          type="radio"
+          value="Snoop"
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Height
+        </h3>
+        <select
+          name="height"
+        >
+          <option
+            disabled={true}
+            hidden={true}
+            selected={true}
+          >
+            Select
+          </option>
+          <option
+            value="Shorter than 5'"
+          >
+            Shorter than 5'
+          </option>
+          <option
+            value="5'1\\""
+          >
+            5'1"
+          </option>
+          <option
+            value="5'2\\""
+          >
+            5'2"
+          </option>
+          <option
+            value="5'3\\""
+          >
+            5'3"
+          </option>
+          <option
+            value="5'4\\""
+          >
+            5'4"
+          </option>
+          <option
+            value="5'5\\""
+          >
+            5'5"
+          </option>
+          <option
+            value="5'6\\""
+          >
+            5'6"
+          </option>
+          <option
+            value="5'7\\""
+          >
+            5'7"
+          </option>
+          <option
+            value="5'8\\""
+          >
+            5'8"
+          </option>
+          <option
+            value="5'9\\""
+          >
+            5'9"
+          </option>
+          <option
+            value="5'10\\""
+          >
+            5'10"
+          </option>
+          <option
+            value="5'11\\""
+          >
+            5'11"
+          </option>
+          <option
+            value="6'1\\""
+          >
+            6'1"
+          </option>
+          <option
+            value="6'2\\""
+          >
+            6'2"
+          </option>
+          <option
+            value="6'3\\""
+          >
+            6'3"
+          </option>
+          <option
+            value="6'4\\""
+          >
+            6'4"
+          </option>
+          <option
+            value="6'5\\""
+          >
+            6'5"
+          </option>
+          <option
+            value="Taller than 6'5\\""
+          >
+            Taller than 6'5"
+          </option>
+        </select>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Weight Range
+        </h3>
+        <select
+          name="weight"
+        >
+          <option
+            disabled={true}
+            hidden={true}
+            selected={true}
+          >
+            Select
+          </option>
+          <option
+            value="Less than 100 lbs"
+          >
+            Less than 100 lbs
+          </option>
+          <option
+            value="100 - 125 lbs"
+          >
+            100 - 125 lbs
+          </option>
+          <option
+            value="125 - 150 lbs"
+          >
+            125 - 150 lbs
+          </option>
+          <option
+            value="175 - 200 lbs"
+          >
+            175 - 200 lbs
+          </option>
+          <option
+            value="200 - 225 lbs"
+          >
+            200 - 225 lbs
+          </option>
+          <option
+            value="225 - 250 lbs"
+          >
+            225 - 250 lbs
+          </option>
+          <option
+            value="250 - 275 lbs"
+          >
+            250 - 275 lbs
+          </option>
+          <option
+            value="275 - 300 lbs"
+          >
+            275 - 300 lbs
+          </option>
+          <option
+            value="300 - 325 lbs"
+          >
+            300 - 325 lbs
+          </option>
+          <option
+            value="325 - 350 lbs"
+          >
+            325 - 350 lbs
+          </option>
+          <option
+            value="350 - 375 lbs"
+          >
+            350 - 375 lbs
+          </option>
+          <option
+            value="375 - 400 lbs"
+          >
+            375 - 400 lbs
+          </option>
+          <option
+            value="More than 400 lbs"
+          >
+            More than 400 lbs
+          </option>
+        </select>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-cBoprd iQQTCc"
+        >
+          Age
+        </h3>
+        <select
+          name="weight"
+        >
+          <option
+            disabled={true}
+            hidden={true}
+            selected={true}
+          >
+            Select
+          </option>
+          <option
+            value="Under 18"
+          >
+            Under 18
+          </option>
+          <option
+            value="18 to 24"
+          >
+            18 to 24
+          </option>
+          <option
+            value="25 to 34"
+          >
+            25 to 34
+          </option>
+          <option
+            value="35 to 44"
+          >
+            35 to 44
+          </option>
+          <option
+            value="45 to 54"
+          >
+            45 to 54
+          </option>
+          <option
+            value="55 to 64"
+          >
+            55 to 64
+          </option>
+          <option
+            value="65 to 74"
+          >
+            65 to 74
+          </option>
+          <option
+            value="75 or over"
+          >
+            75 or over
+          </option>
+        </select>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <div
+          className="sc-iBzFoy hQKBSt"
+        >
+          <h3
+            className="sc-ciSmjq jtjPIj"
+          >
+            Nickname*
+          </h3>
+          <input
+            name="nickname"
+            placeholder="Example: jackie27"
+            type="text"
+          />
+        </div>
+        <div
+          className="sc-iBzFoy hQKBSt"
+        >
+          <h3
+            className="sc-ciSmjq jtjPIj"
+          >
+            Location
+          </h3>
+          <input
+            name="Location"
+            placeholder="Example: Seattle, WA"
+            type="text"
+          />
+        </div>
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <h3
+          className="sc-ciSmjq jtjPIj"
+        >
+          Email*
+        </h3>
+        <input
+          name="email"
+          placeholder="Example: youremail@example.com"
+          type="email"
+        />
+      </div>
+      <div
+        className="sc-iTVIwl ifvcZZ"
+      >
+        <button
+          className="sc-dPaNSN bMpXfL"
+        >
+          Post Review
+        </button>
+      </div>
+    </form>
   </div>
 </div>
 `;
 
 exports[`A suite of tests for Reviews Services Container renders Reviews Services correctly 1`] = `
 <section
-  className="sc-efHXLn fQLJfj"
+  className="sc-bBjRzc jxwOUv"
 >
   <hr />
   <div
     className="sc-bdnylx eTIvCG"
   />
   <button
-    className="sc-jNnnWF crxXDw"
+    className="sc-ArjOu iolnni"
     onClick={[Function]}
   >
     Be the first to review this product
