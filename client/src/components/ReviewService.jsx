@@ -8,6 +8,7 @@ import Review from './Review.jsx';
 import LoadMore from './LoadMore.jsx';
 import ReviewStatsContainer from './ReviewStatsContainer.jsx';
 import ImgModal from './ImgModal.jsx';
+import Star from './Star.jsx';
 import ReviewModal from './ReviewModal.jsx';
 import sampleImages from './sample/sampleImg.js';
 
@@ -54,7 +55,24 @@ function ReviewService({ start }) {
   }, [sort]);
 
   if (reviews.length === 0) {
-    return <p>Be the first to review this product</p>;
+    return (
+      <Wrapper>
+        <hr />
+        <Star rating={0} />
+        <FirstButton
+          onClick={() => (setShowReviewModal(true))}
+        >
+          Be the first to review this product
+        </FirstButton>
+        {showImgModal || showReviewModal ? (
+          <PageMask onClick={() => {
+            setShowImgModal(false);
+            setShowReviewModal(false);
+          }}
+          />
+        ) : null}
+      </Wrapper>
+    )
   }
   return (
 
@@ -121,5 +139,16 @@ const PageMask = styled.div`
   bottom: 0;
   left: 0;
 `;
+
+const FirstButton = styled.button`
+background: none;
+color: inherit;
+border: none;
+padding: 0;
+font: inherit;
+cursor: pointer;
+outline: inherit;
+display: block;
+`
 
 export default ReviewService;
