@@ -543,48 +543,44 @@ exports[`A suite of tests for ReviewModal Component it does nopt renders Reviews
 
 exports[`A suite of tests for ReviewModal Component renders Reviews Services correctly 1`] = `
 <div
-  className="sc-jcwofb bkDIIz"
+  className="sc-cTJmaU mSJyO"
 >
   <button
-    className="sc-jNnnWF bCgksY"
+    className="sc-hTRkEk kyPRJy"
     onClick={[Function]}
   >
     X
   </button>
   <div
-    className="sc-efHXLn eHfBxe"
+    className="sc-ArjOu hdbCCN"
   >
     <img
-      className="sc-cTJmaU lhLlrd"
+      className="sc-khIgXV goQMie"
     />
     The Greekest
   </div>
   <div
-    className="sc-iTVIwl ifvcZZ"
+    className="sc-bBjRzc hoRang"
   >
     <form
       onSubmit={[Function]}
     >
-      <div
-        className="sc-iTVIwl ifvcZZ"
+      <h2
+        className="sc-iTVIwl ezVRTm"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
-        >
-          My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
-        </h3>
-      </div>
+        My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
+      </h2>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
         <label
           htmlFor="Product Rating"
         >
-          <h3
-            className="sc-cBoprd iQQTCc"
+          <label
+            className="sc-iBzFoy fJZDPC"
           >
             Product rating*
-          </h3>
+          </label>
           <input
             name="rating"
             type="radio"
@@ -613,10 +609,10 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         </label>
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
         <h3
-          className="sc-ciSmjq jtjPIj"
+          className="sc-efHXLn kBakUh"
         >
           Review title*
         </h3>
@@ -627,28 +623,42 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         />
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
         <h3
-          className="sc-ciSmjq jtjPIj"
+          className="sc-efHXLn kBakUh"
         >
           Review*
         </h3>
-        <textarea
-          className="sc-carGAA FTkaC"
-          name="body"
-          placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!"
-          type="text"
-        />
+        <div
+          className="sc-ciSmjq kdyKth"
+        >
+          <textarea
+            className="sc-jNnnWF gynoKo"
+            name="body"
+            placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!"
+            type="text"
+          />
+          <div
+            className="sc-cBoprd gLlmmu"
+          >
+            <button>
+              Image
+            </button>
+            <button>
+              Video
+            </button>
+          </div>
+        </div>
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Would you recommend this product to a friend?
-        </h3>
+        </label>
         <input
           name="recc"
           type="radio"
@@ -661,13 +671,13 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         />
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Overall Fit
-        </h3>
+        </label>
         <input
           name="fit"
           type="radio"
@@ -685,13 +695,13 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         />
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Best for:
-        </h3>
+        </label>
         <input
           name="tag"
           type="radio"
@@ -719,14 +729,15 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         />
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Height
-        </h3>
+        </label>
         <select
+          className="sc-carGAA cPNaEG"
           name="height"
         >
           <option
@@ -829,14 +840,15 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         </select>
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Weight Range
-        </h3>
+        </label>
         <select
+          className="sc-carGAA cPNaEG"
           name="weight"
         >
           <option
@@ -914,14 +926,15 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         </select>
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
-        <h3
-          className="sc-cBoprd iQQTCc"
+        <label
+          className="sc-iBzFoy fJZDPC"
         >
           Age
-        </h3>
+        </label>
         <select
+          className="sc-carGAA cPNaEG"
           name="weight"
         >
           <option
@@ -974,56 +987,55 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         </select>
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
-      >
-        <div
-          className="sc-iBzFoy hQKBSt"
-        >
-          <h3
-            className="sc-ciSmjq jtjPIj"
-          >
-            Nickname*
-          </h3>
-          <input
-            name="nickname"
-            placeholder="Example: jackie27"
-            type="text"
-          />
-        </div>
-        <div
-          className="sc-iBzFoy hQKBSt"
-        >
-          <h3
-            className="sc-ciSmjq jtjPIj"
-          >
-            Location
-          </h3>
-          <input
-            name="Location"
-            placeholder="Example: Seattle, WA"
-            type="text"
-          />
-        </div>
-      </div>
-      <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-cOigif dvysjF"
       >
         <h3
-          className="sc-ciSmjq jtjPIj"
+          className="sc-efHXLn kBakUh"
+        >
+          Nickname*
+        </h3>
+        <input
+          className="sc-jcwofb jnSqCA"
+          name="nickname"
+          placeholder="Example: jackie27"
+          type="text"
+        />
+      </div>
+      <div
+        className="sc-cOigif dvysjF"
+      >
+        <h3
+          className="sc-efHXLn kBakUh"
+        >
+          Location
+        </h3>
+        <input
+          className="sc-jcwofb jnSqCA"
+          name="Location"
+          placeholder="Example: Seattle, WA"
+          type="text"
+        />
+      </div>
+      <div
+        className="sc-cOigif dvysjF"
+      >
+        <h3
+          className="sc-efHXLn kBakUh"
         >
           Email*
         </h3>
         <input
+          className="sc-jcwofb jnSqCA"
           name="email"
           placeholder="Example: youremail@example.com"
           type="email"
         />
       </div>
       <div
-        className="sc-iTVIwl ifvcZZ"
+        className="sc-dPaNSN edomnw"
       >
         <button
-          className="sc-dPaNSN bMpXfL"
+          className="sc-jgPznn bJMsQB"
         >
           Post Review
         </button>
@@ -1035,14 +1047,14 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
 
 exports[`A suite of tests for Reviews Services Container renders Reviews Services correctly 1`] = `
 <section
-  className="sc-bBjRzc jxwOUv"
+  className="sc-gSYCTC ihcRdj"
 >
   <hr />
   <div
     className="sc-bdnylx eTIvCG"
   />
   <button
-    className="sc-ArjOu iolnni"
+    className="sc-iNiQeE kVAQmW"
     onClick={[Function]}
   >
     Be the first to review this product
