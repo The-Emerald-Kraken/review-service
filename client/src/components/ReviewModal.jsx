@@ -24,7 +24,7 @@ function ReviewModal({ img, showReviewModal, onClose }) {
         {img.description}
       </ImageContainer>
 
-      <Content>
+      <ContentM>
         <form onSubmit={() => (console.log('HelloWorld'))}>
 
           <TitleMain>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleMain>
@@ -48,7 +48,12 @@ function ReviewModal({ img, showReviewModal, onClose }) {
           <Content>
 
             <TitleFieldBlock>Review*</TitleFieldBlock>
-            <Textarea type="text" name="body" placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!" />
+            <ReviewContent>
+              <Textarea type="text" name="body" placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!" />
+              <ButtonContainer>
+                <button>Image</button><button>Video</button>
+              </ButtonContainer>
+            </ReviewContent>
 
           </Content>
           <Content>
@@ -86,24 +91,24 @@ function ReviewModal({ img, showReviewModal, onClose }) {
               {age.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
             </Select>
           </Content>
-          <Content>
-            <ContentInline>
-              <TitleFieldBlock>Nickname*</TitleFieldBlock>
-              <input type="text" name="nickname" placeholder="Example: jackie27" />
-            </ContentInline>
-            <ContentInline>
-              <TitleFieldBlock>Location</TitleFieldBlock>
-              <input type="text" name="Location" placeholder="Example: Seattle, WA" />
-            </ContentInline>
-          </Content>
-          <Content>
+
+          <ContentInline>
+            <TitleFieldBlock>Nickname*</TitleFieldBlock>
+            <TextField type="text" name="nickname" placeholder="Example: jackie27" />
+          </ContentInline>
+          <ContentInline>
+            <TitleFieldBlock>Location</TitleFieldBlock>
+            <TextField type="text" name="Location" placeholder="Example: Seattle, WA" />
+          </ContentInline>
+
+          <ContentInline>
             <TitleFieldBlock>Email*</TitleFieldBlock>
-            <input type="email" name="email" placeholder="Example: youremail@example.com" />
-          </Content>
+            <TextField type="email" name="email" placeholder="Example: youremail@example.com" />
+          </ContentInline>
           <Content><PostButton>Post Review</PostButton></Content>
 
         </form>
-      </Content>
+      </ContentM>
     </Modal>
   );
 }
@@ -114,63 +119,114 @@ ReviewModal.propTypes = {
   img: PropTypes.shape().isRequired,
 };
 
+const ButtonContainer = styled.div`
+position: relative!important;
+clear: both!important;
+padding: 0 15px!important;
+zoom: 1!important;
+white-space: nowrap!important;
+`;
+const ReviewContent = styled.div`
+background-color: #fff!important;
+// float: left!important;
+width: 100%!important;
+margin: 10px 0!important;
+// -webkit-border-radius: .25em!important;
+border-radius: .25em!important;
+border: 1px solid!important;
+border-color: #aaa #ccc #ccc!important;
+border-style: solid!important;
+// -webkit-box-shadow: 0 1px 1px #fff!important;
+box-shadow: 0 1px 1px #fff!important;
+padding: 0 20px!important;
+
+`;
+
+const TextField = styled.input`
+    margin: 10px 0!important;
+    width: 100%!important;
+    box-sizing: border-box!important;
+    float: left!important;
+
+    border: 1px solid!important;
+    // border-color: #ccc #ccc #999!important;
+    padding: .5em 1em!important;
+    font-size: 15px!important;
+    // color: #666!important;
+    line-height: 1.2em!important;
+    background: #fff!important;
+    // -webkit-box-shadow: 0 1px 1px #fff!important;
+    box-shadow: 0 1px 1px #fff!important;
+    // -webkit-border-radius: .25em!important;
+    border-radius: .25em!important;
+    outline: 0!important;
+    text-shadow: 0 1px #fff!important;
+    // -webkit-transition: all linear .3s!important;
+
+    transition: all linear .3s!important;
+`;
 const Select = styled.select`
   float: right;
-  outline: 0!important;
-    border-color: #666 #ccc #ccc #ccc!important;
-    box-shadow: 0 1px 0 #fff,inset 1px 0 0 #999!important;
-    box-sizing: border-box!important;
-    font-size: 17px!important;
-    height: 32px!important;
-    line-height: 17px!important;
-    white-space: nowrap!important;
-    text-align: left!important;
-    padding: 5px!important;
-    position: absolute!important;
-    top: -1px!important;
-    left: -1px!important;
-    right: -1px!important;
-    z-index: 1!important;
-    width: 82%!important;
-    border-radius: .25em!important;
-    border-width: 1px!important;
-    border-color: #ccc #ccc #666!important;
-    background-color: #fff!important;
+  outline: 0;
+    border-color: #666 #ccc #ccc #ccc;
+    box-shadow: 0 1px 0 #fff,inset 1px 0 0 #999;
+    box-sizing: border-box;
+    font-size: 17px;
+    height: 32px;
+    line-height: 17px;
+    white-space: nowrap;
+    text-align: left;
+    padding: 0;
+    position: relative!important;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    z-index: 1;
+    width: 50%;
+    border-radius: .25em;
+    border-width: 1px;
+    border-color: #ccc #ccc #666;
+    background-color: #fff;
+    margin-left: 36px!important;
+    display: inline-block;
 `;
 const TitleMain = styled.h2`
-    padding: 20px 12px!important;
-    font-size: 22px!important;
-    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
-    font-style: normal!important;
-    font-weight: 400!important;
-    font-variant: normal!important;
-    text-decoration: none!important;
-    text-transform: none!important;
-    zoom: 1!important;
+    padding: 20px 12px;
+    font-size: 22px;
+    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-decoration: none;
+    text-transform: none;
+    zoom: 1;
 `;
-const TitleField = styled.h3`
-    line-height: 1.5em!important;
-    resize: vertical!important;
-    display: inline-block!important;
-    line-height: 20px!important;
+const TitleField = styled.label`
+font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
+font-size: 16px!important;
+font-weight: 700!important;
+line-height: 24px!important;
+resize: vertical;
+display: inline-block;
+
 `;
 const TitleFieldBlock = styled.h3`
-    line-height: 1.5em!important;
-    resize: vertical!important;
-    display: block!important;
-    line-height: 20px!important;
+font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
+font-size: 16px!important;
+font-weight: 700!important;
+line-height: 24px!important;
+display: block;
+
 `;
 const Modal = styled.div`
 font-family: inherit;
 display: grid;
-width: 90%;
-max-width: 900px;
-margin: 0, auto;
+width: auto%;
+max-width: 1000px;
+margin: 0 auto;
 position: absolute;
-top: 25%;
 left: 32%;
 z-index: 10;
-padding: 100px
 height: auto;
 background-color: #e5e5e5;
 grid-template-columns: repeat(3, 1fr);
@@ -178,27 +234,45 @@ box-shadow: 0 10px 25px rgba(0,0,0,.5);
   `;
 const Textarea = styled.textarea`
 overflow-wrap: break-word;
-overflow: hidden !important;
-height: 89.9884px !important;
+overflow: hidden ;
+height: 89.9884px ;
+border-radius: .25em .25em 0 0;
+background-color: transparent;
+border-bottom: 1px solid #ccc;
+margin: 0;
+border-color: transparent;
+line-height: 1.5em;
+resize: vertical;
+display: inline-block;
+width: 100%;
 border-radius: .25em .25em 0 0!important;
-    background-color: transparent!important;
-    border-bottom: 1px solid #ccc!important;
-    margin: 0!important;
-    border-color: transparent!important;
-    line-height: 1.5em!important;
-    resize: vertical!important;
-    display: inline-block!important;
-    width: 100%;
+background-color: transparent!important;
+border-bottom: 1px solid #ccc!important;
+padding: .5em 1em!important;
+-webkit-box-sizing: border-box!important;
+font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+font-size: 15px!important;
 `;
 const Content = styled.div`
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: white;
   display: block;
-  padding: 10px 20px!important;
-  padding-right: 50px!important;
-  zoom: 1!important;
-  border-top: 1px solid #ddd!important;
+  padding: 10px 20px;
+  padding-right: 50px;
+  zoom: 1;
+  border-top: 1px solid #ddd;
+  position: relative;
+`;
+const ContentM = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: white;
+  display: block;
+  margin: 0;
+  padding-bottom: 10px;
+  zoom: 1;
+  border-top: 1px solid #ddd;
   position: relative;
 `;
 const ContentInline = styled.div`
@@ -206,8 +280,8 @@ const ContentInline = styled.div`
   grid-column-end: 4;
   background-color: white;
   display: inline-block;
-  padding: 10px 20px!important;
-  zoom: 1!important;
+  padding: 0 20px!important;
+  zoom: 1;
   position: relative;
 `;
 const ImageContainer = styled.div`
@@ -216,14 +290,14 @@ const ImageContainer = styled.div`
   grid-row-end: 14;
   grid-auto-rows: 200px;
   background-color: #e5e5e5;
+  margin: 20px!important;
+  text-align: center;
 `;
 const Image = styled.img`
 display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 20px;
-width: 252px;
-height: 334px;
+margin:0;
+width: 165px;
+height: 220px;
 background-size: cover;
 background-repeat: no-repeat;
 border: none;
@@ -256,47 +330,47 @@ box-sizing: border-box;
 width: auto;
 margin-bottom: auto;
 margin-left: 0;
-float: right;
-  color: #fff;
-  font-size: 16px;
-  line-height: 28px;
-  font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-variant: normal;
-  text-decoration: none;
-  text-transform: none;
-  text-shadow: none;
-  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,.1)),color-stop(1,rgba(255,255,255,0)));
-  background-image: -webkit-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
-  background-image: -moz-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
-  background-image: -o-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
-  background-image: linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
-  background-color: #426c90;
-  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
-  padding-top: .5em;
-  padding-right: 1em;
-  padding-bottom: .5em;
-  padding-left: 1em;
-  -webkit-border-radius: 2px 2px 2px 2px;
-  border-radius: 2px 2px 2px 2px;
-  border-top-width: 0;
-  border-top-style: none;
-  border-top-color: transparent;
-  border-right-width: 0;
-  border-right-style: none;
-  border-right-color: transparent;
-  border-bottom-width: 0;
-  border-bottom-style: none;
-  border-bottom-color: transparent;
-  border-left-width: 0;
-  border-left-style: none;
-  border-left-color: transparent;
-  &:hover {
-            background - color: #2b455c;
-    border-color: #2b455c;
-  }
+float: left;
+color: #fff;
+font-size: 16px;
+line-height: 28px;
+font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
+font-style: normal;
+font-weight: 700;
+font-variant: normal;
+text-decoration: none;
+text-transform: none;
+text-shadow: none;
+background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,.1)),color-stop(1,rgba(255,255,255,0)));
+background-image: -webkit-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
+background-image: -moz-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
+background-image: -o-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
+background-image: linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%);
+background-color: #426c90;
+-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
+padding-top: .5em;
+padding-right: 1em;
+padding-bottom: .5em;
+padding-left: 1em;
+-webkit-border-radius: 2px 2px 2px 2px;
+border-radius: 2px 2px 2px 2px;
+border-top-width: 0;
+border-top-style: none;
+border-top-color: transparent;
+border-right-width: 0;
+border-right-style: none;
+border-right-color: transparent;
+border-bottom-width: 0;
+border-bottom-style: none;
+border-bottom-color: transparent;
+border-left-width: 0;
+border-left-style: none;
+border-left-color: transparent;
+&:hover {
+          background - color: #2b455c;
+  border-color: #2b455c;
+}
 `;
 
 export default ReviewModal;
