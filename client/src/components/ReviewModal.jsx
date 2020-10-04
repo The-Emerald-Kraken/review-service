@@ -26,9 +26,9 @@ function ReviewModal({ img, showReviewModal, onClose }) {
 
       <Content>
         <form onSubmit={() => (console.log('HelloWorld'))}>
-          <Content>
-            <TitleField>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleField>
-          </Content>
+
+          <TitleMain>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleMain>
+
           <Content>
             <label htmlFor="Product Rating">
               <TitleField>Product rating*</TitleField>
@@ -67,24 +67,24 @@ function ReviewModal({ img, showReviewModal, onClose }) {
           </Content>
           <Content>
             <TitleField>Height</TitleField>
-            <select name="height">
+            <Select name="height">
               <option disabled hidden selected>Select</option>
               {h.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
-            </select>
+            </Select>
           </Content>
           <Content>
             <TitleField>Weight Range</TitleField>
-            <select name="weight">
+            <Select name="weight">
               <option disabled hidden selected>Select</option>
               {w.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
-            </select>
+            </Select>
           </Content>
           <Content>
             <TitleField>Age</TitleField>
-            <select name="weight">
+            <Select name="weight">
               <option disabled hidden selected>Select</option>
               {age.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
-            </select>
+            </Select>
           </Content>
           <Content>
             <ContentInline>
@@ -113,6 +113,41 @@ ReviewModal.propTypes = {
   showReviewModal: PropTypes.bool.isRequired,
   img: PropTypes.shape().isRequired,
 };
+
+const Select = styled.select`
+  float: right;
+  outline: 0!important;
+    border-color: #666 #ccc #ccc #ccc!important;
+    box-shadow: 0 1px 0 #fff,inset 1px 0 0 #999!important;
+    box-sizing: border-box!important;
+    font-size: 17px!important;
+    height: 32px!important;
+    line-height: 17px!important;
+    white-space: nowrap!important;
+    text-align: left!important;
+    padding: 5px!important;
+    position: absolute!important;
+    top: -1px!important;
+    left: -1px!important;
+    right: -1px!important;
+    z-index: 1!important;
+    width: 82%!important;
+    border-radius: .25em!important;
+    border-width: 1px!important;
+    border-color: #ccc #ccc #666!important;
+    background-color: #fff!important;
+`;
+const TitleMain = styled.h2`
+    padding: 20px 12px!important;
+    font-size: 22px!important;
+    font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    font-variant: normal!important;
+    text-decoration: none!important;
+    text-transform: none!important;
+    zoom: 1!important;
+`;
 const TitleField = styled.h3`
     line-height: 1.5em!important;
     resize: vertical!important;
@@ -160,12 +195,20 @@ const Content = styled.div`
   grid-column-end: 4;
   background-color: white;
   display: block;
+  padding: 10px 20px!important;
+  padding-right: 50px!important;
+  zoom: 1!important;
+  border-top: 1px solid #ddd!important;
+  position: relative;
 `;
 const ContentInline = styled.div`
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: white;
   display: inline-block;
+  padding: 10px 20px!important;
+  zoom: 1!important;
+  position: relative;
 `;
 const ImageContainer = styled.div`
   position: relative;

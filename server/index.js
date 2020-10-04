@@ -54,7 +54,10 @@ app.get('/api/products/reviews/:id/:count/:sort', (req, res) => {
 // UNTESTED - TODO
 app.post('/api/products/reviews', (req, res) => {
   Reviews.create(req.body)
-    .then(() => res.sendStatus(201))
+    .then(() => {
+      console.log(req.body);
+      res.sendStatus(201);
+    })
     .catch(() => res.sendStatus(503));
 });
 // TODO - Needs to be cleaned up. This model was based on an old structure that is no longer uesed
