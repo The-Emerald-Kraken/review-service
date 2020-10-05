@@ -571,88 +571,72 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt
       </h2>
       <div
-        className="sc-iNiQeE gauYms"
+        className="sc-iNiQeE gzJjBW"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Product rating*
+          <div
+            className="sc-cBoprd mceXb"
+          >
+            <input
+              className="sc-ciSmjq eFMExB"
+              name="rating"
+              type="radio"
+              value={1}
+            />
+            <span
+              className="sc-jcwofb sc-carGAA kPKIrB bIdzdq"
+            >
+              ★
+            </span>
+            <input
+              className="sc-ciSmjq eFMExB"
+              name="rating"
+              type="radio"
+              value={2}
+            />
+            <span
+              className="sc-jcwofb sc-carGAA sc-iTVIwl kPKIrB bIdzdq inbSUG"
+            >
+              ★
+            </span>
+            <input
+              className="sc-ciSmjq eFMExB"
+              name="rating"
+              type="radio"
+              value={3}
+            />
+            <span
+              className="sc-jcwofb sc-iBzFoy kPKIrB fFwpLw"
+            >
+              ★
+            </span>
+            <input
+              className="sc-ciSmjq eFMExB"
+              name="rating"
+              type="radio"
+              value={4}
+            />
+            <span
+              className="sc-jcwofb sc-efHXLn kPKIrB jSJuMc"
+            >
+              ★
+            </span>
+            <input
+              className="sc-ciSmjq eFMExB"
+              name="rating"
+              type="radio"
+              value={5}
+            />
+            <span
+              className="sc-jcwofb sc-cTJmaU kPKIrB giKXfB"
+            >
+              ★
+            </span>
+          </div>
         </label>
-        <div
-          className="sc-cBoprd blXjzI"
-        >
-          <input
-            className="sc-ciSmjq eFMExB"
-            name="rating"
-            type="radio"
-            value={1}
-          />
-          <span
-            className="sc-jcwofb sc-carGAA gYQAx bIdzdq"
-          >
-            ★
-          </span>
-        </div>
-        <div
-          className="sc-cBoprd blXjzI"
-        >
-          <input
-            className="sc-ciSmjq eFMExB"
-            name="rating"
-            type="radio"
-            value={2}
-          />
-          <span
-            className="sc-jcwofb sc-iTVIwl gYQAx kXFzoQ"
-          >
-            ★
-          </span>
-        </div>
-        <div
-          className="sc-cBoprd blXjzI"
-        >
-          <input
-            className="sc-ciSmjq eFMExB"
-            name="rating"
-            type="radio"
-            value={3}
-          />
-          <span
-            className="sc-jcwofb sc-iBzFoy gYQAx fFwpLw"
-          >
-            ★
-          </span>
-        </div>
-        <div
-          className="sc-cBoprd blXjzI"
-        >
-          <input
-            className="sc-ciSmjq eFMExB"
-            name="rating"
-            type="radio"
-            value={4}
-          />
-          <span
-            className="sc-jcwofb sc-efHXLn gYQAx jSJuMc"
-          >
-            ★
-          </span>
-        </div>
-        <div
-          className="sc-cBoprd blXjzI"
-        >
-          <input
-            className="sc-ciSmjq eFMExB"
-            name="rating"
-            type="radio"
-            value={5}
-          />
-          <span
-            className="sc-jcwofb sc-cTJmaU gYQAx giKXfB"
-          >
-            ★
-          </span>
-        </div>
       </div>
       <div
         className="sc-laZMyp nDOLR"
@@ -701,7 +685,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Would you recommend this product to a friend?
         </label>
@@ -720,7 +704,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Overall Fit
         </label>
@@ -744,7 +728,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Best for:
         </label>
@@ -778,7 +762,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Height
         </label>
@@ -889,7 +873,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Weight Range
         </label>
@@ -975,7 +959,7 @@ exports[`A suite of tests for ReviewModal Component renders Reviews Services cor
         className="sc-laZMyp nDOLR"
       >
         <label
-          className="sc-khIgXV gFJBGR"
+          className="sc-khIgXV gWXUtw"
         >
           Age
         </label>
