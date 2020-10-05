@@ -29,16 +29,29 @@ function ReviewModal({ img, showReviewModal, onClose }) {
 
           <TitleMain>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleMain>
 
-          <Content>
-            <label htmlFor="Product Rating">
-              <TitleField>Product rating*</TitleField>
-              <input type="radio" name="rating" value={1} />
-              <input type="radio" name="rating" value={2} />
-              <input type="radio" name="rating" value={3} />
-              <input type="radio" name="rating" value={4} />
-              <input type="radio" name="rating" value={5} />
-            </label>
-          </Content>
+          <ContentT>
+            <TitleField>Product rating*</TitleField>
+            <StarContainer>
+              <StarInput type="radio" name="rating" value={1} />
+              <StarButton>★</StarButton>
+            </StarContainer>
+            <StarContainer>
+              <StarInput type="radio" name="rating" value={2} />
+              <StarButton>★</StarButton>
+            </StarContainer>
+            <StarContainer>
+              <StarInput type="radio" name="rating" value={3} />
+              <StarButton>★</StarButton>
+            </StarContainer>
+            <StarContainer>
+              <StarInput type="radio" name="rating" value={4} />
+              <StarButton>★</StarButton>
+            </StarContainer>
+            <StarContainer>
+              <StarInput type="radio" name="rating" value={5} />
+              <StarButton>★</StarButton>
+            </StarContainer>
+          </ContentT>
           <Content>
 
             <TitleFieldBlock>Review title*</TitleFieldBlock>
@@ -118,6 +131,53 @@ ReviewModal.propTypes = {
   showReviewModal: PropTypes.bool.isRequired,
   img: PropTypes.shape().isRequired,
 };
+
+const StarContainer = styled.div`
+
+  position: relative;
+  margin-bottom: 12px;
+  color: #666!important;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-color: #ccc #ccc #aaa #eee!important;
+  border-width: 1px!important;
+  border-style: solid!important;
+  box-shadow: 0 1px 0 #fff,inset 0 1px 0 #fff!important;
+  border-radius: 4px;
+  border-left-color: #d0d0d0!important;
+  text-align: center!important;
+  width: max-content;
+  height: max-content;
+  display: inline-block;
+  overflow: hidden;
+`;
+
+const StarInput = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+`;
+const StarButton = styled.span`
+font-family: "Times New Roman", Times, serif;
+opacity: 1!important;
+    font-size: 36px!important;
+    line-height: 1em!important;
+    color: #fff!important;
+    cursor: pointer!important;
+    padding: 0 4px!important;
+    -webkit-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+    -moz-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+    -o-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+    transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+
+    background-color: #ededed!important;
+    text-shadow: 0 -.05em #b9b9b9!important;
+    font-weight: 400!important;
+`;
 
 const ButtonContainer = styled.div`
 position: relative!important;
@@ -208,7 +268,7 @@ font-weight: 700!important;
 line-height: 24px!important;
 resize: vertical;
 display: inline-block;
-
+margin-right: 30px;
 `;
 const TitleFieldBlock = styled.h3`
 font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
@@ -257,6 +317,17 @@ const Content = styled.div`
   grid-column-start: 2;
   grid-column-end: 4;
   background-color: white;
+  display: block;
+  padding: 10px 20px;
+  padding-right: 50px;
+  zoom: 1;
+  border-top: 1px solid #ddd;
+  position: relative;
+`;
+const ContentT = styled.div`
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: transparent;
   display: block;
   padding: 10px 20px;
   padding-right: 50px;
