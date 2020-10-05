@@ -33,23 +33,23 @@ function ReviewModal({ img, showReviewModal, onClose }) {
             <TitleField>Product rating*</TitleField>
             <StarContainer>
               <StarInput type="radio" name="rating" value={1} />
-              <StarButton>★</StarButton>
+              <Red>★</Red>
             </StarContainer>
             <StarContainer>
               <StarInput type="radio" name="rating" value={2} />
-              <StarButton>★</StarButton>
+              <Orange>★</Orange>
             </StarContainer>
             <StarContainer>
               <StarInput type="radio" name="rating" value={3} />
-              <StarButton>★</StarButton>
+              <Yellow>★</Yellow>
             </StarContainer>
             <StarContainer>
               <StarInput type="radio" name="rating" value={4} />
-              <StarButton>★</StarButton>
+              <LGreen>★</LGreen>
             </StarContainer>
             <StarContainer>
               <StarInput type="radio" name="rating" value={5} />
-              <StarButton>★</StarButton>
+              <Green>★</Green>
             </StarContainer>
           </ContentT>
           <Content>
@@ -154,7 +154,9 @@ const StarContainer = styled.div`
   height: max-content;
   display: inline-block;
   overflow: hidden;
+
 `;
+
 
 const StarInput = styled.input`
   position: absolute;
@@ -164,19 +166,51 @@ const StarInput = styled.input`
 const StarButton = styled.span`
 font-family: "Times New Roman", Times, serif;
 opacity: 1!important;
-    font-size: 36px!important;
-    line-height: 1em!important;
-    color: #fff!important;
-    cursor: pointer!important;
-    padding: 0 4px!important;
-    -webkit-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
-    -moz-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
-    -o-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
-    transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+font-size: 36px!important;
+line-height: 1em!important;
+color: #fff!important;
+cursor: pointer!important;
+padding: 0 4px!important;
+-webkit-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+-moz-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+-o-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
+transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
 
-    background-color: #ededed!important;
-    text-shadow: 0 -.05em #b9b9b9!important;
-    font-weight: 400!important;
+background-color: #ededed!important;
+text-shadow: 0 -.05em #b9b9b9!important;
+font-weight: 400!important;
+
+`;
+
+const Red = styled(StarButton)`
+&:hover {
+  background-color: #b43034!important;
+  border-color: #b43034!important;
+  }
+`;
+const Orange = styled(StarButton)`
+&:hover {
+background-color: #de9500!important;
+border-color: #de9500!important;
+}
+`;
+const Yellow = styled(StarButton)`
+&:hover {
+background-color: #ecdb00!important;
+border-color: #ecdb00!important;
+}
+`;
+const LGreen = styled(StarButton)`
+&:hover {
+  background-color: #8ac100!important;
+  border-color: #8ac100!important;
+}
+`;
+const Green = styled(StarButton)`
+&:hover {
+  background-color: #338b2b!important;
+  border-color: #338b2b!important;
+}
 `;
 
 const ButtonContainer = styled.div`
