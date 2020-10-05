@@ -30,28 +30,24 @@ function ReviewModal({ img, showReviewModal, onClose }) {
           <TitleMain>My Review for REI Co-op Men's Sahara Plaid Long-Sleeve Shirt</TitleMain>
 
           <ContentT>
-            <TitleField>Product rating*</TitleField>
-            <StarContainer>
-              <StarInput type="radio" name="rating" value={1} />
-              <Red>★</Red>
-            </StarContainer>
-            <StarContainer>
-              <StarInput type="radio" name="rating" value={2} />
-              <Orange>★</Orange>
-            </StarContainer>
-            <StarContainer>
-              <StarInput type="radio" name="rating" value={3} />
-              <Yellow>★</Yellow>
-            </StarContainer>
-            <StarContainer>
-              <StarInput type="radio" name="rating" value={4} />
-              <LGreen>★</LGreen>
-            </StarContainer>
-            <StarContainer>
-              <StarInput type="radio" name="rating" value={5} />
-              <Green>★</Green>
-            </StarContainer>
+            <TitleField>
+              Product rating*
+              <StarContainer>
+                <StarInput type="radio" name="rating" value={1} />
+                <Red>★</Red>
+
+                <StarInput type="radio" name="rating" value={2} />
+                <Orange>★</Orange>
+                <StarInput type="radio" name="rating" value={3} />
+                <Yellow>★</Yellow>
+                <StarInput type="radio" name="rating" value={4} />
+                <LGreen>★</LGreen>
+                <StarInput type="radio" name="rating" value={5} />
+                <Green>★</Green>
+              </StarContainer>
+            </TitleField>
           </ContentT>
+
           <Content>
 
             <TitleFieldBlock>Review title*</TitleFieldBlock>
@@ -143,20 +139,21 @@ const StarContainer = styled.div`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border-color: #ccc #ccc #aaa #eee!important;
-  border-width: 1px!important;
-  border-style: solid!important;
-  box-shadow: 0 1px 0 #fff,inset 0 1px 0 #fff!important;
-  border-radius: 4px;
-  border-left-color: #d0d0d0!important;
+  //border-color: #ccc #ccc #aaa #eee!important;
+  //border-width: 1px!important;
+  //border-style: solid!important;
+  //box-shadow: 0 1px 0 #fff,inset 0 1px 0 #fff!important;
+  //border-radius: 4px;
+  //border-left-color: #d0d0d0!important;
   text-align: center!important;
   width: max-content;
   height: max-content;
   display: inline-block;
   overflow: hidden;
+  float: right;
+  margin-left: 30px;
 
 `;
-
 
 const StarInput = styled.input`
   position: absolute;
@@ -175,7 +172,10 @@ padding: 0 4px!important;
 -moz-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
 -o-transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
 transition: all .3s cubic-bezier(0.2,.3,.05,1)!important;
-
+border-color: #ccc #ccc #aaa #eee!important;
+border-width: 1px!important;
+border-style: solid!important;
+box-shadow: 0 1px 0 #fff,inset 0 1px 0 #fff!important;
 background-color: #ededed!important;
 text-shadow: 0 -.05em #b9b9b9!important;
 font-weight: 400!important;
@@ -188,11 +188,12 @@ const Red = styled(StarButton)`
   border-color: #b43034!important;
   }
 `;
-const Orange = styled(StarButton)`
-&:hover {
+const Orange = styled(Red)`
+&:hover  {
 background-color: #de9500!important;
 border-color: #de9500!important;
 }
+
 `;
 const Yellow = styled(StarButton)`
 &:hover {
@@ -303,6 +304,8 @@ line-height: 24px!important;
 resize: vertical;
 display: inline-block;
 margin-right: 30px;
+//text-align: center;
+vertical-align: middle;
 `;
 const TitleFieldBlock = styled.h3`
 font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif!important;
@@ -363,11 +366,13 @@ const ContentT = styled.div`
   grid-column-end: 4;
   background-color: transparent;
   display: block;
-  padding: 10px 20px;
+  padding-top: 10px;
   padding-right: 50px;
+  padding-left: 20px;
   zoom: 1;
   border-top: 1px solid #ddd;
   position: relative;
+  // vertical-align: middle;
 `;
 const ContentM = styled.div`
   grid-column-start: 2;
