@@ -4,4 +4,4 @@ import ReactDOM from 'react-dom';
 import ReviewService from './components/ReviewService.jsx';
 // import Example from './hookExample.jsx';
 
-ReactDOM.render(<ReviewService start={1} />, document.getElementById('app'));
+ReactDOM.render(<ReviewService start={1} />, document.getElementById('review'));

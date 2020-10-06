@@ -343,11 +343,13 @@ display: block;
 
 `;
 const Modal = styled.div`
+margin: 0 auto;
+margin-top: 100px;
+top: 0;
 font-family: inherit;
 display: grid;
 width: auto%;
 max-width: 1000px;
-margin: 0 auto;
 position: absolute;
 left: 32%;
 z-index: 10;

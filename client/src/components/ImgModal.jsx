@@ -28,7 +28,7 @@ ImgModal.propTypes = {
   showImgModal: PropTypes.bool.isRequired,
 };
 const Modal = styled.div`
-  margin: 0, auto;
+  margin: 0 auto;
   margin-top: 100px;
   position: absolute;
   top: 25%;
