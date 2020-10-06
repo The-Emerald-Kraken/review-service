@@ -116,7 +116,7 @@ exports[`A suite of tests for ImgModal Component does not renders ImgModal Compo
 
 exports[`A suite of tests for ImgModal Component renders correctly ImgModal Component 1`] = `
 <div
-  className="sc-kLokih ibCanN"
+  className="sc-kLokih kBaboF"
 >
   <button
     className="sc-gXfWUo hkMISl"
@@ -543,7 +543,7 @@ exports[`A suite of tests for ReviewModal Component it does nopt renders Reviews
 
 exports[`A suite of tests for ReviewModal Component renders Reviews Services correctly 1`] = `
 <div
-  className="sc-laZMyp gfniEx"
+  className="sc-laZMyp xjgTX"
 >
   <button
     className="sc-ckTRkR hZrBqO"
