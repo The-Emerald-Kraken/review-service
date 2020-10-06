@@ -51,16 +51,17 @@ function ReviewModal({ img, showReviewModal, onClose }) {
           <Content>
 
             <TitleFieldBlock>Review title*</TitleFieldBlock>
-            <input type="text" name="title" placeholder="Example: Great on trails!" />
+            <ReviewTitleField type="text" name="title" placeholder="Example: Great on trails!" />
 
           </Content>
           <Content>
 
             <TitleFieldBlock>Review*</TitleFieldBlock>
             <ReviewContent>
-              <Textarea type="text" name="body" placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!" />
+              <ReviewTextField type="text" name="body" placeholder="Please keep your review focused on the product and your experience with it. Your review is so important for improving REI and the experience for other REI shoppers!" />
               <ButtonContainer>
-                <button>Image</button><button>Video</button>
+                <MediaButton onClick={() => ("input[id='my_file']")}>Add Photo</MediaButton>
+                <MediaButton>Add Video</MediaButton>
               </ButtonContainer>
             </ReviewContent>
 
@@ -100,22 +101,23 @@ function ReviewModal({ img, showReviewModal, onClose }) {
               {age.map((choice) => <option key={choice} value={choice}>{choice}</option>)}
             </Select>
           </Content>
-
-          <ContentInline>
-            <TitleFieldBlock>Nickname*</TitleFieldBlock>
-            <TextField type="text" name="nickname" placeholder="Example: jackie27" />
-          </ContentInline>
-          <ContentInline>
-            <TitleFieldBlock>Location</TitleFieldBlock>
-            <TextField type="text" name="Location" placeholder="Example: Seattle, WA" />
-          </ContentInline>
-
-          <ContentInline>
-            <TitleFieldBlock>Email*</TitleFieldBlock>
-            <TextField type="email" name="email" placeholder="Example: youremail@example.com" />
-          </ContentInline>
-          <Content><PostButton>Post Review</PostButton></Content>
-
+          <Content>
+            <ContentInline>
+              <TitleFieldBlock>Nickname*</TitleFieldBlock>
+              <TextField type="text" name="nickname" placeholder="Example: jackie27" />
+            </ContentInline>
+            <ContentInline>
+              <TitleFieldBlock>Location</TitleFieldBlock>
+              <TextField type="text" name="Location" placeholder="Example: Seattle, WA" />
+            </ContentInline>
+          </Content>
+          <Content>
+            <ContentEmail>
+              <TitleFieldBlock>Email*</TitleFieldBlock>
+              <EmailText type="email" name="email" placeholder="Example: youremail@example.com" />
+            </ContentEmail>
+            <Content><PostButton>Post Review</PostButton></Content>
+          </Content>
         </form>
       </ContentM>
     </Modal>
@@ -153,6 +155,26 @@ const StarContainer = styled.div`
   float: right;
   margin-left: 30px;
 
+`;
+const ReviewTitleField = styled.input`
+border: 1px solid!important;
+    border-color: #ccc #ccc #999!important;
+    padding: .5em 1em!important;
+    font-size: 15px!important;
+    color: #666!important;
+    line-height: 1.2em!important;
+    background: #fff!important;
+    -webkit-box-shadow: 0 1px 1px #fff!important;
+    box-shadow: 0 1px 1px #fff!important;
+    -webkit-border-radius: .25em!important;
+    border-radius: .25em!important;
+    outline: 0!important;
+    text-shadow: 0 1px #fff!important;
+    -webkit-transition: all linear .3s!important;
+    -moz-transition: all linear .3s!important;
+    -o-transition: all linear .3s!important;
+    transition: all linear .3s!important;
+    width: 100%;
 `;
 
 const StarInput = styled.input`
@@ -215,10 +237,11 @@ const Green = styled(StarButton)`
 `;
 
 const ButtonContainer = styled.div`
+clear: left!important;
+float: left!important;
+width: 100%!important;
 position: relative!important;
-clear: both!important;
-padding: 0 15px!important;
-zoom: 1!important;
+display:block;
 white-space: nowrap!important;
 `;
 const ReviewContent = styled.div`
@@ -233,16 +256,16 @@ border-color: #aaa #ccc #ccc!important;
 border-style: solid!important;
 // -webkit-box-shadow: 0 1px 1px #fff!important;
 box-shadow: 0 1px 1px #fff!important;
-padding: 0 20px!important;
+padding-bottom: 40px!important;
 
 `;
 
 const TextField = styled.input`
     margin: 10px 0!important;
+    margin-right: 5px;
     width: 100%!important;
     box-sizing: border-box!important;
     float: left!important;
-
     border: 1px solid!important;
     // border-color: #ccc #ccc #999!important;
     padding: .5em 1em!important;
@@ -259,6 +282,9 @@ const TextField = styled.input`
     // -webkit-transition: all linear .3s!important;
 
     transition: all linear .3s!important;
+`;
+const EmailText = styled(TextField)`
+width: 250%;
 `;
 const Select = styled.select`
   float: right;
@@ -283,6 +309,7 @@ const Select = styled.select`
     border-color: #ccc #ccc #666;
     background-color: #fff;
     margin-left: 36px!important;
+
     display: inline-block;
 `;
 const TitleMain = styled.h2`
@@ -329,7 +356,7 @@ background-color: #e5e5e5;
 grid-template-columns: repeat(3, 1fr);
 box-shadow: 0 10px 25px rgba(0,0,0,.5);
   `;
-const Textarea = styled.textarea`
+const ReviewTextField = styled.textarea`
 overflow-wrap: break-word;
 overflow: hidden ;
 height: 89.9884px ;
@@ -349,6 +376,7 @@ padding: .5em 1em!important;
 -webkit-box-sizing: border-box!important;
 font-family: "Roboto","Helvetica Neue","Helvetica","Arial",sans-serif;
 font-size: 15px!important;
+width: 100%;
 `;
 const Content = styled.div`
   grid-column-start: 2;
@@ -394,6 +422,9 @@ const ContentInline = styled.div`
   zoom: 1;
   position: relative;
 `;
+const ContentEmail = styled(ContentInline)`
+width: 50%;
+`;
 const ImageContainer = styled.div`
   position: relative;
   grid-row-start: 1;
@@ -406,6 +437,8 @@ const ImageContainer = styled.div`
 const Image = styled.img`
 display: block;
 margin:0;
+margin-left: auto;
+margin-right: auto;
 width: 165px;
 height: 220px;
 background-size: cover;
@@ -481,6 +514,36 @@ border-left-color: transparent;
           background - color: #2b455c;
   border-color: #2b455c;
 }
+`;
+
+const MediaButton = styled.button`
+-webkit-border-radius: .25em!important;
+border-radius: .25em!important;
+padding: 2px 6px!important;
+font-size: 12px!important;
+color: #333!important;
+// -webkit-box-shadow: 0 1px 0 #fff!important;
+box-shadow: 0 1px 0 #fff!important;
+background-color: #ededed!important;
+// background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0,rgba(255,255,255,.1)),color-stop(1,rgba(255,255,255,0)))!important;
+background-image: -webkit-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%)!important;
+background-image: -moz-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%)!important;
+background-image: -o-linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%)!important;
+// background-image: linear-gradient(top,rgba(255,255,255,.1) 0,rgba(255,255,255,0) 100%)!important;
+margin: 7px 5px -5px 5px!important;
+// padding: 8px 14px!important;
+line-height: 16px!important;
+// font-size: 14px!important;
+// color: #666!important;
+float: left!important;
+border-width: 1px!important;
+border-style: solid!important;
+// -webkit-border-radius: 0 .25em .25em 0!important;
+// border-radius: 0 .25em .25em 0!important;
+border-color: #d0d0d0 #d0d0d0 #a4a4a4 #a4a4a4!important;
+// -webkit-box-sizing: border-box!important;
+// -moz-box-sizing: border-box!important;
+box-sizing: border-box!important;
 `;
 
 export default ReviewModal;
