@@ -9,9 +9,12 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
+    "build": "webpack -d",
     "start": "nodemon server/index.js",
     "db-seed": "node database/seed.js",
-    "test": "jest --coverage --env=jsdom"
+    "test": "jest --coverage --env=jsdom",
+    "docker-start": "node database/seed.js && nodemon server/index.js"
+
   },
   "jest": {
     "transform": {

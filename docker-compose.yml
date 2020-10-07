@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  review:
+    build: ./
+    depends_on:
+      - 'myMongo'
+    ports:
+      - '3005:3005'
+
+  myMongo:
+    image: mongo:latest
