@@ -9,12 +9,11 @@
   },
   "scripts": {
     "react-dev": "webpack -d --watch",
-    "build": "webpack -d",
+    "build": "webpack -d --mode=production",
     "start": "nodemon server/index.js",
     "db-seed": "node database/seed.js",
     "test": "jest --coverage --env=jsdom",
     "docker-start": "node database/seed.js && nodemon server/index.js"
-
   },
   "jest": {
     "transform": {
@@ -27,6 +26,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "faker": "^5.1.0",
     "jest-enzyme": "^7.1.2",
