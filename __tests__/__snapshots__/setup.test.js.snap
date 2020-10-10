@@ -149,7 +149,7 @@ exports[`A suite of tests for Load More Component renders correctly Load More Bu
 `;
 
 exports[`A suite of tests for Review Display Component renders correctly Review Display Component 1`] = `
-<section
+<div
   className="sc-fujyUd bPgFlh"
 >
   <div
@@ -214,8 +214,10 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
       </span>
     </p>
     <img
-      className="sc-iqAbSa jqYKGB"
+      alt="https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg"
+      className="sc-iqAbSa eLvtEM"
       onClick={[Function]}
+      src="https://fec-pictures.s3-us-west-2.amazonaws.com/image5.jpg"
     />
     <div>
       Helpful?
@@ -279,7 +281,7 @@ exports[`A suite of tests for Review Display Component renders correctly Review 
       </span>
     </div>
   </div>
-</section>
+</div>
 `;
 
 exports[`A suite of tests for Review Stats Container Component renders correctly Review Display Component 1`] = `
