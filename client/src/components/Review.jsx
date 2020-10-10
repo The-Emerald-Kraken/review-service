@@ -50,7 +50,8 @@ const Review = ({
             showImgModal(true);
           }}
           key={image.id}
-          inputSrc={image.url}
+          alt={image.url}
+          src={image.url}
         />
       ))}
       <Helpful
@@ -75,7 +76,7 @@ Review.propTypes = {
   setModalImg: PropTypes.func.isRequired,
 };
 
-const FlexContainer = styled.section`
+const FlexContainer = styled.div`
 display: flex;
 //font-family: Stuart,Georgia,serif;
 font-size: 16px;
@@ -103,11 +104,11 @@ padding: 20px;
 padding-top: 90px;
 `;
 const Image = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 160px;
+  height: 120px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(${(props) => props.inputSrc});
+
   position: relative;
   margin-right: 1.5px;
   margin -left: 1.5px;

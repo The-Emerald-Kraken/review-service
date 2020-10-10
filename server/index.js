@@ -11,10 +11,6 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '/../public')));
 // Is this safe?
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
-  next();
-});
 
 app.get('/api/products/reviews/avg/:item', (req, res) => {
   Reviews.find({ product_id: req.params.item })
