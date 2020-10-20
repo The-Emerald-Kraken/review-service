@@ -1,3 +1,4 @@
+[![The-Emerald-Kraken](https://circleci.com/gh/The-Emerald-Kraken/review-service.svg?style=shield)](https://circleci.com/gh/The-Emerald-Kraken/review-service)
 # Project Name
 
 > Project description
