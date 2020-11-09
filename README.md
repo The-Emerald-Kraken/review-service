@@ -19,10 +19,13 @@ Project is created with:
 * Docker/DockerHub
 	
 ## Setup
-TODO
-
+# IN PROGRESS
+For local testing
 ```
 $ cd ../review-service
 $ npm install
-$ npm start
+$ npm 
+
+If using Docker image
+start
 ```
