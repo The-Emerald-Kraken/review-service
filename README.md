@@ -6,8 +6,9 @@
 * [Setup](#setup)
 
 ## General info
-Anna is an audio log that that will prompt the user at a set time of day to enter a new entry into their log. Can prompt the user with question or can be used as a blank canvas
-Come with voice recognition software to assist in note taking.  
+Open sourced Ecommerce Review Service application. Demonstrates the functionality of a common review service for a web application. Optimized loading speeds to hold a score of 99 Performance rating according to Lighthouse  
+
+![alt text](https://imgur.com/M4jc4pZ)
 	
 ## Technologies
 Project is created with:
@@ -19,13 +20,26 @@ Project is created with:
 * Docker/DockerHub
 	
 ## Setup
-# IN PROGRESS
+
 For local testing
+#### Inital setup 
 ```
 $ cd ../review-service
 $ npm install
-$ npm 
+```
+#### To seed Database
+Ensure MongoDB is running
+```
+$ npm run db-seed.js
+```
+#### Start the Server
+```
+$ npm start
+```
+Default config is set to listen to localhost:3005
 
+### IN PROGRESS
 If using Docker image
+```
 start
 ```
