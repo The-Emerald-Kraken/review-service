@@ -1,40 +1,31 @@
-[![The-Emerald-Kraken](https://circleci.com/gh/The-Emerald-Kraken/review-service.svg?style=shield)](https://circleci.com/gh/The-Emerald-Kraken/review-service)
-# Project Name
+## CloudBnB Review Service [![The-Emerald-Kraken](https://circleci.com/gh/The-Emerald-Kraken/review-service.svg?style=shield)](https://circleci.com/gh/The-Emerald-Kraken/review-service)
 
-> Project description
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
 
-## Related Projects
+## General info
+Anna is an audio log that that will prompt the user at a set time of day to enter a new entry into their log. Can prompt the user with question or can be used as a blank canvas
+Come with voice recognition software to assist in note taking.  
+	
+## Technologies
+Project is created with:
+* React/Hooks
+* Node.js
+* Express
+* MongoDB/Mongoose
+* Webpack
+* Docker/DockerHub
+	
+## Setup
+To run this project:
+1) Start (or Install) Arangodb
+2) Update configuration files 
+3) Install it locally using npm:
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-
-## Table of Contents
-
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
-
-## Usage
-
-> Some usage instructions
-
-## Requirements
-
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
 ```
-
+$ cd ../athena
+$ npm install
+$ npm start
+```
