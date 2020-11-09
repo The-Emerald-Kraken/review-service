@@ -8,7 +8,7 @@
 ## General info
 Open sourced Ecommerce Review Service application. Demonstrates the functionality of a common review service for a web application. Optimized loading speeds to hold a score of 99 Performance rating according to Lighthouse  
 
-![](https://imgur.com/M4jc4pZ)
+![Image](https://imgur.com/M4jc4pZ)
 	
 ## Technologies
 Project is created with:
