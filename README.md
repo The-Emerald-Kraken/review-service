@@ -1,4 +1,4 @@
-## CloudBnB Review Service [![The-Emerald-Kraken](https://circleci.com/gh/The-Emerald-Kraken/review-service.svg?style=shield)](https://circleci.com/gh/The-Emerald-Kraken/review-service)
+## Recreational Engineering Interface (REI ) Review Service [![The-Emerald-Kraken](https://circleci.com/gh/The-Emerald-Kraken/review-service.svg?style=shield)](https://circleci.com/gh/The-Emerald-Kraken/review-service)
 
 ## Table of contents
 * [General info](#general-info)
@@ -19,13 +19,10 @@ Project is created with:
 * Docker/DockerHub
 	
 ## Setup
-To run this project:
-1) Start (or Install) Arangodb
-2) Update configuration files 
-3) Install it locally using npm:
+TODO
 
 ```
-$ cd ../athena
+$ cd ../review-service
 $ npm install
 $ npm start
 ```
